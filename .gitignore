@@ -1,0 +1,12 @@
+__pycache__/
+.venv/
+Papers/
+raw.githubusercontent.com/
+resultados sktime/
+business_names.zip
+reviews.zip
+signatures.zip
+timeseries.zip
+weekdays_datasets.zip
+
+*.pkl
