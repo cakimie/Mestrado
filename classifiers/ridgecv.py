@@ -1,3 +1,5 @@
+# RUN WITH python -m classifiers.ridgecv
+#!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 from sklearn.metrics import precision_score
 from sklearn.metrics import recall_score
 from sklearn.metrics import accuracy_score
@@ -24,5 +26,5 @@ def ridge_cv (X_train, y_train, X_test, y_test):
     }
 
 if __name__ == '__main__':
-    from run_classifier import run_classifier
+    from classifiers.run_classifier import run_classifier
     run_classifier(ridge_cv, 'ridge_cv')
