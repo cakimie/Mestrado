@@ -1,10 +1,12 @@
-# RUN WITH python -m classifiers.multirocket
-# ATTENTION!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 from sklearn.metrics import precision_score
 from sklearn.metrics import recall_score
 from sklearn.metrics import accuracy_score
 from sklearn.metrics import f1_score
 import numpy as np
+import sys
+import os
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '../MultiRocket')))
+print(sys.path)
 from multirocket.multirocket import MultiRocket
 from sklearn.preprocessing import LabelEncoder
 
@@ -39,5 +41,5 @@ def multirocket (X_train, y_train, X_test, y_test):
     }
 
 if __name__ == '__main__':
-    from classifiers.run_classifier import run_classifier
+    from run_classifier import run_classifier
     run_classifier(multirocket, 'multirocket')
