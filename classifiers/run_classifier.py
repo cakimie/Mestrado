@@ -13,10 +13,15 @@ def run_classifier(fn, fn_name):
     task.connect(params)
 
     preprocess_task = Task.get_task(project_name='PopularTimesFold/Data', task_name=params['data_task_name'])
-    X_train = preprocess_task.artifacts['X_train'].get_local_copy()
-    y_train = preprocess_task.artifacts['y_train'].get_local_copy()
-    X_test = preprocess_task.artifacts['X_test'].get_local_copy()
-    y_test = preprocess_task.artifacts['y_test'].get_local_copy()
+    
+    with np.load(preprocess_task.artifacts['X_train'].get_local_copy(), mmap_mode='r') as data:
+        X_train = data['X_train']
+    with np.load(preprocess_task.artifacts['y_train'].get_local_copy(), mmap_mode='r') as data:
+        y_train = data['y_train']
+    with np.load(preprocess_task.artifacts['X_test'].get_local_copy(), mmap_mode='r') as data:
+        X_test = data['X_test']
+    with np.load(preprocess_task.artifacts['y_test'].get_local_copy(), mmap_mode='r') as data:
+        y_test = data['y_test']
     
     # Executes main function:
     main_time = time.time()
