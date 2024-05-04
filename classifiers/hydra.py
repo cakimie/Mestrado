@@ -7,7 +7,7 @@ import torch
 from hydra import Hydra, SparseScaler
 from sklearn.linear_model import RidgeClassifierCV
 
-def hydra (X_train, y_train, X_test, y_test):
+def hydra_ridge (X_train, y_train, X_test, y_test):
 
     X_train_tensor = torch.tensor(np.expand_dims(X_train, axis=1), dtype=torch.float32)
     X_test_tensor = torch.tensor(np.expand_dims(X_test, axis=1), dtype=torch.float32)
@@ -36,4 +36,4 @@ def hydra (X_train, y_train, X_test, y_test):
 
 if __name__ == '__main__':
     from run_classifier import run_classifier
-    run_classifier(hydra, 'hydra')
+    run_classifier(hydra_ridge, 'hydra_ridge')

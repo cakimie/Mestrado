@@ -7,9 +7,10 @@ from aeon.classification.distance_based import ElasticEnsemble
 def elastic_ensemble (X_train, y_train, X_test, y_test):
 
     ee_clf = ElasticEnsemble(
-    proportion_of_param_options=0.1,
-    proportion_train_for_test=0.1,
-    distance_measures = ["dtw","ddtw"],
+    proportion_of_param_options=1,
+    proportion_train_for_test=1,
+    #distance_measures = ["dtw","ddtw"],
+    distance_measures = "all",
     majority_vote=True,
     )
     ee_clf.fit(X_train, y_train)
