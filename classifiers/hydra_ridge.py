@@ -1,3 +1,6 @@
+# RUN WITH python -m classifiers.hydra_ridge
+# ATTENTION!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
 from sklearn.metrics import precision_score
 from sklearn.metrics import recall_score
 from sklearn.metrics import accuracy_score
@@ -35,5 +38,5 @@ def hydra_ridge (X_train, y_train, X_test, y_test):
     }
 
 if __name__ == '__main__':
-    from run_classifier import run_classifier
+    from classifiers.run_classifier import run_classifier
     run_classifier(hydra_ridge, 'hydra_ridge')
