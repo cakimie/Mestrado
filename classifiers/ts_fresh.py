@@ -12,7 +12,6 @@ def ts_fresh (X_train, y_train, X_test, y_test):
     estimator=RandomForestClassifier(n_estimators=5),
     )
     clf_TSFresh.fit(X_train, y_train)
-    TSFreshClassifier(...)
     tsfresh_pred = clf_TSFresh.predict(X_test)
 
     return {
