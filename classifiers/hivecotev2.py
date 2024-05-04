@@ -30,3 +30,7 @@ def hivecotev2 (X_train, y_train, X_test, y_test):
         'precision_score': precision_score(y_test, hc2_pred, average='weighted'), 
         'recall_score': recall_score(y_test, hc2_pred, average='weighted'),
     }
+
+if __name__ == '__main__':
+    from run_classifier import run_classifier
+    run_classifier(hivecotev2, 'hivecotev2')

@@ -16,3 +16,7 @@ def weasel_d (X_train, y_train, X_test, y_test):
         'precision_score': precision_score(y_test, WEASEL_V2_pred, average='weighted'), 
         'recall_score': recall_score(y_test, WEASEL_V2_pred, average='weighted'),
     }
+
+if __name__ == '__main__':
+    from run_classifier import run_classifier
+    run_classifier(weasel_d, 'weasel_d')
