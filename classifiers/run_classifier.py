@@ -3,25 +3,30 @@ def run_classifier(fn, fn_name):
     start_time = time.time()
 
     import numpy as np
+    import pandas as pd
+    from classifiers.load_fold import load_fold
 
     from clearml import Task
     params = {
-        'fold': 0,
-        'data_task_name': 'example_data',
+        'k': 1,
+        'K': 10,
+        'country': 0,
+        'city': 0,
+        'category': 0,
     }
     task = Task.init(project_name='PopularTimesFold/Classifier', task_name=fn_name)
     task.connect(params)
 
-    preprocess_task = Task.get_task(project_name='PopularTimesFold/Data', task_name=params['data_task_name'])
-    
-    with np.load(preprocess_task.artifacts['X_train'].get_local_copy(), mmap_mode='r') as data:
-        X_train = data['X_train']
-    with np.load(preprocess_task.artifacts['y_train'].get_local_copy(), mmap_mode='r') as data:
-        y_train = data['y_train']
-    with np.load(preprocess_task.artifacts['X_test'].get_local_copy(), mmap_mode='r') as data:
-        X_test = data['X_test']
-    with np.load(preprocess_task.artifacts['y_test'].get_local_copy(), mmap_mode='r') as data:
-        y_test = data['y_test']
+    df = pd.read_csv('weekdays_datasets/df_timeseries.csv')
+    name, X_train, y_train, X_test, y_test = load_fold(
+        df,
+        params['k'],
+        params['K'],
+        params['country'],
+        params['city'],
+        params['category'],
+    )
+    print(f'Loaded: {name}')
     
     # Executes main function:
     main_time = time.time()

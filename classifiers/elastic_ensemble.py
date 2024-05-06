@@ -25,5 +25,5 @@ def elastic_ensemble (X_train, y_train, X_test, y_test):
     }
 
 if __name__ == '__main__':
-    from run_classifier import run_classifier
+    from classifiers.run_classifier import run_classifier
     run_classifier(elastic_ensemble, 'elastic_ensemble')
