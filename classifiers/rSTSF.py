@@ -114,7 +114,7 @@ if __name__ == '__main__':
         'city': 0,
         'category': None,
     }
-    task = Task.init(project_name='PopularTimesFold/Classifier', task_name="rstsf")
+    task = Task.init(project_name='PopularTimesFold/Classifier', task_name="rSTSF")
     task.connect(params)
 
     df = pd.read_csv('weekdays_datasets/df_timeseries.csv')
@@ -130,7 +130,7 @@ if __name__ == '__main__':
     
     # Executes main function:
     main_time = time.time()
-    results = rstsf(X_train, y_train, X_test, y_test)
+    results = rSTSF(X_train, y_train, X_test, y_test)
     task.get_logger().report_scalar('execution_time', 'main', iteration=0, value=time.time() - main_time)
 
     # Reports results:
