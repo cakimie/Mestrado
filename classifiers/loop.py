@@ -92,7 +92,7 @@ def kfold_results(**kwargs):
                 metrics_acum[metric] = [metric_value]
             Task.current_task().get_logger().report_scalar('metrics', metric, iteration=i, value=metric_value)
     for metric, values in metrics_acum.items():
-        Task.current_task().get_logger().report_scalar('metrics', metric, iteration=0, value=np.mean(values))
+        Task.current_task().get_logger().report_scalar('metrics', metric, iteration=len(values)+1, value=np.mean(values))
 
     # Print the final best model details and log it as an output model on this step
     print(f"Results for {Task.current_task().name}: {metrics_acum}")
@@ -118,7 +118,7 @@ def classifier_results(**kwargs):
                 metrics_acum[metric].append(metric_values)
             else:
                 metrics_acum[metric] = [metric_values]
-            Task.current_task().get_logger().report_scalar('metrics', f'{metric}', iteration=i, value=metric_values[0])
+            Task.current_task().get_logger().report_scalar('metrics', f'{metric}', iteration=i, value=metric_values[-1])
 
     # Print the final best model details and log it as an output model on this step
     print(f"Results for {Task.current_task().name}: {metrics_acum}")
@@ -129,20 +129,13 @@ def classifier_results(**kwargs):
 classifiers = [
     ['light', 'DrCIF'],
     ['heavy', 'elastic_ensemble'],
-    ['light', 'fresh_prince'],
-    ['heavy', 'hivecotev2'],
     ['light', 'hydra_ridge'],
-    ['heavy', 'inception_time'],
     ['default', 'MrSQM'],
     ['heavy', 'multirocket'],
-    #['heavy', 'proximity_forest'],
+    ['heavy', 'proximity_forest'],
     ['light', 'rdst'],
-    ['heavy', 'resnet'],
     ['light', 'ridge_cv'],
     ['default', 'rSTSF'],
-    ['default', 'tde'],
-    ['light', 'ts_fresh'],
-    ['light', 'weasel_d'],
 ]
 
 # Extracts types of possible filters to pick from later:
