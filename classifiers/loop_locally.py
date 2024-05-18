@@ -44,16 +44,17 @@ def create_tasks(K, country=None, city=None, category=None):
 
 # ------------------------------ START ------------------------------------
 
-from classifiers.fresh_prince import run_fresh_prince
+# from classifiers.fresh_prince import run_fresh_prince
+from classifiers.hivecotev2 import run_hivecotev2
 
 # Queue name and task name for every classifier taking part in the pipeline:
 classifiers = [
-    ['light', run_fresh_prince],
+    # ['light', run_fresh_prince],
     # ['light', run_ts_fresh],
     # ['light', run_weasel_d],
     # ['default', run_tde],
     # ['heavy', run_resnet],
-    # ['heavy', run_hivecotev2],
+     ['heavy', run_hivecotev2],
     # ['heavy', run_inception_time],
 ]
 
