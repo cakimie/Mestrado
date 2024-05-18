@@ -8,5 +8,6 @@ reviews.zip
 signatures.zip
 timeseries.zip
 weekdays_datasets.zip
+classifiers/logs
 
 *.pkl

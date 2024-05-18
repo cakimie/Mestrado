@@ -15,14 +15,16 @@ def create_tasks(K, country=None, city=None, category=None):
         kfold_results = []
         for k in range(K):
             node_name = f'{classifier}{filter_str}_f{k+1}-{K}'
-            kfold_results.append(classifier(task_name=node_name, 
-                                            params={'k':k+1, 
-                                                    'K':K,
-                                                    'country':country, 
-                                                    'city':city,
-                                                    'category':category,
-                                            }
-            ))
+            results = classifier(task_name=node_name, 
+                                params={'k':k+1, 
+                                        'K':K,
+                                        'country':country, 
+                                        'city':city,
+                                        'category':category,
+                                },
+            )
+            print(f'{node_name}', results)
+            kfold_results.append(results)
 
         #TODO: Totalizar algoritmo com este filtro para todos os diferentes folds.
         metrics =  ['accuracy_score','f1_score','precision_score','recall_score']
