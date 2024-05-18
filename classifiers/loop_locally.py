@@ -37,7 +37,7 @@ def create_tasks(K, country=None, city=None, category=None):
             metric_std = np.std(values)
             trust_interval = stats.t.interval(0.95, K - 1, loc=metric_mean, scale=metric_std)
             means.append(metric_mean)
-            print('          ',metric,f'mean={metric_mean:.7f}',f'std={metric_std:.7f}',f't_interval={trust_interval:.7f}')
+            print('          ',metric,f'mean={metric_mean:.7f}',f'std={metric_std:.7f}',f't_interval={trust_interval}')
         return means
 
 # ------------------------------ START ------------------------------------
@@ -46,18 +46,9 @@ from classifiers.fresh_prince import run_fresh_prince
 
 # Queue name and task name for every classifier taking part in the pipeline:
 classifiers = [
-    # ['light', 'DrCIF'],
-    # ['heavy', 'elastic_ensemble'],
     ['light', run_fresh_prince],
     # ['light', run_ts_fresh],
     # ['light', run_weasel_d],
-    # ['light', 'hydra_ridge'],
-    # ['default', 'MrSQM'],
-    # ['heavy', 'multirocket'],
-    #['heavy', 'proximity_forest'],
-    # ['light', 'rdst'],
-    # ['light', 'ridge_cv'],
-    # ['default', 'rSTSF'],
     # ['default', run_tde],
     # ['heavy', run_resnet],
     # ['heavy', run_hivecotev2],
