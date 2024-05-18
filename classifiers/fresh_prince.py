@@ -64,6 +64,7 @@ def run_fresh_prince(
     for key, value in results.items():
         task.get_logger().report_scalar('metrics', key, iteration=0, value=value)
     task.get_logger().report_scalar('execution_time', 'total', iteration=0, value=time.time() - start_time)
+    task.close()
     return results
 
 if __name__ == '__main__':

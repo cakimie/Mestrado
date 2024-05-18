@@ -49,8 +49,8 @@ classifiers = [
     # ['light', 'DrCIF'],
     # ['heavy', 'elastic_ensemble'],
     ['light', run_fresh_prince],
-    ['light', run_ts_fresh],
-    ['light', run_weasel_d],
+    # ['light', run_ts_fresh],
+    # ['light', run_weasel_d],
     # ['light', 'hydra_ridge'],
     # ['default', 'MrSQM'],
     # ['heavy', 'multirocket'],
@@ -58,10 +58,10 @@ classifiers = [
     # ['light', 'rdst'],
     # ['light', 'ridge_cv'],
     # ['default', 'rSTSF'],
-    ['default', run_tde],
-    ['heavy', run_resnet],
-    ['heavy', run_hivecotev2],
-    ['heavy', run_inception_time],
+    # ['default', run_tde],
+    # ['heavy', run_resnet],
+    # ['heavy', run_hivecotev2],
+    # ['heavy', run_inception_time],
 ]
 
 # Extracts types of possible filters to pick from later:
