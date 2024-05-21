@@ -2,6 +2,8 @@ import pandas as pd
 import numpy as np
 import scipy.stats as stats
 
+from clearml import Task
+
 def create_tasks(K, country=None, city=None, category=None):
     filter_str = ''
     if country is not None:
@@ -15,7 +17,9 @@ def create_tasks(K, country=None, city=None, category=None):
         kfold_results = []
         for k in range(K):
             node_name = f'{classifier}{filter_str}_f{k+1}-{K}'
-            results = classifier(task_name=node_name, 
+            # task=Task.create(project_name='PopularTimesFold/Classifier', task_name=node_name)
+            results = classifier(task_name=node_name,
+                                 clearML=False,
                                 params={'k':k+1, 
                                         'K':K,
                                         'country':country, 
@@ -46,6 +50,7 @@ def create_tasks(K, country=None, city=None, category=None):
 
 # from classifiers.fresh_prince import run_fresh_prince
 from classifiers.ts_fresh import run_ts_fresh
+# from classifiers.hivecotev2 import run_hivecotev2
 
 # Queue name and task name for every classifier taking part in the pipeline:
 classifiers = [

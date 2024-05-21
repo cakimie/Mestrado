@@ -34,6 +34,7 @@ def hivecotev2 (X_train, y_train, X_test, y_test):
     }
 
 def run_hivecotev2(
+    clearML = True,
     params = {
         'k': 1,
         'K': 10,
@@ -51,9 +52,10 @@ def run_hivecotev2(
     import pandas as pd
     from classifiers.load_fold import load_fold
 
-    if task==None:
-        task=Task.init(project_name='PopularTimesFold/Classifier', task_name=task_name)
-    task.connect(params)
+    if clearML:
+        if task==None:
+            task=Task.init(project_name='PopularTimesFold/Classifier', task_name=task_name)
+        task.connect(params)
 
     df = pd.read_csv('weekdays_datasets/df_timeseries.csv')
     name, X_train, y_train, X_test, y_test = load_fold(
@@ -69,8 +71,9 @@ def run_hivecotev2(
     # Executes main function:
     main_time = time.time()
     results = hivecotev2(X_train, y_train, X_test, y_test)
-    task.get_logger().report_scalar('execution_time', 'main', iteration=0, value=time.time() - main_time)
-    task.close()
+    if clearML:
+        task.get_logger().report_scalar('execution_time', 'main', iteration=0, value=time.time() - main_time)
+        task.close()
     return results
 
 if __name__ == '__main__':

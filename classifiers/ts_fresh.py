@@ -10,8 +10,8 @@ from clearml import Task
 def ts_fresh (X_train, y_train, X_test, y_test):
 
     clf_TSFresh = TSFreshClassifier(
-    default_fc_parameters="minimal",
-    estimator=RandomForestClassifier(n_estimators=5),
+    default_fc_parameters="comprehensive",
+    estimator=RandomForestClassifier(n_estimators=10),
     )
     clf_TSFresh.fit(X_train, y_train)
     tsfresh_pred = clf_TSFresh.predict(X_test)
@@ -24,6 +24,7 @@ def ts_fresh (X_train, y_train, X_test, y_test):
     }
 
 def run_ts_fresh(
+    clearML = True,
     params = {
         'k': 1,
         'K': 10,
@@ -41,9 +42,10 @@ def run_ts_fresh(
     import pandas as pd
     from classifiers.load_fold import load_fold
 
-    if task==None:
-        task=Task.init(project_name='PopularTimesFold/Classifier', task_name=task_name)
-    task.connect(params)
+    if clearML:
+        if task==None:
+            task=Task.init(project_name='PopularTimesFold/Classifier', task_name=task_name, reuse_last_task_id=False)
+        task.connect(params)
 
     df = pd.read_csv('weekdays_datasets/df_timeseries.csv')
     name, X_train, y_train, X_test, y_test = load_fold(
@@ -59,8 +61,9 @@ def run_ts_fresh(
     # Executes main function:
     main_time = time.time()
     results = ts_fresh(X_train, y_train, X_test, y_test)
-    task.get_logger().report_scalar('execution_time', 'main', iteration=0, value=time.time() - main_time)
-    task.close()
+    if clearML:
+        task.get_logger().report_scalar('execution_time', 'main', iteration=0, value=time.time() - main_time)
+        task.close()
     return results
 
 if __name__ == '__main__':
