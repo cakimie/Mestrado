@@ -4,6 +4,8 @@ from sklearn.metrics import accuracy_score
 from sklearn.metrics import f1_score
 from sktime.classification.dictionary_based import TemporalDictionaryEnsemble
 
+from clearml import Task
+
 def tde (X_train, y_train, X_test, y_test):
 
     clf_TDE = TemporalDictionaryEnsemble(
@@ -21,7 +23,18 @@ def tde (X_train, y_train, X_test, y_test):
         'recall_score': recall_score(y_test, tde_pred, average='weighted'),
     }
 
-if __name__ == '__main__':
+def run_tde(
+    clearML = True,
+    params = {
+        'k': 1,
+        'K': 10,
+        'country': 0,
+        'city': 0,
+        'category': None,
+    },
+    task=None,
+    task_name="tde",
+):
     import time
     start_time = time.time()
 
@@ -29,7 +42,6 @@ if __name__ == '__main__':
     import pandas as pd
     from classifiers.load_fold import load_fold
 
-    from clearml import Task
     params = {
         'k': 1,
         'K': 10,
@@ -37,8 +49,11 @@ if __name__ == '__main__':
         'city': 0,
         'category': None,
     }
-    task = Task.init(project_name='PopularTimesFold/Classifier', task_name="tde")
-    task.connect(params)
+
+    if clearML:
+        if task==None:
+            task = Task.init(project_name='PopularTimesFold/Classifier', task_name="tde")
+        task.connect(params)
 
     df = pd.read_csv('weekdays_datasets/df_timeseries.csv')
     name, X_train, y_train, X_test, y_test = load_fold(
@@ -54,9 +69,13 @@ if __name__ == '__main__':
     # Executes main function:
     main_time = time.time()
     results = tde(X_train, y_train, X_test, y_test)
-    task.get_logger().report_scalar('execution_time', 'main', iteration=0, value=time.time() - main_time)
+    if clearML:
+        task.get_logger().report_scalar('execution_time', 'main', iteration=0, value=time.time() - main_time)
+        # Reports results:
+        for key, value in results.items():
+            task.get_logger().report_scalar('metrics', key, iteration=0, value=value)
+        task.close()
+    return results
 
-    # Reports results:
-    for key, value in results.items():
-        task.get_logger().report_scalar('metrics', key, iteration=0, value=value)
-    task.get_logger().report_scalar('execution_time', 'total', iteration=0, value=time.time() - start_time)
+if __name__ == '__main__':
+    run_tde()
