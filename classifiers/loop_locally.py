@@ -48,13 +48,13 @@ def create_tasks(K, country=None, city=None, category=None):
 
 # ------------------------------ START ------------------------------------
 
-# from classifiers.fresh_prince import run_fresh_prince #ok
+# from classifiers.fresh_prince import run_fresh_prince #running
 # from classifiers.ts_fresh import run_ts_fresh #ok
 # from classifiers.hivecotev2 import run_hivecotev2 #ok
 # from classifiers.weasel_d import run_weasel_d #ok
 # from classifiers.resnet import run_resnet #not yet
-# from classifiers.tde import run_tde #ok
-from classifiers.inception_time import run_inception_time #running
+from classifiers.tde import run_tde #running
+# from classifiers.inception_time import run_inception_time #running
 
 
 # Queue name and task name for every classifier taking part in the pipeline:
@@ -62,10 +62,10 @@ classifiers = [
     # ['light', run_fresh_prince],
     # ['light', run_ts_fresh],
     # ['light', run_weasel_d],
-    # ['default', run_tde],
+    ['default', run_tde],
     # ['heavy', run_resnet],
     # ['heavy', run_hivecotev2],
-    ['heavy', run_inception_time],
+    # ['heavy', run_inception_time],
 ]
 
 # Extracts types of possible filters to pick from later:
