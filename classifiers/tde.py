@@ -27,7 +27,7 @@ def run_tde(
     clearML = True,
     params = {
         'k': 1,
-        'K': 10,
+        'K': 5,
         'country': 0,
         'city': 0,
         'category': None,
@@ -41,14 +41,6 @@ def run_tde(
     import numpy as np
     import pandas as pd
     from classifiers.load_fold import load_fold
-
-    params = {
-        'k': 1,
-        'K': 10,
-        'country': 0,
-        'city': 0,
-        'category': None,
-    }
 
     if clearML:
         if task==None:
