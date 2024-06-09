@@ -9,7 +9,7 @@ from clearml import Task
 def fresh_prince (X_train, y_train, X_test, y_test):
 
     clf_freshPRINCE = FreshPRINCE(
-    default_fc_parameters="minimal",
+    default_fc_parameters="comprehensive",
     n_estimators=5,
     )
     clf_freshPRINCE.fit(X_train, y_train)

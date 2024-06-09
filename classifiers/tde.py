@@ -9,9 +9,9 @@ from clearml import Task
 def tde (X_train, y_train, X_test, y_test):
 
     clf_TDE = TemporalDictionaryEnsemble(
-        n_parameter_samples=10,
-        max_ensemble_size=3,
-        randomly_selected_params=5,
+        n_parameter_samples=250,
+        max_ensemble_size=50,
+        randomly_selected_params=50,
     ) 
     clf_TDE.fit(X_train, y_train) 
     tde_pred = clf_TDE.predict(X_test)
