@@ -152,7 +152,7 @@ K = 5
 # Creates pipeline controller:
 pipe = PipelineController(
     project='PopularTimesFold/Classifier/Pipelines',  # NOTE: pipeline tasks will be created in this project.
-    name=f'City by city {K}-fold', # NOTE: edit this if changing filter mode below.
+    name=f'Country by country {K}-fold', # NOTE: edit this if changing filter mode below.
     version="1.0"
 )
 
@@ -163,10 +163,10 @@ date_time = now.strftime('%Y-%d-%m_%H-%M-%S')
 # NOTE: Pick one out of the filter modes below to create the pipeline architecture:
 # for country, city, category in unique_categories: # This one doesn't make sense!
 #     create_tasks(K, country, city, category)
-for country, city in unique_cities:               # This one trains models city by city.
-    create_tasks(K, country, city)
-# for country in unique_countries:                    # This one trains models country by country.
-#     create_tasks(K, country)
+# for country, city in unique_cities:               # This one trains models city by city.
+#     create_tasks(K, country, city)
+for country in unique_countries:                    # This one trains models country by country.
+    create_tasks(K, country)
 # create_tasks(K)                                   # This one trains models with full dataset.
 
 # Initializes task queue from pipeline architecture:

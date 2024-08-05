@@ -54,26 +54,39 @@ def create_tasks(K, country=None, city=None, category=None):
 # from classifiers.fresh_prince import run_fresh_prince
 # from classifiers.ts_fresh import run_ts_fresh
 # from classifiers.hivecotev2 import run_hivecotev2
-from classifiers.weasel_d import run_weasel_d
-# from classifiers.resnet import run_resnet
+# from classifiers.weasel_d import run_weasel_d
+from classifiers.resnet import run_resnet
 # from classifiers.tde import run_tde
 # from classifiers.inception_time import run_inception_time
+# from classifiers.drcif2 import run_DrCIF
+# from classifiers.multirocket import run_multirocket
+# from classifiers.rdst import run_rdst
+# from classifiers.ridgecv import run_ridge_cv
+# from classifiers.rSTSF import run_rSTSF
+# from classifiers.elastic_ensemble import run_elastic_ensemble
 
 
 # Queue name and task name for every classifier taking part in the pipeline:
 #ALEXANDRE: Aqui você também deve descomentar os classificadores que for rodar
 #           rodar 1 por vez
 #           caso o classificador não esteja na lista, basta incluí-lo conforme os modelos abaixo
-#           caso não saiba se é "light", "default" ou "heavy", pode cdeixá-lo como "default"
+#           caso não saiba se é "light", "default" ou "heavy", pode deixá-lo como "default"
 
 classifiers = [
     # ['light', run_fresh_prince],
     # ['light', run_ts_fresh],
-    ['light', run_weasel_d],
-    # ['default', run_tde],
-    # ['heavy', run_resnet],
+    # ['light', run_weasel_d],
+    # ['heavy', run_tde],
+    ['heavy', run_resnet],
     # ['heavy', run_hivecotev2],
     # ['heavy', run_inception_time],
+    # ['light', run_DrCIF],
+    # ['light', run_multirocket],
+    # ['light', run_rdst],
+    # ['light', run_ridge_cv],
+    # ['light', run_rSTSF],
+    # ['light', run_MrSQM],
+    # ['heavy', run_elastic_ensemble],
 ]
 
 # Extracts types of possible filters to pick from later:
@@ -95,9 +108,14 @@ date_time = now.strftime('%Y-%d-%m_%H-%M-%S')
 # for country, city, category in unique_categories: # This one doesn't make sense!
 #     create_tasks(K, country, city, category)
 filters_means = []
-for country in unique_countries:               # This one trains models country by country.
-    means = create_tasks(K, country)
+
+for country, city in unique_cities:               # This one trains models city by city.
+    means = create_tasks(K, country, city)
     filters_means.append(means)
+
+# for country in unique_countries:               # This one trains models country by country.
+#     means = create_tasks(K, country)
+#     filters_means.append(means)
 
 metrics =  ['accuracy_score','f1_score','precision_score','recall_score']
 

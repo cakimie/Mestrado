@@ -2,22 +2,30 @@ from sklearn.metrics import precision_score
 from sklearn.metrics import recall_score
 from sklearn.metrics import accuracy_score
 from sklearn.metrics import f1_score
-from aeon.classification.shapelet_based import RDSTClassifier
+from aeon.classification.compose import ChannelEnsembleClassifier
+from aeon.classification.interval_based import DrCIFClassifier
 
-def rdst (X_train, y_train, X_test, y_test):
 
-    clf_rdst = RDSTClassifier()
-    clf_rdst.fit(X_train, y_train)
-    rdst_pred = clf_rdst.predict(X_test)
-    
+def DrCIF (X_train, y_train, X_test, y_test):
+
+    cls_DrCIF = ChannelEnsembleClassifier(
+        estimators=[
+            ("DrCIF0", DrCIFClassifier(n_estimators=5, n_intervals=2), [0]),
+            #("ROCKET3", RocketClassifier(num_kernels=1000), [3, 4]),
+        ]
+    )
+
+    cls_DrCIF.fit(X_train, y_train)
+    DrCIF_pred = cls_DrCIF.predict(X_test)
+
     return {
-        'accuracy_score': accuracy_score(y_test, rdst_pred), 
-        'f1_score': f1_score(y_test, rdst_pred, average='weighted'), 
-        'precision_score': precision_score(y_test, rdst_pred, average='weighted'), 
-        'recall_score': recall_score(y_test, rdst_pred, average='weighted'),
+        'accuracy_score': accuracy_score(y_test, DrCIF_pred), 
+        'f1_score': f1_score(y_test, DrCIF_pred, average='weighted'), 
+        'precision_score': precision_score(y_test, DrCIF_pred, average='weighted'), 
+        'recall_score': recall_score(y_test, DrCIF_pred, average='weighted'),
     }
 
-def run_rdst(
+def run_DrCIF(
     clearML = True,
     params = {
         'k': 1,
@@ -27,7 +35,7 @@ def run_rdst(
         'category': None,
     },
     task=None,
-    task_name="rdst",
+    task_name="DrCIF",
 ):
     import time
     start_time = time.time()
@@ -38,7 +46,7 @@ def run_rdst(
 
     if clearML:
         if task==None:
-            task = Task.init(project_name='PopularTimesFold/Classifier', task_name="rdst")
+            task = Task.init(project_name='PopularTimesFold/Classifier', task_name="DrCIF")
         task.connect(params)
 
     df = pd.read_csv('weekdays_datasets/df_timeseries.csv')
@@ -54,7 +62,7 @@ def run_rdst(
     
     # Executes main function:
     main_time = time.time()
-    results = rdst(X_train, y_train, X_test, y_test)
+    results = DrCIF(X_train, y_train, X_test, y_test)
     if clearML:
         task.get_logger().report_scalar('execution_time', 'main', iteration=0, value=time.time() - main_time)
         # Reports results:
@@ -64,4 +72,4 @@ def run_rdst(
     return results
 
 if __name__ == '__main__':
-    run_rdst()
+    run_DrCIF()
