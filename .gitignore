@@ -13,4 +13,7 @@ timeseries.zip
 weekdays_datasets.zip
 classifiers/logs
 
+TO DO.txt
+
 *.pkl
+**/.DS_Store
