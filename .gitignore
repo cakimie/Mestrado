@@ -3,6 +3,9 @@ __pycache__/
 Papers/
 raw.githubusercontent.com/
 resultados sktime/
+input/
+output/
+classifiers/logs/
 business_names.zip
 reviews.zip
 signatures.zip
