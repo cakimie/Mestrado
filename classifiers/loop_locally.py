@@ -53,9 +53,9 @@ def create_tasks(K, country=None, city=None, category=None):
 
 # from classifiers.fresh_prince import run_fresh_prince
 # from classifiers.ts_fresh import run_ts_fresh
-# from classifiers.hivecotev2 import run_hivecotev2
+from classifiers.hivecotev2 import run_hivecotev2
 # from classifiers.weasel_d import run_weasel_d
-from classifiers.resnet import run_resnet
+# from classifiers.resnet import run_resnet
 # from classifiers.tde import run_tde
 # from classifiers.inception_time import run_inception_time
 # from classifiers.drcif2 import run_DrCIF
@@ -77,8 +77,8 @@ classifiers = [
     # ['light', run_ts_fresh],
     # ['light', run_weasel_d],
     # ['heavy', run_tde],
-    ['heavy', run_resnet],
-    # ['heavy', run_hivecotev2],
+    # ['heavy', run_resnet],
+    ['heavy', run_hivecotev2],
     # ['heavy', run_inception_time],
     # ['light', run_DrCIF],
     # ['light', run_multirocket],
@@ -109,13 +109,13 @@ date_time = now.strftime('%Y-%d-%m_%H-%M-%S')
 #     create_tasks(K, country, city, category)
 filters_means = []
 
-for country, city in unique_cities:               # This one trains models city by city.
-    means = create_tasks(K, country, city)
-    filters_means.append(means)
-
-# for country in unique_countries:               # This one trains models country by country.
-#     means = create_tasks(K, country)
+# for country, city in unique_cities:               # This one trains models city by city.
+#     means = create_tasks(K, country, city)
 #     filters_means.append(means)
+
+for country in unique_countries:               # This one trains models country by country.
+    means = create_tasks(K, country)
+    filters_means.append(means)
 
 metrics =  ['accuracy_score','f1_score','precision_score','recall_score']
 
