@@ -22,10 +22,10 @@ def proximity_forest (X_train, y_train, X_test, y_test):
     }
 
 def run_proximity_forest(
-    clearML = True,
+    clearML = False,
     params = {
         'k': 1,
-        'K': 10,
+        'K': 5,
         'country': 0,
         'city': 0,
         'category': None,
@@ -39,6 +39,9 @@ def run_proximity_forest(
     import numpy as np
     import pandas as pd
     from classifiers.load_fold import load_fold
+    import sys
+
+    sys.setrecursionlimit(30000)
 
     if clearML:
         if task==None:
