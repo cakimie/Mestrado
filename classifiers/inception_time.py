@@ -10,9 +10,9 @@ from clearml import Task
 
 def inception_time (X_train, y_train, X_test, y_test):  
 
-    sns.set_style("whitegrid")
+    # sns.set_style("whitegrid")
     np.unique(y_train)
-    network = InceptionTimeClassifier(n_epochs=10000, verbose=False)
+    network = InceptionTimeClassifier(n_epochs=100, verbose=False, batch_size=64, depth=12, kernel_size=32)
     network.fit(X_train, y_train)
     inception_pred = network.predict(X_test) 
 

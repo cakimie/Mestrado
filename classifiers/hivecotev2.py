@@ -73,6 +73,9 @@ def run_hivecotev2(
     results = hivecotev2(X_train, y_train, X_test, y_test)
     if clearML:
         task.get_logger().report_scalar('execution_time', 'main', iteration=0, value=time.time() - main_time)
+        # Reports results:
+        for key, value in results.items():
+            task.get_logger().report_scalar('metrics', key, iteration=0, value=value)
         task.close()
     return results
 
