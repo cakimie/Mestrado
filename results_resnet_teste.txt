@@ -1,0 +1,23 @@
+2024-09-01 08:48:57.048515: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+2024-09-01 08:49:06.386591: I external/local_xla/xla/stream_executor/cuda/cuda_executor.cc:998] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero. See more at https://github.com/torvalds/linux/blob/v6.0/Documentation/ABI/testing/sysfs-bus-pci#L344-L355
+2024-09-01 08:49:06.407385: W tensorflow/core/common_runtime/gpu/gpu_device.cc:2251] Cannot dlopen some GPU libraries. Please make sure the missing libraries mentioned above are installed properly if you would like to use GPU. Follow the guide at https://www.tensorflow.org/install/gpu for how to download and setup the required libraries for your platform.
+Skipping registering GPU devices...
+(1554, 24) (519, 24)
+[1m 1/33[0m [37m━━━━━━━━━━━━━━━━━━━━[0m [1m29s[0m 936ms/step[1m 3/33[0m [32m━[0m[37m━━━━━━━━━━━━━━━━━━━[0m [1m0s[0m 29ms/step  [1m 8/33[0m [32m━━━━[0m[37m━━━━━━━━━━━━━━━━[0m [1m0s[0m 16ms/step[1m13/33[0m [32m━━━━━━━[0m[37m━━━━━━━━━━━━━[0m [1m0s[0m 14ms/step[1m18/33[0m [32m━━━━━━━━━━[0m[37m━━━━━━━━━━[0m [1m0s[0m 13ms/step[1m23/33[0m [32m━━━━━━━━━━━━━[0m[37m━━━━━━━[0m [1m0s[0m 13ms/step[1m28/33[0m [32m━━━━━━━━━━━━━━━━[0m[37m━━━━[0m [1m0s[0m 13ms/step[1m33/33[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 21ms/step[1m33/33[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m2s[0m 21ms/step
+/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/deep_learning/base.py:103: RuntimeWarning: invalid value encountered in divide
+  probs = probs / probs.sum(axis=1, keepdims=1)
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/runpy.py", line 197, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/usr/local/lib/python3.9/runpy.py", line 87, in _run_code
+    exec(code, run_globals)
+  File "/home/rui/Desktop/temp/carolina-mestrado/classifiers/resnet_teste.py", line 29, in <module>
+    y_pred_resnet = clf_resnet.predict(X_test) 
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 309, in predict
+    y_pred_inner = self._predict(X)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/deep_learning/base.py", line 76, in _predict
+    [
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/deep_learning/base.py", line 77, in <listcomp>
+    self.classes_[int(rng.choice(np.flatnonzero(prob == prob.max())))]
+  File "mtrand.pyx", line 934, in numpy.random.mtrand.RandomState.choice
+ValueError: 'a' cannot be empty unless no samples are taken

@@ -1,0 +1,15 @@
+2024-09-02 11:33:37.596099: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+2024-09-02 11:33:54.945608: I external/local_xla/xla/stream_executor/cuda/cuda_executor.cc:998] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero. See more at https://github.com/torvalds/linux/blob/v6.0/Documentation/ABI/testing/sysfs-bus-pci#L344-L355
+2024-09-02 11:33:55.076912: W tensorflow/core/common_runtime/gpu/gpu_device.cc:2251] Cannot dlopen some GPU libraries. Please make sure the missing libraries mentioned above are installed properly if you would like to use GPU. Follow the guide at https://www.tensorflow.org/install/gpu for how to download and setup the required libraries for your platform.
+Skipping registering GPU devices...
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/runpy.py", line 197, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/usr/local/lib/python3.9/runpy.py", line 87, in _run_code
+    exec(code, run_globals)
+  File "/home/rui/Desktop/temp/carolina-mestrado/classifiers/resnet_teste.py", line 53, in <module>
+    y_pred_resnet = safe_predict(clf_resnet, X_test)
+  File "/home/rui/Desktop/temp/carolina-mestrado/classifiers/resnet_teste.py", line 34, in safe_predict
+    probs = model.model.predict(X)
+AttributeError: 'ResNetClassifier' object has no attribute 'model'
+(1554, 24) (519, 24)

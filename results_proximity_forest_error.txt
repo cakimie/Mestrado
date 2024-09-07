@@ -1,0 +1,1962 @@
+ClearML Task: created new task id=7d3aed4cb65d4f7e90a8450195d29d82
+2024-09-01 08:55:30.007856: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+Traceback (most recent call last):
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/numba/cloudpickle/cloudpickle.py", line 1262, in dump
+    return super().dump(obj)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/numba/core/serialize.py", line 197, in reducer_override
+    return super().reducer_override(obj)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/numba/cloudpickle/cloudpickle.py", line 1347, in reducer_override
+    return self._function_reduce(obj)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/numba/cloudpickle/cloudpickle.py", line 1225, in _function_reduce
+    return self._dynamic_function_reduce(obj)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/numba/cloudpickle/cloudpickle.py", line 1210, in _dynamic_function_reduce
+    state = _function_getstate(func)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/numba/cloudpickle/cloudpickle.py", line 721, in _function_getstate
+    f_globals_ref = _extract_code_globals(func.__code__)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/numba/cloudpickle/cloudpickle.py", line 320, in _extract_code_globals
+    out_names = _extract_code_globals_cache.get(co)
+  File "/usr/local/lib/python3.9/weakref.py", line 442, in get
+    return self.data.get(ref(key),default)
+RecursionError: maximum recursion depth exceeded in comparison
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/runpy.py", line 197, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/usr/local/lib/python3.9/runpy.py", line 87, in _run_code
+    exec(code, run_globals)
+  File "/home/rui/Desktop/temp/carolina-mestrado/classifiers/proximity_forest.py", line 71, in <module>
+    run_proximity_forest()
+  File "/home/rui/Desktop/temp/carolina-mestrado/classifiers/proximity_forest.py", line 61, in run_proximity_forest
+    results = proximity_forest(X_train, y_train, X_test, y_test)
+  File "/home/rui/Desktop/temp/carolina-mestrado/classifiers/proximity_forest.py", line 14, in proximity_forest
+    clf_pf.fit(X_train, y_train) 
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1466, in _fit
+    self.trees = [
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1467, in <listcomp>
+    self._fit_tree(
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1435, in _fit_tree
+    tree.fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1117, in _fit
+    sub_tree.fit(sub_X, sub_y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/base.py", line 262, in fit
+    self._fit(X, y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1098, in _fit
+    self.stump = self.find_stump()
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 1208, in find_stump
+    stump.grow()
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 889, in grow
+    indices = self.find_closest_exemplar_indices(self.X)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 878, in find_closest_exemplar_indices
+    distances = self.distance_to_exemplars(X)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 834, in distance_to_exemplars
+    distances = [
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 835, in <listcomp>
+    self._distance_to_exemplars_inst(
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 763, in _distance_to_exemplars_inst
+    distance = distance_measure(instance, exemplar)  # , min_distance)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 148, in distance
+    return distance_measure(instance_a, instance_b, **params)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/classification/distance_based/_proximity_forest.py", line 174, in distance
+    return distance_measure(instance_a, instance_b, **params)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/distances/_distance.py", line 834, in msm_distance
+    return distance(x, y, metric="msm", **format_kwargs)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/sktime/distances/_distance.py", line 1969, in distance
+    return _metric_callable(_x, _y)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/numba/core/dispatcher.py", line 487, in _compile_for_args
+    raise e
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/numba/core/dispatcher.py", line 420, in _compile_for_args
+    return_val = self.compile(tuple(argtypes))
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/numba/core/dispatcher.py", line 938, in compile
+    cres = self._cache.load_overload(sig, self.targetctx)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/numba/core/caching.py", line 635, in load_overload
+    return self._load_overload(sig, target_context)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/numba/core/caching.py", line 641, in _load_overload
+    key = self._index_key(sig, target_context.codegen())
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/numba/core/caching.py", line 690, in _index_key
+    cvarbytes = dumps(cvars)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/numba/core/serialize.py", line 58, in dumps
+    p.dump(obj)
+  File "/home/rui/Desktop/temp/carolina-mestrado/.venv/lib/python3.9/site-packages/numba/cloudpickle/cloudpickle.py", line 1266, in dump
+    raise pickle.PicklingError(msg) from e
+_pickle.PicklingError: Could not pickle object as excessively deep recursion required.
+ClearML results page: http://localhost:8080/projects/91446c0ee10b48d79a60831470c2ef96/experiments/7d3aed4cb65d4f7e90a8450195d29d82/output/log
+timeseries_0_0_f1-5 (871, 24) (871,) (218, 24) (218,)
+Loaded: timeseries_0_0_f1-5
