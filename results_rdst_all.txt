@@ -1,0 +1,29 @@
+/Users/carolina/Desktop/Mestrado/.venv/lib/python3.9/site-packages/numpy/core/fromnumeric.py:3464: RuntimeWarning: Mean of empty slice.
+  return _methods._mean(a, axis=axis, dtype=dtype,
+/Users/carolina/Desktop/Mestrado/.venv/lib/python3.9/site-packages/numpy/core/_methods.py:192: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+Classifier mean accuracy_score=nan
+Classifier mean f1_score=nan
+Classifier mean precision_score=nan
+Classifier mean recall_score=nan
+timeseries_f1-5 (10163, 24) (10163,) (2541, 24) (2541,)
+Loaded: timeseries_f1-5
+<function run_rdst at 0x1240db040>_f1-5 {'accuracy_score': 0.6942148760330579, 'f1_score': 0.6937580490503694, 'precision_score': 0.6944608152027093, 'recall_score': 0.6942148760330579}
+timeseries_f2-5 (10163, 24) (10163,) (2541, 24) (2541,)
+Loaded: timeseries_f2-5
+<function run_rdst at 0x1240db040>_f2-5 {'accuracy_score': 0.7079889807162535, 'f1_score': 0.7059359829115976, 'precision_score': 0.7082851622128723, 'recall_score': 0.7079889807162535}
+timeseries_f3-5 (10163, 24) (10163,) (2541, 24) (2541,)
+Loaded: timeseries_f3-5
+<function run_rdst at 0x1240db040>_f3-5 {'accuracy_score': 0.6843762298307753, 'f1_score': 0.6822213881161667, 'precision_score': 0.6845055960018177, 'recall_score': 0.6843762298307753}
+timeseries_f4-5 (10163, 24) (10163,) (2541, 24) (2541,)
+Loaded: timeseries_f4-5
+<function run_rdst at 0x1240db040>_f4-5 {'accuracy_score': 0.6973632428177883, 'f1_score': 0.6961245135535485, 'precision_score': 0.696585041550009, 'recall_score': 0.6973632428177883}
+timeseries_f5-5 (10164, 24) (10164,) (2540, 24) (2540,)
+Loaded: timeseries_f5-5
+<function run_rdst at 0x1240db040>_f5-5 {'accuracy_score': 0.6948818897637795, 'f1_score': 0.6934233215677662, 'precision_score': 0.6941607158566842, 'recall_score': 0.6948818897637795}
+<function run_rdst at 0x1240db040>
+           accuracy_score mean=0.6957650 std=0.0075481 t_interval=(0.674808236861681, 0.7167218508029809)
+           f1_score mean=0.6942927 std=0.0075588 t_interval=(0.673305964784999, 0.7152793372947803)
+           precision_score mean=0.6955995 std=0.0075939 t_interval=(0.6745153414144692, 0.716683590915168)
+           recall_score mean=0.6957650 std=0.0075481 t_interval=(0.674808236861681, 0.7167218508029809)
+Done!
