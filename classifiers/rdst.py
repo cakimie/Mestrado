@@ -18,7 +18,7 @@ def rdst (X_train, y_train, X_test, y_test):
     }
 
 def run_rdst(
-    clearML = True,
+    clearML = False,
     params = {
         'k': 1,
         'K': 10,

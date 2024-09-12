@@ -40,7 +40,7 @@ def run_resnet(
 
     if clearML:
         if task==None:
-            task = Task.init(project_name='PopularTimesFold/Classifier', task_name="resnet")
+            task = Task.init(project_name='PopularTimesFold/Classifier', task_name=task_name)
         task.connect(params)
 
     df = pd.read_csv('weekdays_datasets/df_timeseries.csv')

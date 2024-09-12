@@ -1,0 +1,5 @@
+Classifier,best of M1 and M2 models,HIVECOTEV2,Hydra,MultiRocket,Proximity Forest,Elastic Ensemble,Fresh Prince,TSFresh,DrCIF,rSTSF,RDST,MrSQM,Weasel-D,TDE,Inception Time,ResNet,ridge_cv
+Accuracy,0.700,0.680,0.700,0.693,,0.641,0.567,0.690,0.665,0.701,0.699,0.658,0.708,0.712,0.164,,0.696
+F1-Score,0.690,0.670,0.693,0.694,,0.642,0.565,0.690,0.664,0.697,0.691,0.656,0.703,0.711,0.079,,0.681
+Precision,0.660,0.676,0.699,0.701,,0.648,0.568,0.693,0.668,0.698,0.697,0.657,0.707,0.723,0.427,,0.684
+Recall,0.760,0.680,0.700,0.693,,0.641,0.567,0.690,0.665,0.701,0.699,0.658,0.708,0.712,0.164,,0.696
