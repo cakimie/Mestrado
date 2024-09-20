@@ -43,11 +43,11 @@ def run_weasel_d(
     df_country_1 = df[df['country'] == 1]  # Dados do país 1
 
     # Assumimos que as colunas X (features) estão no DataFrame e y é a coluna de rótulo (supondo que se chama 'label')
-    X_train = df_country_0.drop(columns=['label'])  # Features do país 0
-    y_train = df_country_0['label']  # Rótulos do país 0
+    X_train = df_country_0.drop(columns=['category'])  # Features do país 0
+    y_train = df_country_0['category']  # Rótulos do país 0
 
-    X_test = df_country_1.drop(columns=['label'])  # Features do país 1
-    y_test = df_country_1['label']  # Rótulos do país 1
+    X_test = df_country_1.drop(columns=['category'])  # Features do país 1
+    y_test = df_country_1['category']  # Rótulos do país 1
 
     # Treinar no país 0 e testar no país 1
     print(f'Treinando no país 0 e testando no país 1')
@@ -55,11 +55,11 @@ def run_weasel_d(
 
     # Agora inverte, treinando no país 1 e testando no país 0
     print(f'Treinando no país 1 e testando no país 0')
-    X_train = df_country_1.drop(columns=['label'])  # Features do país 1
-    y_train = df_country_1['label']  # Rótulos do país 1
+    X_train = df_country_1.drop(columns=['category'])  # Features do país 1
+    y_train = df_country_1['category']  # Rótulos do país 1
 
-    X_test = df_country_0.drop(columns=['label'])  # Features do país 0
-    y_test = df_country_0['label']  # Rótulos do país 0
+    X_test = df_country_0.drop(columns=['category'])  # Features do país 0
+    y_test = df_country_0['category']  # Rótulos do país 0
 
     results_inverted = weasel_d(X_train, y_train, X_test, y_test)
 
