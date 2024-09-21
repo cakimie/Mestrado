@@ -49,34 +49,30 @@ def run_tde(
 
     df = pd.read_csv('weekdays_datasets/df_timeseries.csv')
 
-    # Separar os dados por país
-    df_country_0 = df[df['country'] == 0]  # Dados do país 0
-    df_country_1 = df[df['country'] == 1]  # Dados do país 1
+
+    df_country_0 = df[df['country'] == 0] 
+    df_country_1 = df[df['country'] == 1] 
 
     print(df_country_0)
 
-    # Assumimos que as colunas X (features) estão no DataFrame e y é a coluna de rótulo (supondo que se chama 'category')
-    X_train = df_country_0.drop(columns=['category'])  # Features do país 0
-    y_train = df_country_0['category']  # Rótulos do país 0
+    X_train = df_country_0.drop(columns=['category']) 
+    y_train = df_country_0['category'] 
 
-    X_test = df_country_1.drop(columns=['category'])  # Features do país 1
-    y_test = df_country_1['category']  # Rótulos do país 1
+    X_test = df_country_1.drop(columns=['category']) 
+    y_test = df_country_1['category'] 
 
-    # Treinar no país 0 e testar no país 1
     print(f'Treinando no país 0 e testando no país 1')
     results = tde(X_train, y_train, X_test, y_test)
 
-    # Agora inverte, treinando no país 1 e testando no país 0
     print(f'Treinando no país 1 e testando no país 0')
-    X_train = df_country_1.drop(columns=['category'])  # Features do país 1
-    y_train = df_country_1['category']  # Rótulos do país 1
+    X_train = df_country_1.drop(columns=['category']) 
+    y_train = df_country_1['category'] 
 
-    X_test = df_country_0.drop(columns=['category'])  # Features do país 0
-    y_test = df_country_0['category']  # Rótulos do país 0
+    X_test = df_country_0.drop(columns=['category']) 
+    y_test = df_country_0['category'] 
 
     results_inverted = tde(X_train, y_train, X_test, y_test)
 
-    # Relatar resultados no ClearML
     if clearML:
         task.get_logger().report_scalar('execution_time', 'main', iteration=0, value=time.time() - start_time)
         for key, value in results.items():
