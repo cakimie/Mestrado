@@ -54,7 +54,7 @@ def create_tasks(K, country=None, city=None, category=None):
 # from classifiers.fresh_prince import run_fresh_prince
 # from classifiers.ts_fresh import run_ts_fresh
 # from classifiers.hivecotev2 import run_hivecotev2
-from classifiers.weasel_d import run_weasel_d
+# from classifiers.weasel_d import run_weasel_d
 # from classifiers.resnet import run_resnet
 # from classifiers.tde import run_tde
 # from classifiers.inception_time import run_inception_time
@@ -67,6 +67,12 @@ from classifiers.weasel_d import run_weasel_d
 # from classifiers.proximity_forest import run_proximity_forest
 # from classifiers.hydra_ridge import run_hydra_ridge
 
+#treino com um país e teste com outro (vice-versa)
+from classifiers.weasel_d_inverted import run_weasel_d
+# from classifiers.tde_inverted import run_tde
+# from classifiers.hydra_ridge_inverted import run_hydra_ridge
+# from classifiers.rdst_inverted import run_rdst
+# from classifiers.rSTSF_inverted import run_rSTSF
 
 # Queue name and task name for every classifier taking part in the pipeline:
 #ALEXANDRE: Aqui você também deve descomentar os classificadores que for rodar
