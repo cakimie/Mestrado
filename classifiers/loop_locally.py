@@ -81,12 +81,12 @@ from classifiers.weasel_d_inverted import run_weasel_d
 #           caso não saiba se é "light", "default" ou "heavy", pode deixá-lo como "default"
 
 classifiers = [
-    # ['light', run_fresh_prince],
-    # ['light', run_ts_fresh],
-    ['light', run_weasel_d],
-    # ['heavy', run_tde],
+    # ['light', run_fresh_prince], ok
+    # ['light', run_ts_fresh], ok
+    # ['light', run_weasel_d], ok
+    # ['heavy', run_tde], ok
     # ['heavy', run_resnet],
-    # ['heavy', run_hivecotev2],
+    # ['heavy', run_hivecotev2], ok
     # ['heavy', run_inception_time],
     # ['light', run_DrCIF],
     # ['light', run_multirocket],
@@ -94,7 +94,7 @@ classifiers = [
     # ['light', run_ridge_cv],
     # ['light', run_rSTSF],
     # ['light', run_MrSQM],
-    # ['heavy', run_elastic_ensemble],
+    # ['heavy', run_elastic_ensemble], ok
     # ['heavy', run_proximity_forest],
     # ['heavy', run_hydra_ridge],
 ]
@@ -119,9 +119,9 @@ date_time = now.strftime('%Y-%d-%m_%H-%M-%S')
 #     create_tasks(K, country, city, category)
 filters_means = []
 
-# for country, city in unique_cities:               # This one trains models city by city.
-#     means = create_tasks(K, country, city)
-#     filters_means.append(means)
+for country, city in unique_cities:               # This one trains models city by city.
+    means = create_tasks(K, country, city)
+    filters_means.append(means)
 
 # for country in unique_countries:               # This one trains models country by country.
 #     means = create_tasks(K, country)
@@ -137,6 +137,6 @@ for m,metric in enumerate(metrics):
 
 # for country in unique_countries:                    # This one trains models country by country.
 #     create_tasks(K, country)
-create_tasks(K)                                   # This one trains models with full dataset.
+# create_tasks(K)                                   # This one trains models with full dataset.
 
 print('Done!')
