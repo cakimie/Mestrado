@@ -43,7 +43,7 @@ def run_hydra_ridge(
     clearML = False,
     params = {
         'k': 1,
-        'K': 10,
+        'K': 5,
         'country': 0,
         'city': 0,
         'category': None,

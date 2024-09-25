@@ -4,6 +4,20 @@ import scipy.stats as stats
 
 from clearml import Task
 
+import torch
+
+if torch.cuda.is_available():
+    print("GPU is available")
+else:
+    print("GPU is not available")
+
+if torch.cuda.is_available():
+    device = torch.device("cuda")
+else:
+    device = torch.device("cpu")
+
+x = torch.randn(10, 10).to(device)
+
 def create_tasks(K, country=None, city=None, category=None):
     filter_str = ''
     if country is not None:
@@ -68,10 +82,10 @@ def create_tasks(K, country=None, city=None, category=None):
 # from classifiers.hydra_ridge import run_hydra_ridge
 
 #treino com um país e teste com outro (vice-versa)
-from classifiers.weasel_d_inverted import run_weasel_d
+# from classifiers.weasel_d_inverted import run_weasel_d
 # from classifiers.tde_inverted import run_tde
 # from classifiers.hydra_ridge_inverted import run_hydra_ridge
-# from classifiers.rdst_inverted import run_rdst
+from classifiers.rdst_inverted import run_rdst
 # from classifiers.rSTSF_inverted import run_rSTSF
 
 # Queue name and task name for every classifier taking part in the pipeline:
@@ -90,7 +104,7 @@ classifiers = [
     # ['heavy', run_inception_time],
     # ['light', run_DrCIF],
     # ['light', run_multirocket],
-    # ['light', run_rdst],
+    ['light', run_rdst],
     # ['light', run_ridge_cv],
     # ['light', run_rSTSF],
     # ['light', run_MrSQM],
@@ -119,13 +133,13 @@ date_time = now.strftime('%Y-%d-%m_%H-%M-%S')
 #     create_tasks(K, country, city, category)
 filters_means = []
 
-for country, city in unique_cities:               # This one trains models city by city.
-    means = create_tasks(K, country, city)
-    filters_means.append(means)
-
-# for country in unique_countries:               # This one trains models country by country.
-#     means = create_tasks(K, country)
+# for country, city in unique_cities:               # This one trains models city by city.
+#     means = create_tasks(K, country, city)
 #     filters_means.append(means)
+
+for country in unique_countries:               # This one trains models country by country.
+    means = create_tasks(K, country)
+    filters_means.append(means)
 
 metrics =  ['accuracy_score','f1_score','precision_score','recall_score']
 
