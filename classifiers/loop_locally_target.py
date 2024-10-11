@@ -57,7 +57,7 @@ from classifiers.weasel_d import run_weasel_d
 # from classifiers.hydra_ridge import run_hydra_ridge
 
 classifiers = [
-    ['light', run_weasel_d],
+    ['heavy', run_weasel_d],
     # ['light', run_hydra_ridge],
     # ['light', run_tde],
     # ['light', run_rdst],
