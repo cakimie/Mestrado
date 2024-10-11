@@ -30,6 +30,7 @@ def run_weasel_d(
     },
     task=None,
     task_name="weasel_d",
+    dataset_filename=None,
 ):
     import time
     start_time = time.time()
@@ -43,7 +44,11 @@ def run_weasel_d(
             task = Task.init(project_name='PopularTimesFold/Classifier', task_name="weasel_d")
         task.connect(params)
 
-    df = pd.read_csv('weekdays_datasets/df_timeseries.csv')
+    if dataset_filename:
+        df = pd.read_csv(dataset_filename)
+    else:
+        df = pd.read_csv('weekdays_datasets/df_timeseries.csv')
+
     name, X_train, y_train, X_test, y_test = load_fold(
         df,
         params['k'],

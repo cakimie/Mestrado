@@ -3,6 +3,7 @@ from sklearn.metrics import recall_score
 from sklearn.metrics import accuracy_score
 from sklearn.metrics import f1_score
 from aeon.classification.shapelet_based import RDSTClassifier
+from clearml import Task
 
 def rdst (X_train, y_train, X_test, y_test):
 
@@ -28,6 +29,7 @@ def run_rdst(
     },
     task=None,
     task_name="rdst",
+    dataset_filename=None,
 ):
     import time
     start_time = time.time()
@@ -41,7 +43,11 @@ def run_rdst(
             task = Task.init(project_name='PopularTimesFold/Classifier', task_name="rdst")
         task.connect(params)
 
-    df = pd.read_csv('weekdays_datasets/df_timeseries.csv')
+    if dataset_filename:
+        df = pd.read_csv(dataset_filename)
+    else:
+        df = pd.read_csv('weekdays_datasets/df_timeseries.csv')
+
     name, X_train, y_train, X_test, y_test = load_fold(
         df,
         params['k'],

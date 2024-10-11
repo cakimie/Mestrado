@@ -6,7 +6,11 @@ def extract_x_y(df, country=None, city=None, category=None):
         (city is None     or df['city'] == city) &
         (category is None or df['category'] == category)
     ]
-    df_x = filtered_df.drop(columns=['id','country', 'city', 'category'])
+    df_x = filtered_df.drop(columns=['id', 'category'])
+    try:
+        df_x = filtered_df.drop(columns=['country', 'city'])
+    except:
+        pass
     return np.array(df_x), np.array(filtered_df['category'])
 
 # Extracts fold number 'k' out of 'K' folds for the specified filter:

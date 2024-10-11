@@ -34,6 +34,7 @@ def run_tde(
     },
     task=None,
     task_name="tde",
+    dataset_filename=None,
 ):
     import time
     start_time = time.time()
@@ -47,7 +48,11 @@ def run_tde(
             task = Task.init(project_name='PopularTimesFold/Classifier', task_name="tde")
         task.connect(params)
 
-    df = pd.read_csv('weekdays_datasets/df_timeseries.csv')
+    if dataset_filename:
+        df = pd.read_csv(dataset_filename)
+    else:
+        df = pd.read_csv('weekdays_datasets/df_timeseries.csv')
+
     name, X_train, y_train, X_test, y_test = load_fold(
         df,
         params['k'],

@@ -9,6 +9,7 @@ import numpy as np
 import torch
 from hydra import Hydra, SparseScaler
 from sklearn.linear_model import RidgeClassifierCV
+from clearml import Task
 
 def hydra_ridge (X_train, y_train, X_test, y_test):
 
@@ -48,6 +49,7 @@ def run_hydra_ridge(
     },
     task=None,
     task_name="hydra_ridge",
+    dataset_filename=None,
 ):
     import time
     start_time = time.time()
@@ -61,7 +63,11 @@ def run_hydra_ridge(
             task = Task.init(project_name='PopularTimesFold/Classifier', task_name="hydra_ridge")
         task.connect(params)
 
-    df = pd.read_csv('weekdays_datasets/df_timeseries.csv')
+    if dataset_filename:
+        df = pd.read_csv(dataset_filename)
+    else:
+        df = pd.read_csv('weekdays_datasets/df_timeseries.csv')
+
     name, X_train, y_train, X_test, y_test = load_fold(
         df,
         params['k'],
