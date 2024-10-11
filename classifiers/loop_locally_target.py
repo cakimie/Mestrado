@@ -52,11 +52,13 @@ def create_tasks(K, target=None):
 # ------------------------------ START ------------------------------------
 # Importação dos classificadores
 from classifiers.weasel_d import run_weasel_d
-# from classifiers.tde_target import run_tde
-# from classifiers.rdst_target import run_rdst
+# from classifiers.tde import run_tde
+# from classifiers.rdst import run_rdst
+# from classifiers.hydra_ridge import run_hydra_ridge
 
 classifiers = [
     ['light', run_weasel_d],
+    # ['light', run_hydra_ridge],
     # ['light', run_tde],
     # ['light', run_rdst],
 ]
@@ -69,8 +71,6 @@ date_time = now.strftime('%Y-%d-%m_%H-%M-%S')
 
 # Ajuste na lógica de criação de tarefas para usar a nova coluna target
 filters_means = []
-
-create_tasks(K)
 
 metrics = ['accuracy_score', 'f1_score', 'precision_score', 'recall_score']
 

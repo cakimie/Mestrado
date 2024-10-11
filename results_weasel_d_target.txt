@@ -1,0 +1,36 @@
+/Users/carolina/Desktop/Mestrado/.venv/lib/python3.9/site-packages/numpy/core/fromnumeric.py:3464: RuntimeWarning: Mean of empty slice.
+  return _methods._mean(a, axis=axis, dtype=dtype,
+/Users/carolina/Desktop/Mestrado/.venv/lib/python3.9/site-packages/numpy/core/_methods.py:192: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/Users/carolina/Desktop/Mestrado/.venv/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1344: UndefinedMetricWarning: Recall is ill-defined and being set to 0.0 in labels with no true samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/Users/carolina/Desktop/Mestrado/.venv/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1344: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/Users/carolina/Desktop/Mestrado/.venv/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1344: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+GPU is not available
+Classifier mean accuracy_score=nan
+Classifier mean f1_score=nan
+Classifier mean precision_score=nan
+Classifier mean recall_score=nan
+timeseries_f1-5 (10163, 24) (10163,) (2541, 24) (2541,)
+Loaded: timeseries_f1-5
+<function run_weasel_d at 0x129993310>_f1-5 {'accuracy_score': 0.452577725304998, 'f1_score': 0.4449060883806888, 'precision_score': 0.45724647158042364, 'recall_score': 0.452577725304998}
+timeseries_f2-5 (10163, 24) (10163,) (2541, 24) (2541,)
+Loaded: timeseries_f2-5
+<function run_weasel_d at 0x129993310>_f2-5 {'accuracy_score': 0.4462809917355372, 'f1_score': 0.43819393047522087, 'precision_score': 0.456874734876886, 'recall_score': 0.4462809917355372}
+timeseries_f3-5 (10163, 24) (10163,) (2541, 24) (2541,)
+Loaded: timeseries_f3-5
+<function run_weasel_d at 0x129993310>_f3-5 {'accuracy_score': 0.43565525383707204, 'f1_score': 0.4314351435257935, 'precision_score': 0.4555246265146325, 'recall_score': 0.43565525383707204}
+timeseries_f4-5 (10163, 24) (10163,) (2541, 24) (2541,)
+Loaded: timeseries_f4-5
+<function run_weasel_d at 0x129993310>_f4-5 {'accuracy_score': 0.4541519086973632, 'f1_score': 0.44615908578812125, 'precision_score': 0.4498881789462099, 'recall_score': 0.4541519086973632}
+timeseries_f5-5 (10164, 24) (10164,) (2540, 24) (2540,)
+Loaded: timeseries_f5-5
+<function run_weasel_d at 0x129993310>_f5-5 {'accuracy_score': 0.44133858267716536, 'f1_score': 0.4327330800273383, 'precision_score': 0.44877433037100983, 'recall_score': 0.44133858267716536}
+<function run_weasel_d at 0x129993310>
+           accuracy_score mean=0.4460009 std=0.0069071 t_interval=(0.42682364935257566, 0.4651781355482787)
+           f1_score mean=0.4386855 std=0.0060463 t_interval=(0.4218981492141553, 0.4554727820647097)
+           precision_score mean=0.4536617 std=0.0035992 t_interval=(0.4436687400433717, 0.463654596872293)
+           recall_score mean=0.4460009 std=0.0069071 t_interval=(0.42682364935257566, 0.4651781355482787)
+Done!

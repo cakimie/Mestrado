@@ -39,7 +39,7 @@ def hydra_ridge (X_train, y_train, X_test, y_test):
     }
 
 def run_hydra_ridge(
-    clearML = True,
+    clearML = False,
     params = {
         'k': 1,
         'K': 10,
