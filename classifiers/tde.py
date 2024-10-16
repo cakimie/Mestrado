@@ -24,7 +24,7 @@ def tde (X_train, y_train, X_test, y_test):
     }
 
 def run_tde(
-    clearML = True,
+    clearML = False,
     params = {
         'k': 1,
         'K': 5,
