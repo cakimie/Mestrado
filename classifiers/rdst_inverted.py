@@ -3,6 +3,7 @@ from sklearn.metrics import recall_score
 from sklearn.metrics import accuracy_score
 from sklearn.metrics import f1_score
 from aeon.classification.shapelet_based import RDSTClassifier
+from clearml import Task
 
 def rdst (X_train, y_train, X_test, y_test):
 
@@ -28,6 +29,7 @@ def run_rdst(
     },
     task=None,
     task_name="rdst",
+    dataset_filename=None,
 ):
     import time
     start_time = time.time()
@@ -41,7 +43,23 @@ def run_rdst(
             task = Task.init(project_name='PopularTimesFold/Classifier', task_name="rdst")
         task.connect(params)
 
-    df = pd.read_csv('weekdays_datasets/df_timeseries.csv')
+    if dataset_filename:
+        df = pd.read_csv(dataset_filename)
+    else:
+        df = pd.read_csv('weekdays_datasets/df_timeseries.csv')
+
+    name, X_train, y_train, X_test, y_test = load_fold(
+        df,
+        params['k'],
+        params['K'],
+        params['country'],
+        params['city'],
+        params['category'],
+    )
+    print(f'Loaded: {name}')
+    
+    # Executes main function:
+    main_time = time.time()
     
     df_country_0 = df[df['country'] == 0] 
     df_country_1 = df[df['country'] == 1] 
@@ -67,13 +85,11 @@ def run_rdst(
     results_inverted = rdst(X_train, y_train, X_test, y_test)
 
     if clearML:
-        task.get_logger().report_scalar('execution_time', 'main', iteration=0, value=time.time() - start_time)
+        task.get_logger().report_scalar('execution_time', 'main', iteration=0, value=time.time() - main_time)
+        # Reports results:
         for key, value in results.items():
-            task.get_logger().report_scalar('metrics', f'{key}_train_country_0_test_country_1', iteration=0, value=value)
-        for key, value in results_inverted.items():
-            task.get_logger().report_scalar('metrics', f'{key}_train_country_1_test_country_0', iteration=0, value=value)
+            task.get_logger().report_scalar('metrics', key, iteration=0, value=value)
         task.close()
-
     return results, results_inverted
 
 if __name__ == '__main__':

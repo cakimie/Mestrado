@@ -5,6 +5,7 @@ from sklearn.metrics import recall_score
 from sklearn.metrics import accuracy_score
 from sklearn.metrics import f1_score
 from rSTSF_functions import *
+from clearml import Task
 
 def rSTSF (X_train, y_train, X_test, y_test):
     agg_fns = [np.mean, np.std, np.polyfit, np.median, np.min, np.max, iqr, np.percentile, np.quantile]
@@ -123,7 +124,17 @@ def run_rSTSF(
         task.connect(params)
 
     df = pd.read_csv('weekdays_datasets/df_timeseries.csv')
+    name, X_train, y_train, X_test, y_test = load_fold(
+        df,
+        params['k'],
+        params['K'],
+        params['country'],
+        params['city'],
+        params['category'],
+    )
+    print(f'Loaded: {name}')
     
+    # Executes main function:
     df_country_0 = df[df['country'] == 0] 
     df_country_1 = df[df['country'] == 1] 
 
@@ -149,12 +160,10 @@ def run_rSTSF(
 
     if clearML:
         task.get_logger().report_scalar('execution_time', 'main', iteration=0, value=time.time() - start_time)
+        # Reports results:
         for key, value in results.items():
-            task.get_logger().report_scalar('metrics', f'{key}_train_country_0_test_country_1', iteration=0, value=value)
-        for key, value in results_inverted.items():
-            task.get_logger().report_scalar('metrics', f'{key}_train_country_1_test_country_0', iteration=0, value=value)
+            task.get_logger().report_scalar('metrics', key, iteration=0, value=value)
         task.close()
-
     return results, results_inverted
 
 if __name__ == '__main__':

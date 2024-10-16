@@ -6,7 +6,7 @@ from sktime.classification.dictionary_based import TemporalDictionaryEnsemble
 
 from clearml import Task
 
-def tde(X_train, y_train, X_test, y_test):
+def tde (X_train, y_train, X_test, y_test):
 
     clf_TDE = TemporalDictionaryEnsemble(
         n_parameter_samples=250,
@@ -34,6 +34,7 @@ def run_tde(
     },
     task=None,
     task_name="tde",
+    dataset_filename=None,
 ):
     import time
     start_time = time.time()
@@ -47,9 +48,22 @@ def run_tde(
             task = Task.init(project_name='PopularTimesFold/Classifier', task_name="tde")
         task.connect(params)
 
-    df = pd.read_csv('weekdays_datasets/df_timeseries.csv')
+    if dataset_filename:
+        df = pd.read_csv(dataset_filename)
+    else:
+        df = pd.read_csv('weekdays_datasets/df_timeseries.csv')
 
-
+    name, X_train, y_train, X_test, y_test = load_fold(
+        df,
+        params['k'],
+        params['K'],
+        params['country'],
+        params['city'],
+        params['category'],
+    )
+    print(f'Loaded: {name}')
+    
+    # Executes main function:
     df_country_0 = df[df['country'] == 0] 
     df_country_1 = df[df['country'] == 1] 
 
@@ -74,13 +88,11 @@ def run_tde(
     results_inverted = tde(X_train, y_train, X_test, y_test)
 
     if clearML:
-        task.get_logger().report_scalar('execution_time', 'main', iteration=0, value=time.time() - start_time)
+        task.get_logger().report_scalar('execution_time', 'main', iteration=0, value=time.time() - main_time)
+        # Reports results:
         for key, value in results.items():
-            task.get_logger().report_scalar('metrics', f'{key}_train_country_0_test_country_1', iteration=0, value=value)
-        for key, value in results_inverted.items():
-            task.get_logger().report_scalar('metrics', f'{key}_train_country_1_test_country_0', iteration=0, value=value)
+            task.get_logger().report_scalar('metrics', key, iteration=0, value=value)
         task.close()
-
     return results, results_inverted
 
 if __name__ == '__main__':

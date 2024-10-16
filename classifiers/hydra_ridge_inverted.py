@@ -9,7 +9,6 @@ import numpy as np
 import torch
 from hydra import Hydra, SparseScaler
 from sklearn.linear_model import RidgeClassifierCV
-
 from clearml import Task
 
 def hydra_ridge (X_train, y_train, X_test, y_test):
@@ -43,13 +42,14 @@ def run_hydra_ridge(
     clearML = False,
     params = {
         'k': 1,
-        'K': 5,
+        'K': 10,
         'country': 0,
         'city': 0,
         'category': None,
     },
     task=None,
     task_name="hydra_ridge",
+    dataset_filename=None,
 ):
     import time
     start_time = time.time()
@@ -63,8 +63,22 @@ def run_hydra_ridge(
             task = Task.init(project_name='PopularTimesFold/Classifier', task_name="hydra_ridge")
         task.connect(params)
 
-    df = pd.read_csv('weekdays_datasets/df_timeseries.csv')
+    if dataset_filename:
+        df = pd.read_csv(dataset_filename)
+    else:
+        df = pd.read_csv('weekdays_datasets/df_timeseries.csv')
+
+    name, X_train, y_train, X_test, y_test = load_fold(
+        df,
+        params['k'],
+        params['K'],
+        params['country'],
+        params['city'],
+        params['category'],
+    )
+    print(f'Loaded: {name}')
     
+    # Executes main function:
     df_country_0 = df[df['country'] == 0] 
     df_country_1 = df[df['country'] == 1] 
 
@@ -90,12 +104,10 @@ def run_hydra_ridge(
 
     if clearML:
         task.get_logger().report_scalar('execution_time', 'main', iteration=0, value=time.time() - start_time)
+        # Reports results:
         for key, value in results.items():
-            task.get_logger().report_scalar('metrics', f'{key}_train_country_0_test_country_1', iteration=0, value=value)
-        for key, value in results_inverted.items():
-            task.get_logger().report_scalar('metrics', f'{key}_train_country_1_test_country_0', iteration=0, value=value)
+            task.get_logger().report_scalar('metrics', key, iteration=0, value=value)
         task.close()
-
     return results, results_inverted
 
 if __name__ == '__main__':
