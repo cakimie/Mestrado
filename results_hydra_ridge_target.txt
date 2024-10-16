@@ -1,72 +1,30 @@
-/Users/carolina/Desktop/Mestrado/.venv/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1344: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
-  _warn_prf(average, modifier, msg_start, len(result))
-/Users/carolina/Desktop/Mestrado/.venv/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1344: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
-  _warn_prf(average, modifier, msg_start, len(result))
-/Users/carolina/Desktop/Mestrado/.venv/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1344: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
-  _warn_prf(average, modifier, msg_start, len(result))
-/Users/carolina/Desktop/Mestrado/.venv/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1344: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
-  _warn_prf(average, modifier, msg_start, len(result))
-/Users/carolina/Desktop/Mestrado/.venv/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1344: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
-  _warn_prf(average, modifier, msg_start, len(result))
 /Users/carolina/Desktop/Mestrado/.venv/lib/python3.9/site-packages/numpy/core/fromnumeric.py:3464: RuntimeWarning: Mean of empty slice.
   return _methods._mean(a, axis=axis, dtype=dtype,
 /Users/carolina/Desktop/Mestrado/.venv/lib/python3.9/site-packages/numpy/core/_methods.py:192: RuntimeWarning: invalid value encountered in scalar divide
   ret = ret.dtype.type(ret / rcount)
-/Users/carolina/Desktop/Mestrado/.venv/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1344: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
-  _warn_prf(average, modifier, msg_start, len(result))
-/Users/carolina/Desktop/Mestrado/.venv/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1344: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
-  _warn_prf(average, modifier, msg_start, len(result))
-/Users/carolina/Desktop/Mestrado/.venv/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1344: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
-  _warn_prf(average, modifier, msg_start, len(result))
-/Users/carolina/Desktop/Mestrado/.venv/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1344: UndefinedMetricWarning: Recall is ill-defined and being set to 0.0 in labels with no true samples. Use `zero_division` parameter to control this behavior.
-  _warn_prf(average, modifier, msg_start, len(result))
-/Users/carolina/Desktop/Mestrado/.venv/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1344: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
-  _warn_prf(average, modifier, msg_start, len(result))
-/Users/carolina/Desktop/Mestrado/.venv/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1344: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
-  _warn_prf(average, modifier, msg_start, len(result))
 GPU is not available
-timeseries_f1-5 (10163, 24) (10163,) (2541, 24) (2541,)
-Loaded: timeseries_f1-5
-<function run_hydra_ridge at 0x124251e50>_f1-5 {'accuracy_score': 0.4100747737111374, 'f1_score': 0.395665912975406, 'precision_score': 0.4242709737743741, 'recall_score': 0.4100747737111374}
-timeseries_f2-5 (10163, 24) (10163,) (2541, 24) (2541,)
-Loaded: timeseries_f2-5
-<function run_hydra_ridge at 0x124251e50>_f2-5 {'accuracy_score': 0.40181031090122, 'f1_score': 0.3871757301721454, 'precision_score': 0.4134734057596649, 'recall_score': 0.40181031090122}
-timeseries_f3-5 (10163, 24) (10163,) (2541, 24) (2541,)
-Loaded: timeseries_f3-5
-<function run_hydra_ridge at 0x124251e50>_f3-5 {'accuracy_score': 0.3880362062180244, 'f1_score': 0.3778980762219894, 'precision_score': 0.4146577815458651, 'recall_score': 0.3880362062180244}
-timeseries_f4-5 (10163, 24) (10163,) (2541, 24) (2541,)
-Loaded: timeseries_f4-5
-<function run_hydra_ridge at 0x124251e50>_f4-5 {'accuracy_score': 0.4041715859897678, 'f1_score': 0.3938037627722271, 'precision_score': 0.4143795478608383, 'recall_score': 0.4041715859897678}
-timeseries_f5-5 (10164, 24) (10164,) (2540, 24) (2540,)
-Loaded: timeseries_f5-5
-<function run_hydra_ridge at 0x124251e50>_f5-5 {'accuracy_score': 0.39409448818897636, 'f1_score': 0.37752564099834063, 'precision_score': 0.403756509786616, 'recall_score': 0.39409448818897636}
-<function run_hydra_ridge at 0x124251e50>
-           accuracy_score mean=0.3996375 std=0.0077399 t_interval=(0.37814804893078247, 0.4211268970728679)
-           f1_score mean=0.3864138 std=0.0076461 t_interval=(0.3651849792414554, 0.40764267001458804)
-           precision_score mean=0.4141076 std=0.0064995 t_interval=(0.39606211351535586, 0.43215317397558756)
-           recall_score mean=0.3996375 std=0.0077399 t_interval=(0.37814804893078247, 0.4211268970728679)
 Classifier mean accuracy_score=nan
 Classifier mean f1_score=nan
 Classifier mean precision_score=nan
 Classifier mean recall_score=nan
-timeseries_f1-5 (10163, 24) (10163,) (2541, 24) (2541,)
+timeseries_f1-5 (10163, 26) (10163,) (2541, 26) (2541,)
 Loaded: timeseries_f1-5
-<function run_hydra_ridge at 0x124251e50>_f1-5 {'accuracy_score': 0.40771349862258954, 'f1_score': 0.3907373140494864, 'precision_score': 0.42401288259799175, 'recall_score': 0.40771349862258954}
-timeseries_f2-5 (10163, 24) (10163,) (2541, 24) (2541,)
+<function run_hydra_ridge at 0x126df2e50>_f1-5 {'accuracy_score': 0.683982683982684, 'f1_score': 0.6822083873602175, 'precision_score': 0.6833701405787205, 'recall_score': 0.683982683982684}
+timeseries_f2-5 (10163, 26) (10163,) (2541, 26) (2541,)
 Loaded: timeseries_f2-5
-<function run_hydra_ridge at 0x124251e50>_f2-5 {'accuracy_score': 0.4022038567493113, 'f1_score': 0.38716079964982403, 'precision_score': 0.41303992037394704, 'recall_score': 0.4022038567493113}
-timeseries_f3-5 (10163, 24) (10163,) (2541, 24) (2541,)
+<function run_hydra_ridge at 0x126df2e50>_f2-5 {'accuracy_score': 0.6926406926406926, 'f1_score': 0.6896880790223265, 'precision_score': 0.6933009344204863, 'recall_score': 0.6926406926406926}
+timeseries_f3-5 (10163, 26) (10163,) (2541, 26) (2541,)
 Loaded: timeseries_f3-5
-<function run_hydra_ridge at 0x124251e50>_f3-5 {'accuracy_score': 0.3860684769775679, 'f1_score': 0.37631855467899933, 'precision_score': 0.4113680480625737, 'recall_score': 0.3860684769775679}
-timeseries_f4-5 (10163, 24) (10163,) (2541, 24) (2541,)
+<function run_hydra_ridge at 0x126df2e50>_f3-5 {'accuracy_score': 0.6887052341597796, 'f1_score': 0.6861457427074253, 'precision_score': 0.6898440936101701, 'recall_score': 0.6887052341597796}
+timeseries_f4-5 (10163, 26) (10163,) (2541, 26) (2541,)
 Loaded: timeseries_f4-5
-<function run_hydra_ridge at 0x124251e50>_f4-5 {'accuracy_score': 0.40731995277449823, 'f1_score': 0.39557999577314845, 'precision_score': 0.41093856237893484, 'recall_score': 0.40731995277449823}
-timeseries_f5-5 (10164, 24) (10164,) (2540, 24) (2540,)
+<function run_hydra_ridge at 0x126df2e50>_f4-5 {'accuracy_score': 0.7091696182605274, 'f1_score': 0.7067561614564601, 'precision_score': 0.7074098216778869, 'recall_score': 0.7091696182605274}
+timeseries_f5-5 (10164, 26) (10164,) (2540, 26) (2540,)
 Loaded: timeseries_f5-5
-<function run_hydra_ridge at 0x124251e50>_f5-5 {'accuracy_score': 0.40590551181102363, 'f1_score': 0.38992298948792126, 'precision_score': 0.4211455962900076, 'recall_score': 0.40590551181102363}
-<function run_hydra_ridge at 0x124251e50>
-           accuracy_score mean=0.4018423 std=0.0081232 t_interval=(0.3792887202068835, 0.4243957985671127)
-           f1_score mean=0.3879439 std=0.0064155 t_interval=(0.37013170710974336, 0.4057561543460085)
-           precision_score mean=0.4161010 std=0.0054123 t_interval=(0.4010739102978747, 0.4311280935835073)
-           recall_score mean=0.4018423 std=0.0081232 t_interval=(0.3792887202068835, 0.4243957985671127)
+<function run_hydra_ridge at 0x126df2e50>_f5-5 {'accuracy_score': 0.6933070866141732, 'f1_score': 0.6895467542633898, 'precision_score': 0.6919926475148291, 'recall_score': 0.6933070866141732}
+<function run_hydra_ridge at 0x126df2e50>
+           accuracy_score mean=0.6935611 std=0.0084837 t_interval=(0.6700066283180917, 0.7171154979450509)
+           f1_score mean=0.6908690 std=0.0084007 t_interval=(0.6675448971035552, 0.7141931528203728)
+           precision_score mean=0.6931835 std=0.0078902 t_interval=(0.6712769074152091, 0.7150901477056281)
+           recall_score mean=0.6935611 std=0.0084837 t_interval=(0.6700066283180917, 0.7171154979450509)
 Done!
