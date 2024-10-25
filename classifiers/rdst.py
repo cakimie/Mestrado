@@ -57,6 +57,7 @@ def run_rdst(
         params['category'],
     )
     print(f'Loaded: {name}')
+    print(df.columns)
     
     # Executes main function:
     main_time = time.time()

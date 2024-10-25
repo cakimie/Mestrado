@@ -52,15 +52,15 @@ def create_tasks(K, target=None):
 # ------------------------------ START ------------------------------------
 # Importação dos classificadores
 # from classifiers.weasel_d import run_weasel_d
-from classifiers.tde import run_tde
-# from classifiers.rdst import run_rdst
+# from classifiers.tde import run_tde
+from classifiers.rdst import run_rdst
 # from classifiers.hydra_ridge import run_hydra_ridge
 
 classifiers = [
     # ['heavy', run_weasel_d],
     # ['light', run_hydra_ridge],
-    ['light', run_tde],
-    # ['light', run_rdst],
+    # ['light', run_tde],
+    ['light', run_rdst],
 ]
 
 K = 5
@@ -79,6 +79,8 @@ for m, metric in enumerate(metrics):
     print(f'Classifier mean {metric}={mean_of_means:.7f}')
 
 # Executa a função para todo o dataset
+print(date_time)
+
 create_tasks(K)  # Esta linha treina modelos com o dataset completo.
 
 print('Done!')

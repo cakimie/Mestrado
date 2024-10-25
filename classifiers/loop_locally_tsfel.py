@@ -31,7 +31,7 @@ def create_tasks(K, target=None):
                                         'city': None,
                                         'category': None,
                                 },
-                                dataset_filename = '/Users/carolina/Desktop/Mestrado/df_timeseries_with_tsfel_features.csv',
+                                dataset_filename = '/Users/carolina/Desktop/Mestrado/df_timeseries_with_tsfel_features_clean.csv',
             )
             print(f'{node_name}', results)
             kfold_results.append(results)
@@ -53,14 +53,14 @@ def create_tasks(K, target=None):
 # Importação dos classificadores
 # from classifiers.weasel_d import run_weasel_d
 # from classifiers.tde import run_tde
-# from classifiers.rdst import run_rdst
-from classifiers.hydra_ridge import run_hydra_ridge
+from classifiers.rdst import run_rdst
+# from classifiers.hydra_ridge import run_hydra_ridge
 
 classifiers = [
     # ['heavy', run_weasel_d],
-    ['light', run_hydra_ridge],
+    # ['light', run_hydra_ridge],
     # ['light', run_tde],
-    # ['light', run_rdst],
+    ['light', run_rdst],
 ]
 
 K = 5
