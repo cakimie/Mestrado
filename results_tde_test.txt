@@ -1,0 +1,122 @@
+Retrying (Retry(total=239, connect=239, read=240, redirect=240, status=240)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x123c7bb20>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known')': /auth.login
+Retrying (Retry(total=238, connect=238, read=240, redirect=240, status=240)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x123c7bca0>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known')': /auth.login
+Retrying (Retry(total=237, connect=237, read=240, redirect=240, status=240)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x123c7beb0>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known')': /auth.login
+Retrying (Retry(total=236, connect=236, read=240, redirect=240, status=240)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x123cd2100>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known')': /auth.login
+Retrying (Retry(total=235, connect=235, read=240, redirect=240, status=240)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x123cd2310>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known')': /auth.login
+Retrying (Retry(total=234, connect=234, read=240, redirect=240, status=240)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x123cd2520>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known')': /auth.login
+Retrying (Retry(total=233, connect=233, read=240, redirect=240, status=240)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x123cd2730>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known')': /auth.login
+Retrying (Retry(total=232, connect=232, read=240, redirect=240, status=240)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x123cd2940>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known')': /auth.login
+Retrying (Retry(total=231, connect=231, read=240, redirect=240, status=240)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x123c611c0>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known')': /auth.login
+Retrying (Retry(total=230, connect=230, read=240, redirect=240, status=240)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x123cd2a30>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known')': /auth.login
+Retrying (Retry(total=229, connect=229, read=240, redirect=240, status=240)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x123cd2ca0>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known')': /auth.login
+Retrying (Retry(total=228, connect=228, read=240, redirect=240, status=240)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x123cd2eb0>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known')': /auth.login
+Retrying (Retry(total=227, connect=227, read=240, redirect=240, status=240)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x123ce5100>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known')': /auth.login
+Retrying (Retry(total=226, connect=226, read=240, redirect=240, status=240)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x123ce5310>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known')': /auth.login
+Retrying (Retry(total=225, connect=225, read=240, redirect=240, status=240)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x123ce5520>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known')': /auth.login
+Retrying (Retry(total=224, connect=224, read=240, redirect=240, status=240)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x123ce5730>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known')': /auth.login
+Retrying (Retry(total=223, connect=223, read=240, redirect=240, status=240)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x123ce5940>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known')': /auth.login
+Retrying (Retry(total=222, connect=222, read=240, redirect=240, status=240)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x123ce5b50>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known')': /auth.login
+Retrying (Retry(total=221, connect=221, read=240, redirect=240, status=240)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x123ce5d60>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known')': /auth.login
+Retrying (Retry(total=220, connect=220, read=240, redirect=240, status=240)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x123ce5f70>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known')': /auth.login
+Retrying (Retry(total=219, connect=219, read=240, redirect=240, status=240)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x123d401c0>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known')': /auth.login
+Retrying (Retry(total=218, connect=218, read=240, redirect=240, status=240)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x123d403d0>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known')': /auth.login
+Retrying (Retry(total=217, connect=217, read=240, redirect=240, status=240)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x123d405e0>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known')': /auth.login
+Retrying (Retry(total=216, connect=216, read=240, redirect=240, status=240)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x123d407f0>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known')': /auth.login
+Retrying (Retry(total=215, connect=215, read=240, redirect=240, status=240)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x123d40a00>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known')': /auth.login
+Retrying (Retry(total=214, connect=214, read=240, redirect=240, status=240)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x123d40c10>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known')': /auth.login
+Retrying (Retry(total=213, connect=213, read=240, redirect=240, status=240)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x123d40e20>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known')': /auth.login
+Retrying (Retry(total=212, connect=212, read=240, redirect=240, status=240)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x123d5f0a0>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known')': /auth.login
+Retrying (Retry(total=211, connect=211, read=240, redirect=240, status=240)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x123d5f280>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known')': /auth.login
+Retrying (Retry(total=210, connect=210, read=240, redirect=240, status=240)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x123d5f490>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known')': /auth.login
+Retrying (Retry(total=209, connect=209, read=240, redirect=240, status=240)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x123d5f6d0>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known')': /auth.login
+Traceback (most recent call last):
+  File "/Users/carolina/Desktop/Mestrado/.venv/lib/python3.9/site-packages/urllib3/connection.py", line 174, in _new_conn
+    conn = connection.create_connection(
+  File "/Users/carolina/Desktop/Mestrado/.venv/lib/python3.9/site-packages/urllib3/util/connection.py", line 72, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/socket.py", line 953, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 8] nodename nor servname provided, or not known
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/carolina/Desktop/Mestrado/.venv/lib/python3.9/site-packages/urllib3/connectionpool.py", line 715, in urlopen
+    httplib_response = self._make_request(
+  File "/Users/carolina/Desktop/Mestrado/.venv/lib/python3.9/site-packages/urllib3/connectionpool.py", line 416, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "/Users/carolina/Desktop/Mestrado/.venv/lib/python3.9/site-packages/urllib3/connection.py", line 244, in request
+    super(HTTPConnection, self).request(method, url, body=body, headers=headers)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/http/client.py", line 1257, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/http/client.py", line 1303, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/http/client.py", line 1252, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/http/client.py", line 1012, in _send_output
+    self.send(msg)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/http/client.py", line 952, in send
+    self.connect()
+  File "/Users/carolina/Desktop/Mestrado/.venv/lib/python3.9/site-packages/urllib3/connection.py", line 205, in connect
+    conn = self._new_conn()
+  File "/Users/carolina/Desktop/Mestrado/.venv/lib/python3.9/site-packages/urllib3/connection.py", line 186, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x123d5f910>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/runpy.py", line 197, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/runpy.py", line 87, in _run_code
+    exec(code, run_globals)
+  File "/Users/carolina/Desktop/Mestrado/classifiers/tde.py", line 73, in <module>
+    run_tde()
+  File "/Users/carolina/Desktop/Mestrado/classifiers/tde.py", line 47, in run_tde
+    task = Task.init(project_name='PopularTimesFold/Classifier', task_name="tde")
+  File "/Users/carolina/Desktop/Mestrado/.venv/lib/python3.9/site-packages/clearml/task.py", line 572, in init
+    task = cls._create_dev_task(
+  File "/Users/carolina/Desktop/Mestrado/.venv/lib/python3.9/site-packages/clearml/task.py", line 3696, in _create_dev_task
+    task = cls(
+  File "/Users/carolina/Desktop/Mestrado/.venv/lib/python3.9/site-packages/clearml/task.py", line 209, in __init__
+    super(Task, self).__init__(**kwargs)
+  File "/Users/carolina/Desktop/Mestrado/.venv/lib/python3.9/site-packages/clearml/backend_interface/task/task.py", line 161, in __init__
+    super(Task, self).__init__(id=task_id, session=session, log=log)
+  File "/Users/carolina/Desktop/Mestrado/.venv/lib/python3.9/site-packages/clearml/backend_interface/base.py", line 149, in __init__
+    super(IdObjectBase, self).__init__(session, log, **kwargs)
+  File "/Users/carolina/Desktop/Mestrado/.venv/lib/python3.9/site-packages/clearml/backend_interface/base.py", line 41, in __init__
+    self._session = session or self._get_default_session()
+  File "/Users/carolina/Desktop/Mestrado/.venv/lib/python3.9/site-packages/clearml/backend_interface/base.py", line 119, in _get_default_session
+    InterfaceBase._default_session = Session(
+  File "/Users/carolina/Desktop/Mestrado/.venv/lib/python3.9/site-packages/clearml/backend_api/session/session.py", line 160, in __init__
+    self._connect()
+  File "/Users/carolina/Desktop/Mestrado/.venv/lib/python3.9/site-packages/clearml/backend_api/session/session.py", line 227, in _connect
+    self.refresh_token()
+  File "/Users/carolina/Desktop/Mestrado/.venv/lib/python3.9/site-packages/clearml/backend_api/session/token_manager.py", line 112, in refresh_token
+    self._set_token(self._do_refresh_token(self.__token, exp=self.req_token_expiration_sec))
+  File "/Users/carolina/Desktop/Mestrado/.venv/lib/python3.9/site-packages/clearml/backend_api/session/session.py", line 834, in _do_refresh_token
+    res = self._send_request(
+  File "/Users/carolina/Desktop/Mestrado/.venv/lib/python3.9/site-packages/clearml/backend_api/session/session.py", line 411, in _send_request
+    res = self.__http_session.request(
+  File "/Users/carolina/Desktop/Mestrado/.venv/lib/python3.9/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/Users/carolina/Desktop/Mestrado/.venv/lib/python3.9/site-packages/clearml/backend_api/utils.py", line 98, in send
+    return super(SessionWithTimeout, self).send(request, **kwargs)
+  File "/Users/carolina/Desktop/Mestrado/.venv/lib/python3.9/site-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+  File "/Users/carolina/Desktop/Mestrado/.venv/lib/python3.9/site-packages/requests/adapters.py", line 486, in send
+    resp = conn.urlopen(
+  File "/Users/carolina/Desktop/Mestrado/.venv/lib/python3.9/site-packages/urllib3/connectionpool.py", line 827, in urlopen
+    return self.urlopen(
+  File "/Users/carolina/Desktop/Mestrado/.venv/lib/python3.9/site-packages/urllib3/connectionpool.py", line 827, in urlopen
+    return self.urlopen(
+  File "/Users/carolina/Desktop/Mestrado/.venv/lib/python3.9/site-packages/urllib3/connectionpool.py", line 827, in urlopen
+    return self.urlopen(
+  [Previous line repeated 28 more times]
+  File "/Users/carolina/Desktop/Mestrado/.venv/lib/python3.9/site-packages/urllib3/connectionpool.py", line 802, in urlopen
+    retries.sleep()
+  File "/Users/carolina/Desktop/Mestrado/.venv/lib/python3.9/site-packages/urllib3/util/retry.py", line 432, in sleep
+    self._sleep_backoff()
+  File "/Users/carolina/Desktop/Mestrado/.venv/lib/python3.9/site-packages/urllib3/util/retry.py", line 416, in _sleep_backoff
+    time.sleep(backoff)
+KeyboardInterrupt

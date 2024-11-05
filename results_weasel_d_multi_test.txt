@@ -1,0 +1,46 @@
+GPU is not available
+timeseries_0_f1-5 (3588, 24) (3588,) (898, 24) (898,)
+Loaded: timeseries_0_f1-5
+<function run_weasel_d at 0x123e315e0>_0_f1-5 {'accuracy_score': 0.7472160356347439, 'f1_score': 0.7430345941261509, 'precision_score': 0.7433572439256394, 'recall_score': 0.7472160356347439}
+timeseries_0_f2-5 (3589, 24) (3589,) (897, 24) (897,)
+Loaded: timeseries_0_f2-5
+<function run_weasel_d at 0x123e315e0>_0_f2-5 {'accuracy_score': 0.7435897435897436, 'f1_score': 0.7359440205974697, 'precision_score': 0.7349798062474313, 'recall_score': 0.7435897435897436}
+timeseries_0_f3-5 (3589, 24) (3589,) (897, 24) (897,)
+Loaded: timeseries_0_f3-5
+<function run_weasel_d at 0x123e315e0>_0_f3-5 {'accuracy_score': 0.7391304347826086, 'f1_score': 0.7341906053003756, 'precision_score': 0.7376762717120167, 'recall_score': 0.7391304347826086}
+timeseries_0_f4-5 (3589, 24) (3589,) (897, 24) (897,)
+Loaded: timeseries_0_f4-5
+<function run_weasel_d at 0x123e315e0>_0_f4-5 {'accuracy_score': 0.7491638795986622, 'f1_score': 0.7445449741108218, 'precision_score': 0.748346372103266, 'recall_score': 0.7491638795986622}
+timeseries_0_f5-5 (3589, 24) (3589,) (897, 24) (897,)
+Loaded: timeseries_0_f5-5
+<function run_weasel_d at 0x123e315e0>_0_f5-5 {'accuracy_score': 0.7112597547380156, 'f1_score': 0.7023617126253349, 'precision_score': 0.7145900646437843, 'recall_score': 0.7112597547380156}
+<function run_weasel_d at 0x123e315e0>_0
+           accuracy_score mean=0.7380720 std=0.0138355 t_interval=(0.6996584603260696, 0.7764854790114399)
+           f1_score mean=0.7320152 std=0.0153487 t_interval=(0.6894002378796295, 0.7746301248244317)
+           precision_score mean=0.7357900 std=0.0115635 t_interval=(0.703684416053511, 0.7678954873993444)
+           recall_score mean=0.7380720 std=0.0138355 t_interval=(0.6996584603260696, 0.7764854790114399)
+timeseries_1_f1-5 (6574, 24) (6574,) (1644, 24) (1644,)
+Loaded: timeseries_1_f1-5
+<function run_weasel_d at 0x123e315e0>_1_f1-5 {'accuracy_score': 0.6928223844282239, 'f1_score': 0.6868738333607957, 'precision_score': 0.68797642068, 'recall_score': 0.6928223844282239}
+timeseries_1_f2-5 (6574, 24) (6574,) (1644, 24) (1644,)
+Loaded: timeseries_1_f2-5
+<function run_weasel_d at 0x123e315e0>_1_f2-5 {'accuracy_score': 0.6909975669099757, 'f1_score': 0.6842981731304001, 'precision_score': 0.6943682845922907, 'recall_score': 0.6909975669099757}
+timeseries_1_f3-5 (6574, 24) (6574,) (1644, 24) (1644,)
+Loaded: timeseries_1_f3-5
+<function run_weasel_d at 0x123e315e0>_1_f3-5 {'accuracy_score': 0.6922141119221411, 'f1_score': 0.6875402574024171, 'precision_score': 0.6945296904247943, 'recall_score': 0.6922141119221411}
+timeseries_1_f4-5 (6575, 24) (6575,) (1643, 24) (1643,)
+Loaded: timeseries_1_f4-5
+<function run_weasel_d at 0x123e315e0>_1_f4-5 {'accuracy_score': 0.6987218502738892, 'f1_score': 0.6934488189453946, 'precision_score': 0.6997079021104149, 'recall_score': 0.6987218502738892}
+timeseries_1_f5-5 (6575, 24) (6575,) (1643, 24) (1643,)
+Loaded: timeseries_1_f5-5
+<function run_weasel_d at 0x123e315e0>_1_f5-5 {'accuracy_score': 0.6786366402921485, 'f1_score': 0.6724355099942511, 'precision_score': 0.6776831348651918, 'recall_score': 0.6786366402921485}
+<function run_weasel_d at 0x123e315e0>_1
+           accuracy_score mean=0.6906785 std=0.0065842 t_interval=(0.6723978590882346, 0.7089591624423169)
+           f1_score mean=0.6849193 std=0.0069235 t_interval=(0.665696646514757, 0.7041419906185463)
+           precision_score mean=0.6908531 std=0.0075631 t_interval=(0.669854473143392, 0.7118516999256848)
+           recall_score mean=0.6906785 std=0.0065842 t_interval=(0.6723978590882346, 0.7089591624423169)
+Classifier mean accuracy_score=0.7143752
+Classifier mean f1_score=0.7084672
+Classifier mean precision_score=0.7133215
+Classifier mean recall_score=0.7143752
+Done!

@@ -1,0 +1,29 @@
+Traceback (most recent call last):
+  File "/Users/carolina/Desktop/Mestrado/.venv/lib/python3.9/site-packages/pandas/core/indexes/base.py", line 3802, in get_loc
+    return self._engine.get_loc(casted_key)
+  File "pandas/_libs/index.pyx", line 138, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas/_libs/index.pyx", line 165, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas/_libs/hashtable_class_helper.pxi", line 5745, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas/_libs/hashtable_class_helper.pxi", line 5753, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'country'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/runpy.py", line 197, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/runpy.py", line 87, in _run_code
+    exec(code, run_globals)
+  File "/Users/carolina/Desktop/Mestrado/classifiers/weasel_d_ensemble.py", line 77, in <module>
+    run_weasel_d()
+  File "/Users/carolina/Desktop/Mestrado/classifiers/weasel_d_ensemble.py", line 54, in run_weasel_d
+    name, X_train, y_train, X_test, y_test = load_fold(
+  File "/Users/carolina/Desktop/Mestrado/classifiers/load_fold.py", line 22, in load_fold
+    X, y = extract_x_y(df, country, city, category)
+  File "/Users/carolina/Desktop/Mestrado/classifiers/load_fold.py", line 5, in extract_x_y
+    (country is None  or df['country'] == country) &
+  File "/Users/carolina/Desktop/Mestrado/.venv/lib/python3.9/site-packages/pandas/core/frame.py", line 3807, in __getitem__
+    indexer = self.columns.get_loc(key)
+  File "/Users/carolina/Desktop/Mestrado/.venv/lib/python3.9/site-packages/pandas/core/indexes/base.py", line 3804, in get_loc
+    raise KeyError(key) from err
+KeyError: 'country'
