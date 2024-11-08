@@ -1,5 +1,10 @@
 filename,Classifier,filter_ds,accuracy_score_mean,f1_score_mean,precision_score_mean,recall_score_mean,accuracy_score_std,f1_score_std,precision_score_std,recall_score_std,accuracy_score_ci_l,f1_score_ci_l,precision_score_ci_l,recall_score_ci_l,accuracy_score_ci_h,f1_score_ci_h,precision_score_ci_h,recall_score_ci_h
-results_rdst_inverted_5_fold.csv,rdst,_train0_1,0.1369919688,0.1031429195,0.2736164486,0.1369919688,,,,,accuracy_score,f1_score,precision_score,recall_score,0.2322781988,0.1340846665,0.248379454,0.2322781988
-results_weasel_d_inverted_5_fold.csv,weasel_d,_train0_1,0.3697980043806279,0.27815547007348884,0.3437219945866061,0.3697980043806279,,,,,accuracy_score,f1_score,precision_score,recall_score,0.6103432902362906,0.6120901149495297,0.6217578236214641,0.6103432902362906
-results_hydra_ridge_inverted_5_fold.csv,hydra_ridge,_train0_1,0.3230713069,0.1580975596,0.2802314396,0.3230713069,,,,,accuracy_score,f1_score,precision_score,recall_score,0.3263040571,0.1949916492,0.1743023186,0.3263040571
-best_of_m1_m2_models.csv,best_of_m1_m2_models,,0.7,0.69,0.66,0.76,0,0,0,0,0,0,0,0,0,0,0,0
+results_tde_inverted_5_fold.csv,tde,inverted,_train0_1,0.5749564,0.5432915,0.6390021,0.5749564
+results_tde_inverted_5_fold.csv,tde,inverted,_train1_0,0.8350411,0.8365724,0.8571903,0.8350411
+results_rdst_inverted_5_fold.csv,rdst,inverted,_train0_1,0.1369919688,0.1031429195,0.2736164486,0.1369919688
+results_rdst_inverted_5_fold.csv,rdst,inverted,_train1_0,0.2322781988,0.1340846665,0.248379454,0.2322781988
+results_weasel_d_inverted_5_fold.csv,weasel_d,inverted,_train0_1,0.3697980043806279,0.27815547007348884,0.3437219945866061,0.3697980043806279
+results_weasel_d_inverted_5_fold.csv,weasel_d,inverted,_train1_0,0.6103432902362906,0.6120901149495297,0.6217578236214641,0.6103432902362906
+results_hydra_ridge_inverted_5_fold.csv,hydra_ridge,inverted,_train0_1,0.3230713069,0.1580975596,0.2802314396,0.3230713069
+results_hydra_ridge_inverted_5_fold.csv,hydra_ridge,inverted,_train1_0,0.3263040571,0.1949916492,0.1743023186,0.3263040571
+best_of_m1_m2_models.csv,best_of_m1_m2_models,inverted,0.7,0.69,0.66,0.76,0,0,0,0,0,0,0,0,0,0,0,0
