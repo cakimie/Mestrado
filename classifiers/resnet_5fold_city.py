@@ -85,6 +85,7 @@ def run_filtered_kfold(df, filter_column='city', n_splits=5, n_epochs=10000):
     results_df = pd.DataFrame(all_metrics)
     results_df.to_csv("results_resnet_5fold_city.csv", index=False)
     print("Results saved to results_resnet_5fold_city.csv")
-file_path = input("Enter the path to the CSV file: ")
+
+file_path = 'weekdays_datasets/df_timeseries.csv'
 df = pd.read_csv(file_path)
 run_filtered_kfold(df, filter_column='city')
