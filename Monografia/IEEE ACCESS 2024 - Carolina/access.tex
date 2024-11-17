@@ -82,58 +82,31 @@ order, separated by commas. Autocorrelation, beamforming, communications technol
 
 \maketitle
 
+% Contribuições: A ideia principal deste trabalho é evaluar diversos algoritmos disponíveis na literatura recente em um problema unificado de Séries Temporais.
+% Por quê? (Contextualização) Fisgar o leitor com informações de senso comum que o levem a entender o contexto geral em que o trabalho se aplica. Urban Computing - Social Computing - Urban Data Science - Urban Data Mining - Urban Data Analysis - Urban Data Analytics - Urban Data Engineering - Urban Data Classification - Urban Data Clustering
+% Trabalhos anteriores: o que foi inspiração para este trabalho? (Revisão da Literatura) - Bake off redux: a review and experimental evaluation of recent time series classification algorithms e Trabalho do Leonardo (Extraction and Exploration of Business Categories Signatures)
+
 \section{Introduction}
 \label{sec:introduction}
-\PARstart{T}{his} document is a template for \LaTeX. If you are reading a paper or PDF version of this document, please download the LaTeX template or the MS Word
-template of your preferred publication from the IEEE Website at \underline
-{https://template-selector.ieee.org/secure/templateSelec}\break\underline{tor/publicationType} so you can use it to prepare your manuscript. 
-If you would prefer to use LaTeX, download IEEE's LaTeX style and sample files
-from the same Web page. You can also explore using the Overleaf editor at
-\underline
-{https://www.overleaf.com/blog/278-how-to-use-overleaf-}\break\underline{with-ieee-collabratec-your-quick-guide-to-getting-started}\break\underline{\#.xsVp6tpPkrKM9}
+\PARstart{I}{n} this study, the analysis of the dataset focuses on examining how people visit and interact with these establishments over time. 
+By observing patterns of occupancy at different times and types of establishments, the aim is to understand the variations in consumer behavior and how these patterns can be useful in predicting movement in different types of establishments. 
+Time series analysis provides a more detailed and accurate view of collective behavior over time, which can be used to predict the occupancy conditions of a location at certain times, optimizing resource management and improving the experience for both customers and establishment owners.
 
-IEEE will do the final formatting of your paper. If your paper is intended
-for a conference, please observe the conference page limits.
+Based on the time series from the Popular Times dataset, several tests were performed with different classifiers, with the aim of evaluating the predictive capacity of the models and identifying which would be the most effective in capturing the temporal patterns of popularity of establishments. 
+The choice of classifiers was inspired by a recent "bake-off redux" study (Bake off redux: a review and experimental evaluation of recent time series classification algorithms) that compared the performance of different classification approaches on time series datasets. 
+These classifiers were tested using the K-fold cross-validation technique, a process in which the data is divided into K parts, and each is used as a test set while the other K-1 parts are used for training, ensuring a robust evaluation of the models.
 
-\subsection{Abbreviations and Acronyms}
-Define abbreviations and acronyms the first time they are used in the text,
-even after they have already been defined in the abstract. Abbreviations
-such as IEEE, SI, ac, and dc do not have to be defined. Abbreviations that
-incorporate periods should not have spaces: write ``C.N.R.S.,'' not ``C. N.
-R. S.'' Do not use abbreviations in the title unless they are unavoidable
-(for example, ``IEEE'' in the title of this article).
+In addition, the data was separated by city and country to test how the performance of the models would vary depending on the granularity of the information. This test was important to understand how temporal characteristics can behave differently in a specific city or in a national context. In the tests, the city and country variables were omitted to verify the ability of the models to identify patterns without the influence of this information, which can be useful to assess the robustness of the classifiers in different contexts.
 
-\subsection{Other Recommendations}
-Use one space after periods and colons. Hyphenate complex modifiers:
-``zero-field-cooled magnetization.'' Avoid dangling participles, such as,
-``Using \eqref{eq}, the potential was calculated.'' [It is not clear who or what
-used \eqref{eq}.] Write instead, ``The potential was calculated by using \eqref{eq},'' or
-``Using \eqref{eq}, we calculated the potential.''
+From these analyses, the results obtained help to better understand how time series of popularity can be modeled and used to generate useful predictions in contexts such as retail and establishment management. The study offers a significant contribution by applying time series models in the area of location and occupancy data analysis, and by exploring the applicability of the classifiers in real time data, such as that provided by Google.
 
-Use a zero before decimal points: ``0.25,'' not ``.25.'' Use
-``cm$^{3}$,'' not ``cc.'' Indicate sample dimensions as ``0.1 cm
-$\times $ 0.2 cm,'' not ``0.1 $\times $ 0.2 cm$^{2}$.'' The
-abbreviation for ``seconds'' is ``s,'' not ``sec.'' Use
-``Wb/m$^{2}$'' or ``webers per square meter,'' not
-``webers/m$^{2}$.'' When expressing a range of values, write ``7 to
-9'' or ``7--9,'' not ``7$\sim $9.''
+\subsection{Time Series Data and Classification}
+Time Series Data also known as Temporal Data is a sequence of data points indexed in time order. Time series data is used in various fields such as finance, economics, weather forecasting, and many others. Time Series Classification (TSC) is the task of predicting the class label of a time series. The time series data can be univariate or multivariate. In univariate time series data, there is only one variable, whereas in multivariate time series data, there are multiple variables. Time series data can be classified into two categories: fixed length and variable length. In fixed length time series data, the length of the time series is fixed, whereas in variable length time series data, the length of the time series is not fixed.
 
-A parenthetical statement at the end of a sentence is punctuated outside of
-the closing parenthesis (like this). (A parenthetical sentence is punctuated
-within the parentheses.) In American English, periods and commas are within
-quotation marks, like ``this period.'' Other punctuation is ``outside''!
-Avoid contractions; for example, write ``do not'' instead of ``don't.'' The
-serial comma is preferred: ``A, B, and C'' instead of ``A, B and C.''
+\subsection{Urban computing}
+Urban computing is a process of acquisition, integration, and analysis of big and heterogeneous data generated by a diversity of sources in urban spaces, such as sensors, devices, vehicles, buildings, and human, to tackle the major issues that cities face, e.g. air pollution, increased energy consumption and traffic congestion. The ultimate goal of urban computing is to improve the quality of life in urban settings. Urban computing integrates big data, cloud computing, Internet of Things, and mobile computing to enhance the intelligence and efficiency of urban systems, infrastructure, and services. Urban computing is a multidisciplinary field that involves experts in computer science, civil engineering, transportation, environmental science, sociology, and urban planning.
 
-If you wish, you may write in the first person singular or plural and use
-the active voice (``I observed that $\ldots$'' or ``We observed that $\ldots$''
-instead of ``It was observed that $\ldots$''). Remember to check spelling. If
-your native language is not English, please get a native English-speaking
-colleague to carefully proofread your paper.
-
-Try not to use too many typefaces in the same article. Also please remember that MathJax
-can't handle really weird typefaces.
-
+% TO DO
 \subsection{Equations}
 Number equations consecutively with equation numbers in parentheses flush
 with the right margin, as in \eqref{eq}. To make your equations more
