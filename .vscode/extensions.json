@@ -1,6 +1,7 @@
 {
     "recommendations": [
         "james-yu.latex-workshop",
-        "ms-python.python"
+        "ms-python.python",
+        "ms-toolsai.jupyter"
     ]
 }
