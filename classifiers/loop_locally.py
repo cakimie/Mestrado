@@ -82,8 +82,8 @@ def create_tasks(K, country=None, city=None, category=None):
 # from classifiers.hydra_ridge import run_hydra_ridge
 
 #treino com um país e teste com outro (vice-versa)
-from classifiers.weasel_d_inverted import run_weasel_d
-# from classifiers.tde_inverted import run_tde
+# from classifiers.weasel_d_inverted import run_weasel_d
+from classifiers.tde_inverted import run_tde
 # from classifiers.hydra_ridge_inverted import run_hydra_ridge
 # from classifiers.rdst_inverted import run_rdst
 # from classifiers.rSTSF_inverted import run_rSTSF
@@ -104,8 +104,8 @@ from classifiers.weasel_d_inverted import run_weasel_d
 classifiers = [
     # ['light', run_fresh_prince], ok
     # ['light', run_ts_fresh], ok
-    ['heavy', run_weasel_d], #ok
-    # ['heavy', run_tde], ok
+    # ['heavy', run_weasel_d], #ok
+    ['heavy', run_tde], #ok
     # ['heavy', run_resnet],
     # ['heavy', run_hivecotev2], ok
     # ['heavy', run_inception_time],
