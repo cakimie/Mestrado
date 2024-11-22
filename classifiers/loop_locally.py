@@ -66,7 +66,7 @@ def create_tasks(K, country=None, city=None, category=None):
 #            caso o classificador não esteja na lista, basta incluí-lo conforme os imports abaixo
 
 # from classifiers.fresh_prince import run_fresh_prince
-# from classifiers.ts_fresh import run_ts_fresh
+from classifiers.ts_fresh import run_ts_fresh
 # from classifiers.hivecotev2 import run_hivecotev2
 # from classifiers.weasel_d import run_weasel_d
 # from classifiers.resnet import run_resnet
@@ -83,7 +83,7 @@ def create_tasks(K, country=None, city=None, category=None):
 
 #treino com um país e teste com outro (vice-versa)
 # from classifiers.weasel_d_inverted import run_weasel_d
-from classifiers.tde_inverted import run_tde
+# from classifiers.tde_inverted import run_tde
 # from classifiers.hydra_ridge_inverted import run_hydra_ridge
 # from classifiers.rdst_inverted import run_rdst
 # from classifiers.rSTSF_inverted import run_rSTSF
@@ -103,9 +103,9 @@ from classifiers.tde_inverted import run_tde
 
 classifiers = [
     # ['light', run_fresh_prince], ok
-    # ['light', run_ts_fresh], ok
+    ['light', run_ts_fresh], #ok
     # ['heavy', run_weasel_d], #ok
-    ['heavy', run_tde], #ok
+    # ['heavy', run_tde], #ok
     # ['heavy', run_resnet],
     # ['heavy', run_hivecotev2], ok
     # ['heavy', run_inception_time],
@@ -156,9 +156,9 @@ for m,metric in enumerate(metrics):
 
     #TODO: Totalizar algoritmo para todos os diferentes filtros.
 
-# for country in unique_countries:                    # This one trains models country by country.
-#     create_tasks(K, country)
+for country in unique_countries:                    # This one trains models country by country.
+    create_tasks(K, country)
 
-create_tasks(K)                                   # This one trains models with full dataset.
+# create_tasks(K)                                   # This one trains models with full dataset.
 
 print('Done!')
