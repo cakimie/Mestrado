@@ -95,15 +95,14 @@ order, separated by commas. Autocorrelation, beamforming, communications technol
 % Problema em dataset do mundo real e entender como a regionalidade influencia no comportamento dos time series e na performance de classificadores.
 \section{Introduction}
 \label{sec:introduction}
-\PARstart{}{} Urban environments have its own dynamics, made up of a complex network of interactions between people, establishments, and infrastructure. Also, with the growth of technologies such as smartphones devices and Internet access, the amount of data generated in urban areas has increased significantly, providing valuable insights into the behavior of people in these environments. This data can be used to optimize urban services, improve resource management, and enhance the quality of life for residents.
+\PARstart{}{} Urban environments have their own dynamics, comprised of a complex network of interactions between people, establishments, and infrastructure. Also, with the growth of technologies such as smartphone devices and Internet access, the amount of data generated in urban areas has increased significantly, providing valuable insights into the behavior of people in these environments. This data can be used to optimize urban services, improve resource management, and enhance the quality of life for residents.
 
 Cities are systems that are constantly changing and evolving. One of the mais characteristics of an urban city is the diversity of establishments and services available to residents and visitors. These establishments, such as restaurants, cafes, and shops, attract people at different times of the day, creating patterns of occupancy that can be observed and analyzed.
 
 Therefore, each city has its own characteristics and behaviors that can be observed along the time, which can be influenced by factors such as culture, climate, and local events. Different cities may have different patterns of occupancy for the same type of establishment, while different establishments may have similar patterns across different cities. These are some examples of how regional characteristics can influence the behavior of time series data and how challenging it can be to model and classify these patterns.
 
+In Computer Science, the study of urban environments is known as Urban Computing. It involves collecting, combining, and analyzing vast and diverse datasets produced by various sources within city environments \cite{zheng2014urban}.
 One of the main sources of data in urban environments is the Popular Times dataset from Google, which provides information about the popularity of establishments at different times of the day. This dataset is generated from aggregated and anonymized data from users who have opted to share their location history with Google. The dataset contains information about the popularity of establishments such as restaurants, cafes, and shops, based on the number of visitors at different times of the day.
-
-In the Computer Science field, the study of urban environments is known as Urban Computing. It involves collecting, combining, and analyzing vast and diverse datasets produced by various sources within city environments \cite{zheng2014urban}.
 
 %\textbf{TODO: incluir contribuições do trabalho}
 
@@ -115,9 +114,7 @@ The performance of these algorithms can vary depending on the characteristics of
 
 This type of study was conducted by Middlehurst et al. \cite{middlehurst2024bakeoff}, who compared the performance of different TSC algorithms on a set of benchmark datasets. The paper evaluates 18 Time Series Classification (TSC) algorithms evaluating a broad range of modern TSC algorithms, including traditional distance-based methods, feature-based approaches, and state-of-the-art deep learning techniques. 
 
-From their study, it was possible to select the best algorithms to be appied into the problem of time series classification with a real world dataset, the Popular Times dataset from Google.
-
-Based on the Popular Times dataset extracted and studied by Leonardo \cite{silva2019signatures}, where he extracted the Popular Times data from Google Maps for a set of establishments in different cities and countries, this study aims to continue his contributions by evaluating the performance of different time series classification algorithms on this dataset.
+Based on the Popular Times dataset extracted and studied by Silva et al. \cite{silva2019signatures}, where he extracted the Popular Times data from Google Maps for a set of establishments in different cities and countries, this study aims to continue his contributions by evaluating the performance of different time series classification algorithms on this dataset.
 % Explanation of his study
 %In their study, the authors structured the time series clustering experiments into three distinct stages. The first stage involved clustering the time series data of businesses within the same category to analyze intra-category behaviors. The second stage focused on clustering the signatures of different categories to explore whether multiple categories exhibit similar behaviors, potentially represented by a single signature. The same criterion used for determining the number of clusters in the first stage was applied here.
 
@@ -126,16 +123,19 @@ The authors divided the time series clustering experiments into three stages. Fi
 % How am I going to continue his contribution? I am going to use his dataset to evaluate the performance of different time series classification algorithms. Also, compare the results based on some metrics. Accuracy,F1-Score, Precision and Recall. Need to explain the metrics and why I choose these.
 
 % Como é o desempenho da classificação do Leonardo em relação a outros classificadores de Time Series? Quais são os classificadores que eu vou utilizar? Por que eu escolhi esses classificadores? O que eu espero encontrar com esses classificadores? Quais são as métricas que eu vou utilizar para avaliar o desempenho dos classificadores? Por que eu escolhi essas métricas? O que eu espero encontrar com essas métricas?
-The studies [2] and [3] provided a foundation for addressing several questions. How does Leonardo's work compare to state-of-the-art classifiers? How do existing classifiers perform when applied to a real-world time series dataset? What are the limitations of current classifiers when dealing with such datasets? How do different preprocessing techniques impact the performance of these classifiers?
+Studies [2] and [3] provided a foundation for addressing several questions. 
+% reescrever o parágrafo seguinte:
+From their study, it was possible to select the best algorithms to be appied into the problem of time series classification with a real world dataset, the Popular Times dataset from Google.
+%How does Leonardo's work compare to state-of-the-art classifiers? How do existing classifiers perform when applied to a real-world time series dataset? What are the limitations of current classifiers when dealing with such datasets? How do different preprocessing techniques impact the performance of these classifiers?
 
 
 \cite{middlehurst2024bakeoff}
 
 % Ainda estou escrevendo o corpo da introdução, mas quero fechar a Introdução com algo nesta linha.
 
-In this study, the analysis of the dataset focuses on examining how people visit and interact with these establishments over time. 
-By observing patterns of occupancy at different times and types of establishments, the aim is to understand the variations in consumer behavior and how these patterns can be useful in predicting movement in different types of establishments. 
-Time series analysis provides a more detailed and accurate view of collective behavior over time, which can be used to predict the occupancy conditions of a location at certain times, optimizing resource management and improving the experience for both customers and establishment owners.
+%In this study, the analysis of the dataset focuses on examining how people visit and interact with these establishments over time. 
+%By observing patterns of occupancy at different times and types of establishments, the aim is to understand the variations in consumer behavior and how these patterns can be useful in predicting movement in different types of establishments. 
+%Time series analysis provides a more detailed and accurate view of collective behavior over time, which can be used to predict the occupancy conditions of a location at certain times, optimizing resource management and improving the experience for both customers and establishment owners.
 
 % Based on the time series from the Popular Times dataset, several tests were performed with different classifiers, with the aim of evaluating the predictive capacity of the models and identifying which would be the most effective in capturing the temporal patterns of popularity of establishments. 
 % The choice of classifiers was inspired by a recent "bake-off redux" study (Bake off redux: a review and experimental evaluation of recent time series classification algorithms) that compared the performance of different classification approaches on time series datasets.
