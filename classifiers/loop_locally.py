@@ -132,8 +132,9 @@ unique_countries = np.array(unique_countries, dtype=int).ravel().tolist() # 1D
 K = 5
 
 from datetime import datetime
-now = datetime.now() # current date and time
-date_time = now.strftime('%Y-%d-%m_%H-%M-%S')
+date_time_init = datetime.now() # current date and time
+start_time = date_time_init.strftime('%Y-%d-%m_%H-%M-%S')
+print('Start time:', start_time)
 
 # NOTE: Pick one out of the filter modes below to create the pipeline architecture:
 # for country, city, category in unique_categories: # This one doesn't make sense!
@@ -160,5 +161,12 @@ for country in unique_countries:                    # This one trains models cou
     create_tasks(K, country)
 
 # create_tasks(K)                                   # This one trains models with full dataset.
+
+date_time_finish = datetime.now() # current date and time
+end_time = date_time_finish.strftime('%Y-%d-%m_%H-%M-%S')
+print('End time:', end_time)
+
+running_time = date_time_finish - date_time_init
+print('Running time:', str(running_time))
 
 print('Done!')
