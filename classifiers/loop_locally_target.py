@@ -59,15 +59,16 @@ from classifiers.weasel_d import run_weasel_d
 classifiers = [
     ['heavy', run_weasel_d],
     # ['light', run_hydra_ridge],
-    # ['light', run_tde],
+    # ['heavy', run_tde],
     # ['light', run_rdst],
 ]
 
 K = 5
 
 from datetime import datetime
-now = datetime.now()
-date_time = now.strftime('%Y-%d-%m_%H-%M-%S')
+date_time_init = datetime.now() # current date and time
+start_time = date_time_init.strftime('%Y-%d-%m_%H-%M-%S')
+print('Start time:', start_time)
 
 # Ajuste na lógica de criação de tarefas para usar a nova coluna target
 filters_means = []
@@ -82,5 +83,12 @@ for m, metric in enumerate(metrics):
 print(date_time)
 
 create_tasks(K)  # Esta linha treina modelos com o dataset completo.
+
+date_time_finish = datetime.now() # current date and time
+end_time = date_time_finish.strftime('%Y-%d-%m_%H-%M-%S')
+print('End time:', end_time)
+
+running_time = date_time_finish - date_time_init
+print('Running time:', str(running_time))
 
 print('Done!')
