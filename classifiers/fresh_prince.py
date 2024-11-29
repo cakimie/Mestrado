@@ -23,7 +23,7 @@ def fresh_prince (X_train, y_train, X_test, y_test):
     }
 
 def run_fresh_prince(
-    clearML = True,
+    clearML = False,
     params = {
         'k': 1,
         'K': 10,
@@ -33,6 +33,7 @@ def run_fresh_prince(
     },
     task=None,
     task_name="fresh_prince",
+    dataset_filename=None,
 ):
     import time
     start_time = time.time()

@@ -65,7 +65,7 @@ def create_tasks(K, country=None, city=None, category=None):
 #            rode 1 por vez
 #            caso o classificador não esteja na lista, basta incluí-lo conforme os imports abaixo
 
-# from classifiers.fresh_prince import run_fresh_prince
+from classifiers.fresh_prince import run_fresh_prince
 # from classifiers.ts_fresh import run_ts_fresh
 # from classifiers.hivecotev2 import run_hivecotev2
 # from classifiers.weasel_d import run_weasel_d
@@ -83,7 +83,7 @@ def create_tasks(K, country=None, city=None, category=None):
 
 #treino com um país e teste com outro (vice-versa)
 # from classifiers.weasel_d_inverted import run_weasel_d
-from classifiers.tde_inverted import run_tde
+# from classifiers.tde_inverted import run_tde
 # from classifiers.hydra_ridge_inverted import run_hydra_ridge
 # from classifiers.rdst_inverted import run_rdst
 # from classifiers.rSTSF_inverted import run_rSTSF
@@ -102,12 +102,12 @@ from classifiers.tde_inverted import run_tde
 #           caso não saiba se é "light", "default" ou "heavy", pode deixá-lo como "default"
 
 classifiers = [
-    # ['light', run_fresh_prince], ok
+    ['light', run_fresh_prince],
     # ['light', run_ts_fresh], #ok
     # ['heavy', run_weasel_d], #ok
-    ['heavy', run_tde], #ok
+    # ['heavy', run_tde], #ok
     # ['heavy', run_resnet],
-    # ['heavy', run_hivecotev2], ok
+    # ['heavy', run_hivecotev2],
     # ['heavy', run_inception_time],
     # ['light', run_DrCIF],
     # ['light', run_multirocket],
@@ -115,7 +115,7 @@ classifiers = [
     # ['light', run_ridge_cv],
     # ['light', run_rSTSF],
     # ['light', run_MrSQM],
-    # ['heavy', run_elastic_ensemble], ok
+    # ['heavy', run_elastic_ensemble],
     # ['heavy', run_proximity_forest],
     # ['heavy', run_hydra_ridge],
 ]
@@ -141,9 +141,9 @@ print('Start time:', start_time)
 #     create_tasks(K, country, city, category)
 filters_means = []
 
-# for country, city in unique_cities:               # This one trains models city by city.
-#     means = create_tasks(K, country, city)
-#     filters_means.append(means)
+for country, city in unique_cities:               # This one trains models city by city.
+    means = create_tasks(K, country, city)
+    filters_means.append(means)
 
 # for country in unique_countries:               # This one trains models country by country.
 #     means = create_tasks(K, country)
@@ -157,8 +157,8 @@ for m,metric in enumerate(metrics):
 
     #TODO: Totalizar algoritmo para todos os diferentes filtros.
 
-for country in unique_countries:                    # This one trains models country by country.
-    create_tasks(K, country)
+# for country in unique_countries:                    # This one trains models country by country.
+#     create_tasks(K, country)
 
 # create_tasks(K)                                   # This one trains models with full dataset.
 

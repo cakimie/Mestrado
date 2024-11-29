@@ -8,7 +8,7 @@ def extract_x_y(df, country=None, city=None, category=None):
     ]
     df_x = filtered_df.drop(columns=['id', 'category'])
     try:
-        df_x = filtered_df.drop(columns=['country', 'city'])
+        df_x = df_x.drop(columns=['country', 'city'])
     except:
         pass
     return np.array(df_x), np.array(filtered_df['category'])
