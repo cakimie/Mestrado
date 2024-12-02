@@ -66,21 +66,21 @@ def run_rdst(
 
     print(df_country_0)
 
-    X_train = df_country_0.drop(columns=['category']) 
-    y_train = df_country_0['category'] 
+    X_train = np.array(df_country_0.drop(columns=['category'])) 
+    y_train = np.array(df_country_0['category']) 
 
-    X_test = df_country_1.drop(columns=['category']) 
-    y_test = df_country_1['category'] 
+    X_test = np.array(df_country_1.drop(columns=['category'])) 
+    y_test = np.array(df_country_1['category']) 
 
     print(f'Treinando no país 0 e testando no país 1')
     results = rdst(X_train, y_train, X_test, y_test)
 
     print(f'Treinando no país 1 e testando no país 0')
-    X_train = df_country_1.drop(columns=['category']) 
-    y_train = df_country_1['category'] 
+    X_train = np.array(df_country_1.drop(columns=['category'])) 
+    y_train = np.array(df_country_1['category']) 
 
-    X_test = df_country_0.drop(columns=['category']) 
-    y_test = df_country_0['category'] 
+    X_test = np.array(df_country_0.drop(columns=['category'])) 
+    y_test = np.array(df_country_0['category']) 
 
     results_inverted = rdst(X_train, y_train, X_test, y_test)
 
