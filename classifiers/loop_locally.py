@@ -65,12 +65,9 @@ def create_tasks(K, country=None, city=None, category=None):
 #            rode 1 por vez
 #            caso o classificador não esteja na lista, basta incluí-lo conforme os imports abaixo
 
-from classifiers.fresh_prince import run_fresh_prince
+# from classifiers.fresh_prince import run_fresh_prince
 # from classifiers.ts_fresh import run_ts_fresh
 # from classifiers.hivecotev2 import run_hivecotev2
-# from classifiers.weasel_d import run_weasel_d
-# from classifiers.resnet import run_resnet
-# from classifiers.tde import run_tde
 # from classifiers.inception_time import run_inception_time
 # from classifiers.drcif2 import run_DrCIF
 # from classifiers.multirocket import run_multirocket
@@ -78,8 +75,12 @@ from classifiers.fresh_prince import run_fresh_prince
 # from classifiers.ridgecv import run_ridge_cv
 # from classifiers.rSTSF import run_rSTSF
 # from classifiers.elastic_ensemble import run_elastic_ensemble
-# from classifiers.proximity_forest import run_proximity_forest
 # from classifiers.hydra_ridge import run_hydra_ridge
+from classifiers.mrsqm import run_MrSQM
+# from classifiers.weasel_d import run_weasel_d
+# from classifiers.tde import run_tde
+# from classifiers.resnet import run_resnet
+# from classifiers.proximity_forest import run_proximity_forest
 
 #treino com um país e teste com outro (vice-versa)
 # from classifiers.weasel_d_inverted import run_weasel_d
@@ -102,11 +103,8 @@ from classifiers.fresh_prince import run_fresh_prince
 #           caso não saiba se é "light", "default" ou "heavy", pode deixá-lo como "default"
 
 classifiers = [
-    ['light', run_fresh_prince],
-    # ['light', run_ts_fresh], #ok
-    # ['heavy', run_weasel_d], #ok
-    # ['heavy', run_tde], #ok
-    # ['heavy', run_resnet],
+    # ['light', run_fresh_prince],
+    # ['light', run_ts_fresh],
     # ['heavy', run_hivecotev2],
     # ['heavy', run_inception_time],
     # ['light', run_DrCIF],
@@ -114,10 +112,13 @@ classifiers = [
     # ['light', run_rdst],
     # ['light', run_ridge_cv],
     # ['light', run_rSTSF],
-    # ['light', run_MrSQM],
     # ['heavy', run_elastic_ensemble],
-    # ['heavy', run_proximity_forest],
     # ['heavy', run_hydra_ridge],
+    ['light', run_MrSQM],
+    # ['heavy', run_proximity_forest],
+    # ['heavy', run_weasel_d],
+    # ['heavy', run_tde],
+    # ['heavy', run_resnet],
 ]
 
 # Extracts types of possible filters to pick from later:
