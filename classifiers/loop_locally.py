@@ -150,6 +150,8 @@ for country, city in unique_cities:               # This one trains models city 
 #     means = create_tasks(K, country)
 #     filters_means.append(means)
 
+create_tasks(K)                                   # This one trains models with full dataset.
+
 metrics =  ['accuracy_score','f1_score','precision_score','recall_score']
 
 for m,metric in enumerate(metrics):
@@ -160,8 +162,6 @@ for m,metric in enumerate(metrics):
 
 # for country in unique_countries:                    # This one trains models country by country.
 #     create_tasks(K, country)
-
-# create_tasks(K)                                   # This one trains models with full dataset.
 
 date_time_finish = datetime.now() # current date and time
 end_time = date_time_finish.strftime('%Y-%d-%m_%H-%M-%S')
