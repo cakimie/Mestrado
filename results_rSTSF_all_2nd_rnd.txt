@@ -1,0 +1,254 @@
+nohup: ignoring input
+/home/carolina/Documents/Mestrado/.venv/lib/python3.9/site-packages/torch/cuda/__init__.py:141: UserWarning: CUDA initialization: The NVIDIA driver on your system is too old (found version 11020). Please update your GPU driver by downloading and installing a new version from the URL: http://www.nvidia.com/Download/index.aspx Alternatively, go to: https://pytorch.org to install a PyTorch version that has been compiled with your version of the CUDA driver. (Triggered internally at ../c10/cuda/CUDAFunctions.cpp:108.)
+  return torch._C._cuda_getDeviceCount() > 0
+GPU is not available
+Start time: 2024-29-11_07-12-16
+timeseries_f1-5 (10163, 24) (10163,) (2541, 24) (2541,)
+Loaded: timeseries_f1-5
+Dataset:  PopularTimesGoogle
+run  1
+training time: 4118.492467531934
+testing time: 68.19773098267615
+accuracy:  0.6812278630460449
+run  2
+training time: 4264.755747972056
+testing time: 49.735726583749056
+accuracy:  0.6808343171979535
+run  3
+training time: 4136.563050569035
+testing time: 58.829843666404486
+accuracy:  0.6824085005903188
+run  4
+training time: 3771.306222275831
+testing time: 29.671476006507874
+accuracy:  0.6808343171979535
+run  5
+training time: 3680.8451458513737
+testing time: 39.31277816276997
+accuracy:  0.6824085005903188
+run  6
+training time: 3281.245294383727
+testing time: 38.19153729174286
+accuracy:  0.6808343171979535
+run  7
+training time: 2808.7163613410667
+testing time: 39.02717665117234
+accuracy:  0.6843762298307753
+run  8
+training time: 2852.923468247056
+testing time: 35.723102307878435
+accuracy:  0.683982683982684
+run  9
+training time: 2219.2537990575656
+testing time: 27.172983134165406
+accuracy:  0.6831955922865014
+run  10
+training time: 1835.3799632648006
+testing time: 26.520328522659838
+accuracy:  0.6855568673750492
+avg accuracy for 10 runs:  0.6825659189295552
+
+
+<function run_rSTSF at 0x7f673d08c3a0>_f1-5 {'accuracy_score': 0.6855568673750492, 'f1_score': 0.6849183518995972, 'precision_score': 0.6862285054774285, 'recall_score': 0.6855568673750492}
+timeseries_f2-5 (10163, 24) (10163,) (2541, 24) (2541,)
+Loaded: timeseries_f2-5
+Dataset:  PopularTimesGoogle
+run  1
+training time: 1474.0804614191875
+testing time: 15.636007491499186
+accuracy:  0.6780794962613145
+run  2
+training time: 1396.5740035716444
+testing time: 21.29218468721956
+accuracy:  0.6784730421094057
+run  3
+training time: 1415.289252457209
+testing time: 21.188802713528275
+accuracy:  0.676111767020858
+run  4
+training time: 1412.010461206548
+testing time: 20.40852806624025
+accuracy:  0.6784730421094057
+run  5
+training time: 1398.6332372082397
+testing time: 19.4157495489344
+accuracy:  0.6776859504132231
+run  6
+training time: 1699.8845498925075
+testing time: 34.77938895393163
+accuracy:  0.6780794962613145
+run  7
+training time: 1238.162330207415
+testing time: 11.481593837030232
+accuracy:  0.6788665879574971
+run  8
+training time: 819.8951561711729
+testing time: 10.040854781866074
+accuracy:  0.6820149547422275
+run  9
+training time: 880.4453580174595
+testing time: 10.677351355552673
+accuracy:  0.6772924045651318
+run  10
+training time: 910.5632940204814
+testing time: 13.71528014820069
+accuracy:  0.6776859504132231
+avg accuracy for 10 runs:  0.6782762691853602
+
+
+<function run_rSTSF at 0x7f673d08c3a0>_f2-5 {'accuracy_score': 0.6776859504132231, 'f1_score': 0.6762755491596515, 'precision_score': 0.6766799362921985, 'recall_score': 0.6776859504132231}
+timeseries_f3-5 (10163, 24) (10163,) (2541, 24) (2541,)
+Loaded: timeseries_f3-5
+Dataset:  PopularTimesGoogle
+run  1
+training time: 855.8053195532411
+testing time: 13.058091554790735
+accuracy:  0.6465958284140102
+run  2
+training time: 851.39577644784
+testing time: 10.60307553038001
+accuracy:  0.6477764659582841
+run  3
+training time: 881.0852406891063
+testing time: 11.613668299280107
+accuracy:  0.6465958284140102
+run  4
+training time: 876.1169995293021
+testing time: 13.157190489582717
+accuracy:  0.6485635576544667
+run  5
+training time: 698.484442952089
+testing time: 6.1554879089817405
+accuracy:  0.6493506493506493
+run  6
+training time: 445.5696501750499
+testing time: 6.787259061820805
+accuracy:  0.6481700118063755
+run  7
+training time: 459.70510931126773
+testing time: 6.642096523195505
+accuracy:  0.6481700118063755
+run  8
+training time: 449.09626631159335
+testing time: 7.504614654928446
+accuracy:  0.6493506493506493
+run  9
+training time: 455.3608462912962
+testing time: 6.750012792646885
+accuracy:  0.6462022825659189
+run  10
+training time: 453.4807780897245
+testing time: 7.4799251444637775
+accuracy:  0.6481700118063755
+avg accuracy for 10 runs:  0.6478945297127116
+
+
+<function run_rSTSF at 0x7f673d08c3a0>_f3-5 {'accuracy_score': 0.6481700118063755, 'f1_score': 0.6476063720592837, 'precision_score': 0.648294107744478, 'recall_score': 0.6481700118063755}
+timeseries_f4-5 (10163, 24) (10163,) (2541, 24) (2541,)
+Loaded: timeseries_f4-5
+Dataset:  PopularTimesGoogle
+run  1
+training time: 486.0999500034377
+testing time: 7.8182843225076795
+accuracy:  0.6725698543880362
+run  2
+training time: 479.2222685366869
+testing time: 6.588033490814269
+accuracy:  0.6741440377804014
+run  3
+training time: 460.080765186809
+testing time: 8.092905984260142
+accuracy:  0.6768988587170406
+run  4
+training time: 460.33703452628106
+testing time: 6.668709955178201
+accuracy:  0.6745375836284927
+run  5
+training time: 467.714809268713
+testing time: 7.168337767012417
+accuracy:  0.6772924045651318
+run  6
+training time: 466.675614384003
+testing time: 7.3645139103755355
+accuracy:  0.6745375836284927
+run  7
+training time: 461.9504934847355
+testing time: 7.13680690061301
+accuracy:  0.6721763085399449
+run  8
+training time: 460.1474480070174
+testing time: 6.512600091286004
+accuracy:  0.6737504919323101
+run  9
+training time: 467.6458792472258
+testing time: 6.469668502919376
+accuracy:  0.6768988587170406
+run  10
+training time: 470.55497777089477
+testing time: 6.7412044098600745
+accuracy:  0.6753246753246753
+avg accuracy for 10 runs:  0.6748130657221567
+
+
+<function run_rSTSF at 0x7f673d08c3a0>_f4-5 {'accuracy_score': 0.6753246753246753, 'f1_score': 0.6744762376204365, 'precision_score': 0.6744116290786568, 'recall_score': 0.6753246753246753}
+timeseries_f5-5 (10164, 24) (10164,) (2540, 24) (2540,)
+Loaded: timeseries_f5-5
+Dataset:  PopularTimesGoogle
+run  1
+training time: 453.6963477777317
+testing time: 6.985181628726423
+accuracy:  0.6775590551181102
+run  2
+training time: 452.94585755467415
+testing time: 8.021664379164577
+accuracy:  0.6791338582677166
+run  3
+training time: 452.2046538051218
+testing time: 6.7521793292835355
+accuracy:  0.6791338582677166
+run  4
+training time: 452.0021592807025
+testing time: 7.843373564071953
+accuracy:  0.6779527559055119
+run  5
+training time: 460.2921653781086
+testing time: 7.348502937704325
+accuracy:  0.6751968503937008
+run  6
+training time: 454.6272619329393
+testing time: 6.846441396512091
+accuracy:  0.6811023622047244
+run  7
+training time: 440.4924067808315
+testing time: 5.902017225511372
+accuracy:  0.6775590551181102
+run  8
+training time: 438.27171923872083
+testing time: 6.797849382273853
+accuracy:  0.6783464566929134
+run  9
+training time: 442.64874169323593
+testing time: 6.359934658743441
+accuracy:  0.6779527559055119
+run  10
+training time: 422.28189540840685
+testing time: 5.7123096119612455
+accuracy:  0.6807086614173228
+avg accuracy for 10 runs:  0.6784645669291339
+
+
+<function run_rSTSF at 0x7f673d08c3a0>_f5-5 {'accuracy_score': 0.6807086614173228, 'f1_score': 0.6801478836882091, 'precision_score': 0.6800079176961218, 'recall_score': 0.6807086614173228}
+<function run_rSTSF at 0x7f673d08c3a0>
+           accuracy_score mean=0.6734892 std=0.0131133 t_interval=(0.6370808966503024, 0.709897569884356)
+           f1_score mean=0.6726849 std=0.0130414 t_interval=(0.636476209075784, 0.7088935486950872)
+           precision_score mean=0.6731244 std=0.0130380 t_interval=(0.6369252262154944, 0.7093236123000591)
+           recall_score mean=0.6734892 std=0.0131133 t_interval=(0.6370808966503024, 0.709897569884356)
+Classifier mean accuracy_score=nan
+Classifier mean f1_score=nan
+Classifier mean precision_score=nan
+Classifier mean recall_score=nan
+End time: 2024-30-11_00-29-16
+Running time: 17:17:00.056333
+Done!
+15716.02user 138.57system 17:17:34elapsed 25%CPU (0avgtext+0avgdata 2464424maxresident)k
+229416inputs+40outputs (13020major+6199406minor)pagefaults 0swaps

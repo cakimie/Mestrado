@@ -1,0 +1,54 @@
+nohup: ignoring input
+/home/carolina/Documents/Mestrado/.venv/lib/python3.9/site-packages/torch/cuda/__init__.py:141: UserWarning: CUDA initialization: The NVIDIA driver on your system is too old (found version 11020). Please update your GPU driver by downloading and installing a new version from the URL: http://www.nvidia.com/Download/index.aspx Alternatively, go to: https://pytorch.org to install a PyTorch version that has been compiled with your version of the CUDA driver. (Triggered internally at ../c10/cuda/CUDAFunctions.cpp:108.)
+  return torch._C._cuda_getDeviceCount() > 0
+GPU is not available
+Start time: 2024-29-11_07-16-09
+timeseries_0_f1-5 (3588, 24) (3588,) (898, 24) (898,)
+Loaded: timeseries_0_f1-5
+<function run_hydra_ridge at 0x7faf56b97ca0>_0_f1-5 {'accuracy_score': 0.7305122494432071, 'f1_score': 0.7213261737845713, 'precision_score': 0.7309096880099807, 'recall_score': 0.7305122494432071}
+timeseries_0_f2-5 (3589, 24) (3589,) (897, 24) (897,)
+Loaded: timeseries_0_f2-5
+<function run_hydra_ridge at 0x7faf56b97ca0>_0_f2-5 {'accuracy_score': 0.7536231884057971, 'f1_score': 0.744329103702869, 'precision_score': 0.7508599402281679, 'recall_score': 0.7536231884057971}
+timeseries_0_f3-5 (3589, 24) (3589,) (897, 24) (897,)
+Loaded: timeseries_0_f3-5
+<function run_hydra_ridge at 0x7faf56b97ca0>_0_f3-5 {'accuracy_score': 0.7224080267558528, 'f1_score': 0.7124186210461576, 'precision_score': 0.7255723799336755, 'recall_score': 0.7224080267558528}
+timeseries_0_f4-5 (3589, 24) (3589,) (897, 24) (897,)
+Loaded: timeseries_0_f4-5
+<function run_hydra_ridge at 0x7faf56b97ca0>_0_f4-5 {'accuracy_score': 0.7268673355629878, 'f1_score': 0.7203426163250286, 'precision_score': 0.7284131853529847, 'recall_score': 0.7268673355629878}
+timeseries_0_f5-5 (3589, 24) (3589,) (897, 24) (897,)
+Loaded: timeseries_0_f5-5
+<function run_hydra_ridge at 0x7faf56b97ca0>_0_f5-5 {'accuracy_score': 0.6755852842809364, 'f1_score': 0.6618163003647625, 'precision_score': 0.6773718295750298, 'recall_score': 0.6755852842809364}
+<function run_hydra_ridge at 0x7faf56b97ca0>_0
+           accuracy_score mean=0.7217992 std=0.0254969 t_interval=(0.6510084018741085, 0.7925900319054042)
+           f1_score mean=0.7120466 std=0.0272775 t_interval=(0.636312022737136, 0.7877811033522196)
+           precision_score mean=0.7226254 std=0.0243141 t_interval=(0.6551185244198193, 0.7901322848201161)
+           recall_score mean=0.7217992 std=0.0254969 t_interval=(0.6510084018741085, 0.7925900319054042)
+timeseries_1_f1-5 (6574, 24) (6574,) (1644, 24) (1644,)
+Loaded: timeseries_1_f1-5
+<function run_hydra_ridge at 0x7faf56b97ca0>_1_f1-5 {'accuracy_score': 0.7001216545012166, 'f1_score': 0.6964698968078392, 'precision_score': 0.6959887603406343, 'recall_score': 0.7001216545012166}
+timeseries_1_f2-5 (6574, 24) (6574,) (1644, 24) (1644,)
+Loaded: timeseries_1_f2-5
+<function run_hydra_ridge at 0x7faf56b97ca0>_1_f2-5 {'accuracy_score': 0.6782238442822385, 'f1_score': 0.6730491861102122, 'precision_score': 0.680868973218811, 'recall_score': 0.6782238442822385}
+timeseries_1_f3-5 (6574, 24) (6574,) (1644, 24) (1644,)
+Loaded: timeseries_1_f3-5
+<function run_hydra_ridge at 0x7faf56b97ca0>_1_f3-5 {'accuracy_score': 0.6843065693430657, 'f1_score': 0.6800524958568378, 'precision_score': 0.6862627502596305, 'recall_score': 0.6843065693430657}
+timeseries_1_f4-5 (6575, 24) (6575,) (1643, 24) (1643,)
+Loaded: timeseries_1_f4-5
+<function run_hydra_ridge at 0x7faf56b97ca0>_1_f4-5 {'accuracy_score': 0.6810712111990261, 'f1_score': 0.6756179098315062, 'precision_score': 0.6822703850428123, 'recall_score': 0.6810712111990261}
+timeseries_1_f5-5 (6575, 24) (6575,) (1643, 24) (1643,)
+Loaded: timeseries_1_f5-5
+<function run_hydra_ridge at 0x7faf56b97ca0>_1_f5-5 {'accuracy_score': 0.6755934266585514, 'f1_score': 0.6707703171920457, 'precision_score': 0.674957819694344, 'recall_score': 0.6755934266585514}
+<function run_hydra_ridge at 0x7faf56b97ca0>_1
+           accuracy_score mean=0.6838633 std=0.0086316 t_interval=(0.6598982415814233, 0.7078284408122159)
+           f1_score mean=0.6791920 std=0.0091728 t_interval=(0.6537242491726127, 0.7046596731467636)
+           precision_score mean=0.6840697 std=0.0069768 t_interval=(0.6646989031189747, 0.7034405723035182)
+           recall_score mean=0.6838633 std=0.0086316 t_interval=(0.6598982415814233, 0.7078284408122159)
+Classifier mean accuracy_score=0.7028313
+Classifier mean f1_score=0.6956193
+Classifier mean precision_score=0.7033476
+Classifier mean recall_score=0.7028313
+End time: 2024-29-11_07-44-14
+Running time: 0:28:05.461310
+Done!
+871.72user 1614.71system 28:42.00elapsed 144%CPU (0avgtext+0avgdata 1357148maxresident)k
+24936inputs+40outputs (94major+3795861minor)pagefaults 0swaps

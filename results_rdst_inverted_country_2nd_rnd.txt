@@ -1,0 +1,128 @@
+nohup: ignoring input
+/home/carolina/Documents/Mestrado/.venv/lib/python3.9/site-packages/torch/cuda/__init__.py:141: UserWarning: CUDA initialization: The NVIDIA driver on your system is too old (found version 11020). Please update your GPU driver by downloading and installing a new version from the URL: http://www.nvidia.com/Download/index.aspx Alternatively, go to: https://pytorch.org to install a PyTorch version that has been compiled with your version of the CUDA driver. (Triggered internally at ../c10/cuda/CUDAFunctions.cpp:108.)
+  return torch._C._cuda_getDeviceCount() > 0
+/home/carolina/Documents/Mestrado/.venv/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1344: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/carolina/Documents/Mestrado/.venv/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1344: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/carolina/Documents/Mestrado/.venv/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1344: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/carolina/Documents/Mestrado/.venv/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1344: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/carolina/Documents/Mestrado/.venv/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1344: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/carolina/Documents/Mestrado/.venv/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1344: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+Traceback (most recent call last):
+  File "/usr/lib/python3.9/runpy.py", line 197, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/usr/lib/python3.9/runpy.py", line 87, in _run_code
+    exec(code, run_globals)
+  File "/home/carolina/Documents/Mestrado/classifiers/loop_locally.py", line 150, in <module>
+    #     means = create_tasks(K, country)
+  File "/home/carolina/Documents/Mestrado/classifiers/loop_locally.py", line 53, in create_tasks
+    values = [
+  File "/home/carolina/Documents/Mestrado/classifiers/loop_locally.py", line 54, in <listcomp>
+    results[metric] for results in kfold_results
+TypeError: tuple indices must be integers or slices, not str
+GPU is not available
+Start time: 2024-29-11_07-31-10
+timeseries_0_f1-5 (3588, 24) (3588,) (898, 24) (898,)
+Loaded: timeseries_0_f1-5
+        id       h00  h01  h02  ...       h23  country  city  category
+0        0  0.000000  0.0  0.0  ...  0.000000      0.0   0.0       0.0
+1        1  0.000000  0.0  0.0  ...  0.000000      0.0   0.0       0.0
+2        2  0.000000  0.0  0.0  ...  0.000000      0.0   0.0       0.0
+3        3  0.000000  0.0  0.0  ...  0.000000      0.0   0.0       0.0
+4        4  0.000000  0.0  0.0  ...  0.000000      0.0   0.0       0.0
+...    ...       ...  ...  ...  ...       ...      ...   ...       ...
+4481  4481  0.000000  0.0  0.0  ...  0.490978      0.0   2.0       4.0
+4482  4482  0.000000  0.0  0.0  ...  0.000000      0.0   2.0       4.0
+4483  4483  0.268889  0.0  0.0  ...  0.184940      0.0   2.0       4.0
+4484  4484  0.000000  0.0  0.0  ...  0.000000      0.0   2.0       4.0
+4485  4485  0.000000  0.0  0.0  ...  0.178723      0.0   2.0       4.0
+
+[4486 rows x 28 columns]
+Treinando no país 0 e testando no país 1
+Treinando no país 1 e testando no país 0
+<function run_rdst at 0x7f37d2982040>_0_f1-5 ({'accuracy_score': 0.17741542954490144, 'f1_score': 0.14735983780853618, 'precision_score': 0.21281390978344705, 'recall_score': 0.17741542954490144}, {'accuracy_score': 0.1905929558626839, 'f1_score': 0.08991811418192902, 'precision_score': 0.47281897389757616, 'recall_score': 0.1905929558626839})
+timeseries_0_f2-5 (3589, 24) (3589,) (897, 24) (897,)
+Loaded: timeseries_0_f2-5
+        id       h00  h01  h02  ...       h23  country  city  category
+0        0  0.000000  0.0  0.0  ...  0.000000      0.0   0.0       0.0
+1        1  0.000000  0.0  0.0  ...  0.000000      0.0   0.0       0.0
+2        2  0.000000  0.0  0.0  ...  0.000000      0.0   0.0       0.0
+3        3  0.000000  0.0  0.0  ...  0.000000      0.0   0.0       0.0
+4        4  0.000000  0.0  0.0  ...  0.000000      0.0   0.0       0.0
+...    ...       ...  ...  ...  ...       ...      ...   ...       ...
+4481  4481  0.000000  0.0  0.0  ...  0.490978      0.0   2.0       4.0
+4482  4482  0.000000  0.0  0.0  ...  0.000000      0.0   2.0       4.0
+4483  4483  0.268889  0.0  0.0  ...  0.184940      0.0   2.0       4.0
+4484  4484  0.000000  0.0  0.0  ...  0.000000      0.0   2.0       4.0
+4485  4485  0.000000  0.0  0.0  ...  0.178723      0.0   2.0       4.0
+
+[4486 rows x 28 columns]
+Treinando no país 0 e testando no país 1
+Treinando no país 1 e testando no país 0
+<function run_rdst at 0x7f37d2982040>_0_f2-5 ({'accuracy_score': 0.1707228036018496, 'f1_score': 0.1704152364493949, 'precision_score': 0.2338418452564095, 'recall_score': 0.1707228036018496}, {'accuracy_score': 0.27619259919750333, 'f1_score': 0.17317736857424937, 'precision_score': 0.15962266278006032, 'recall_score': 0.27619259919750333})
+timeseries_0_f3-5 (3589, 24) (3589,) (897, 24) (897,)
+Loaded: timeseries_0_f3-5
+        id       h00  h01  h02  ...       h23  country  city  category
+0        0  0.000000  0.0  0.0  ...  0.000000      0.0   0.0       0.0
+1        1  0.000000  0.0  0.0  ...  0.000000      0.0   0.0       0.0
+2        2  0.000000  0.0  0.0  ...  0.000000      0.0   0.0       0.0
+3        3  0.000000  0.0  0.0  ...  0.000000      0.0   0.0       0.0
+4        4  0.000000  0.0  0.0  ...  0.000000      0.0   0.0       0.0
+...    ...       ...  ...  ...  ...       ...      ...   ...       ...
+4481  4481  0.000000  0.0  0.0  ...  0.490978      0.0   2.0       4.0
+4482  4482  0.000000  0.0  0.0  ...  0.000000      0.0   2.0       4.0
+4483  4483  0.268889  0.0  0.0  ...  0.184940      0.0   2.0       4.0
+4484  4484  0.000000  0.0  0.0  ...  0.000000      0.0   2.0       4.0
+4485  4485  0.000000  0.0  0.0  ...  0.178723      0.0   2.0       4.0
+
+[4486 rows x 28 columns]
+Treinando no país 0 e testando no país 1
+Treinando no país 1 e testando no país 0
+<function run_rdst at 0x7f37d2982040>_0_f3-5 ({'accuracy_score': 0.16719396446824045, 'f1_score': 0.13105461343728042, 'precision_score': 0.23329731349565622, 'recall_score': 0.16719396446824045}, {'accuracy_score': 0.2619259919750334, 'f1_score': 0.16361858994384657, 'precision_score': 0.40556421692184197, 'recall_score': 0.2619259919750334})
+timeseries_0_f4-5 (3589, 24) (3589,) (897, 24) (897,)
+Loaded: timeseries_0_f4-5
+        id       h00  h01  h02  ...       h23  country  city  category
+0        0  0.000000  0.0  0.0  ...  0.000000      0.0   0.0       0.0
+1        1  0.000000  0.0  0.0  ...  0.000000      0.0   0.0       0.0
+2        2  0.000000  0.0  0.0  ...  0.000000      0.0   0.0       0.0
+3        3  0.000000  0.0  0.0  ...  0.000000      0.0   0.0       0.0
+4        4  0.000000  0.0  0.0  ...  0.000000      0.0   0.0       0.0
+...    ...       ...  ...  ...  ...       ...      ...   ...       ...
+4481  4481  0.000000  0.0  0.0  ...  0.490978      0.0   2.0       4.0
+4482  4482  0.000000  0.0  0.0  ...  0.000000      0.0   2.0       4.0
+4483  4483  0.268889  0.0  0.0  ...  0.184940      0.0   2.0       4.0
+4484  4484  0.000000  0.0  0.0  ...  0.000000      0.0   2.0       4.0
+4485  4485  0.000000  0.0  0.0  ...  0.178723      0.0   2.0       4.0
+
+[4486 rows x 28 columns]
+Treinando no país 0 e testando no país 1
+Treinando no país 1 e testando no país 0
+<function run_rdst at 0x7f37d2982040>_0_f4-5 ({'accuracy_score': 0.1403017765879776, 'f1_score': 0.11216630490143957, 'precision_score': 0.17915967933245502, 'recall_score': 0.1403017765879776}, {'accuracy_score': 0.21756576014266607, 'f1_score': 0.11897020598907952, 'precision_score': 0.11673555509311949, 'recall_score': 0.21756576014266607})
+timeseries_0_f5-5 (3589, 24) (3589,) (897, 24) (897,)
+Loaded: timeseries_0_f5-5
+        id       h00  h01  h02  ...       h23  country  city  category
+0        0  0.000000  0.0  0.0  ...  0.000000      0.0   0.0       0.0
+1        1  0.000000  0.0  0.0  ...  0.000000      0.0   0.0       0.0
+2        2  0.000000  0.0  0.0  ...  0.000000      0.0   0.0       0.0
+3        3  0.000000  0.0  0.0  ...  0.000000      0.0   0.0       0.0
+4        4  0.000000  0.0  0.0  ...  0.000000      0.0   0.0       0.0
+...    ...       ...  ...  ...  ...       ...      ...   ...       ...
+4481  4481  0.000000  0.0  0.0  ...  0.490978      0.0   2.0       4.0
+4482  4482  0.000000  0.0  0.0  ...  0.000000      0.0   2.0       4.0
+4483  4483  0.268889  0.0  0.0  ...  0.184940      0.0   2.0       4.0
+4484  4484  0.000000  0.0  0.0  ...  0.000000      0.0   2.0       4.0
+4485  4485  0.000000  0.0  0.0  ...  0.178723      0.0   2.0       4.0
+
+[4486 rows x 28 columns]
+Treinando no país 0 e testando no país 1
+Treinando no país 1 e testando no país 0
+<function run_rdst at 0x7f37d2982040>_0_f5-5 ({'accuracy_score': 0.11839863713798977, 'f1_score': 0.08486785485215669, 'precision_score': 0.09325338363191071, 'recall_score': 0.11839863713798977}, {'accuracy_score': 0.2059741417744093, 'f1_score': 0.10454504283120465, 'precision_score': 0.09883568575436581, 'recall_score': 0.2059741417744093})
+<function run_rdst at 0x7f37d2982040>_0
+Command exited with non-zero status 1
+6610.87user 5106.76system 4:57:38elapsed 65%CPU (0avgtext+0avgdata 7936700maxresident)k
+154320inputs+2024outputs (393major+15158908minor)pagefaults 0swaps

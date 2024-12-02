@@ -1,0 +1,82 @@
+nohup: ignoring input
+/home/carolina/Documents/Mestrado/.venv/lib/python3.9/site-packages/torch/cuda/__init__.py:141: UserWarning: CUDA initialization: The NVIDIA driver on your system is too old (found version 11020). Please update your GPU driver by downloading and installing a new version from the URL: http://www.nvidia.com/Download/index.aspx Alternatively, go to: https://pytorch.org to install a PyTorch version that has been compiled with your version of the CUDA driver. (Triggered internally at ../c10/cuda/CUDAFunctions.cpp:108.)
+  return torch._C._cuda_getDeviceCount() > 0
+Traceback (most recent call last):
+  File "/home/carolina/Documents/Mestrado/.venv/lib/python3.9/site-packages/pandas/core/indexes/base.py", line 3802, in get_loc
+    return self._engine.get_loc(casted_key)
+  File "pandas/_libs/index.pyx", line 138, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas/_libs/index.pyx", line 144, in pandas._libs.index.IndexEngine.get_loc
+TypeError: '(0        True
+1        True
+2        True
+3        True
+4        True
+        ...  
+4481    False
+4482    False
+4483    False
+4484    False
+4485    False
+Name: category, Length: 4486, dtype: bool, slice(None, None, None))' is an invalid key
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.9/runpy.py", line 197, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/usr/lib/python3.9/runpy.py", line 87, in _run_code
+    exec(code, run_globals)
+  File "/home/carolina/Documents/Mestrado/classifiers/loop_locally.py", line 150, in <module>
+    #     means = create_tasks(K, country)
+  File "/home/carolina/Documents/Mestrado/classifiers/loop_locally.py", line 35, in create_tasks
+    results = classifier(task_name=node_name,
+  File "/home/carolina/Documents/Mestrado/classifiers/rSTSF_inverted.py", line 150, in run_rSTSF
+    results = rSTSF(X_train, y_train, X_test, y_test)
+  File "/home/carolina/Documents/Mestrado/classifiers/rSTSF_inverted.py", line 17, in rSTSF
+    clf_rSTSF.fit(X_train,y_train)
+  File "/home/carolina/Documents/Mestrado/rSTSF_functions.py", line 564, in fit
+    X_train, per_X_train, diff_X_train, ar_X_train, y_train = dataAugmented(X_train_ori,y_train_ori)
+  File "/home/carolina/Documents/Mestrado/rSTSF_functions.py", line 434, in dataAugmented
+    X_toadd,y_toadd = balanceSample(X_train,y_train)
+  File "/home/carolina/Documents/Mestrado/rSTSF_functions.py", line 207, in balanceSample
+    X_train_c = X_train[row_idx,:]
+  File "/home/carolina/Documents/Mestrado/.venv/lib/python3.9/site-packages/pandas/core/frame.py", line 3807, in __getitem__
+    indexer = self.columns.get_loc(key)
+  File "/home/carolina/Documents/Mestrado/.venv/lib/python3.9/site-packages/pandas/core/indexes/base.py", line 3809, in get_loc
+    self._check_indexing_error(key)
+  File "/home/carolina/Documents/Mestrado/.venv/lib/python3.9/site-packages/pandas/core/indexes/base.py", line 5925, in _check_indexing_error
+    raise InvalidIndexError(key)
+pandas.errors.InvalidIndexError: (0        True
+1        True
+2        True
+3        True
+4        True
+        ...  
+4481    False
+4482    False
+4483    False
+4484    False
+4485    False
+Name: category, Length: 4486, dtype: bool, slice(None, None, None))
+GPU is not available
+Start time: 2024-29-11_07-24-23
+timeseries_0_f1-5 (3588, 24) (3588,) (898, 24) (898,)
+Loaded: timeseries_0_f1-5
+        id       h00  h01  h02  ...       h23  country  city  category
+0        0  0.000000  0.0  0.0  ...  0.000000      0.0   0.0       0.0
+1        1  0.000000  0.0  0.0  ...  0.000000      0.0   0.0       0.0
+2        2  0.000000  0.0  0.0  ...  0.000000      0.0   0.0       0.0
+3        3  0.000000  0.0  0.0  ...  0.000000      0.0   0.0       0.0
+4        4  0.000000  0.0  0.0  ...  0.000000      0.0   0.0       0.0
+...    ...       ...  ...  ...  ...       ...      ...   ...       ...
+4481  4481  0.000000  0.0  0.0  ...  0.490978      0.0   2.0       4.0
+4482  4482  0.000000  0.0  0.0  ...  0.000000      0.0   2.0       4.0
+4483  4483  0.268889  0.0  0.0  ...  0.184940      0.0   2.0       4.0
+4484  4484  0.000000  0.0  0.0  ...  0.000000      0.0   2.0       4.0
+4485  4485  0.000000  0.0  0.0  ...  0.178723      0.0   2.0       4.0
+
+[4486 rows x 28 columns]
+Treinando no país 0 e testando no país 1
+Command exited with non-zero status 1
+5.41user 0.59system 1:14.49elapsed 8%CPU (0avgtext+0avgdata 588524maxresident)k
+0inputs+40outputs (0major+90873minor)pagefaults 0swaps

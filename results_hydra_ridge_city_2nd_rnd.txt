@@ -1,0 +1,146 @@
+nohup: ignoring input
+/home/carolina/Documents/Mestrado/.venv/lib/python3.9/site-packages/torch/cuda/__init__.py:141: UserWarning: CUDA initialization: The NVIDIA driver on your system is too old (found version 11020). Please update your GPU driver by downloading and installing a new version from the URL: http://www.nvidia.com/Download/index.aspx Alternatively, go to: https://pytorch.org to install a PyTorch version that has been compiled with your version of the CUDA driver. (Triggered internally at ../c10/cuda/CUDAFunctions.cpp:108.)
+  return torch._C._cuda_getDeviceCount() > 0
+/home/carolina/Documents/Mestrado/.venv/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1344: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/carolina/Documents/Mestrado/.venv/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1344: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/carolina/Documents/Mestrado/.venv/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1344: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/carolina/Documents/Mestrado/.venv/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1344: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/carolina/Documents/Mestrado/.venv/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1344: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/carolina/Documents/Mestrado/.venv/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1344: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+GPU is not available
+Start time: 2024-29-11_07-15-39
+timeseries_0_0_f1-5 (871, 24) (871,) (218, 24) (218,)
+Loaded: timeseries_0_0_f1-5
+<function run_hydra_ridge at 0x7fb963ec1c10>_0_0_f1-5 {'accuracy_score': 0.7752293577981652, 'f1_score': 0.7568921921158781, 'precision_score': 0.7512282617719055, 'recall_score': 0.7752293577981652}
+timeseries_0_0_f2-5 (871, 24) (871,) (218, 24) (218,)
+Loaded: timeseries_0_0_f2-5
+<function run_hydra_ridge at 0x7fb963ec1c10>_0_0_f2-5 {'accuracy_score': 0.8211009174311926, 'f1_score': 0.8135796950676752, 'precision_score': 0.8138121261369675, 'recall_score': 0.8211009174311926}
+timeseries_0_0_f3-5 (871, 24) (871,) (218, 24) (218,)
+Loaded: timeseries_0_0_f3-5
+<function run_hydra_ridge at 0x7fb963ec1c10>_0_0_f3-5 {'accuracy_score': 0.7660550458715596, 'f1_score': 0.7465224032716314, 'precision_score': 0.7530251502689023, 'recall_score': 0.7660550458715596}
+timeseries_0_0_f4-5 (871, 24) (871,) (218, 24) (218,)
+Loaded: timeseries_0_0_f4-5
+<function run_hydra_ridge at 0x7fb963ec1c10>_0_0_f4-5 {'accuracy_score': 0.7706422018348624, 'f1_score': 0.7549966852719148, 'precision_score': 0.7455901091323379, 'recall_score': 0.7706422018348624}
+timeseries_0_0_f5-5 (872, 24) (872,) (217, 24) (217,)
+Loaded: timeseries_0_0_f5-5
+<function run_hydra_ridge at 0x7fb963ec1c10>_0_0_f5-5 {'accuracy_score': 0.7788018433179723, 'f1_score': 0.7695150815305608, 'precision_score': 0.7640077278444677, 'recall_score': 0.7788018433179723}
+<function run_hydra_ridge at 0x7fb963ec1c10>_0_0
+           accuracy_score mean=0.7823659 std=0.0198370 t_interval=(0.7272896642987574, 0.8374420822027433)
+           f1_score mean=0.7683012 std=0.0238038 t_interval=(0.7022112358269414, 0.8343911870761227)
+           precision_score mean=0.7655327 std=0.0248676 t_interval=(0.6964891089501138, 0.8345762411117185)
+           recall_score mean=0.7823659 std=0.0198370 t_interval=(0.7272896642987574, 0.8374420822027433)
+timeseries_0_1_f1-5 (1059, 24) (1059,) (265, 24) (265,)
+Loaded: timeseries_0_1_f1-5
+<function run_hydra_ridge at 0x7fb963ec1c10>_0_1_f1-5 {'accuracy_score': 0.6415094339622641, 'f1_score': 0.6377700327769654, 'precision_score': 0.6419151983040209, 'recall_score': 0.6415094339622641}
+timeseries_0_1_f2-5 (1059, 24) (1059,) (265, 24) (265,)
+Loaded: timeseries_0_1_f2-5
+<function run_hydra_ridge at 0x7fb963ec1c10>_0_1_f2-5 {'accuracy_score': 0.6792452830188679, 'f1_score': 0.6668068264141714, 'precision_score': 0.6723108987965241, 'recall_score': 0.6792452830188679}
+timeseries_0_1_f3-5 (1059, 24) (1059,) (265, 24) (265,)
+Loaded: timeseries_0_1_f3-5
+<function run_hydra_ridge at 0x7fb963ec1c10>_0_1_f3-5 {'accuracy_score': 0.6981132075471698, 'f1_score': 0.6925688865513991, 'precision_score': 0.6942138364779873, 'recall_score': 0.6981132075471698}
+timeseries_0_1_f4-5 (1059, 24) (1059,) (265, 24) (265,)
+Loaded: timeseries_0_1_f4-5
+<function run_hydra_ridge at 0x7fb963ec1c10>_0_1_f4-5 {'accuracy_score': 0.7283018867924528, 'f1_score': 0.7192675026641269, 'precision_score': 0.7350166255826635, 'recall_score': 0.7283018867924528}
+timeseries_0_1_f5-5 (1060, 24) (1060,) (264, 24) (264,)
+Loaded: timeseries_0_1_f5-5
+<function run_hydra_ridge at 0x7fb963ec1c10>_0_1_f5-5 {'accuracy_score': 0.696969696969697, 'f1_score': 0.6886198703718562, 'precision_score': 0.6977658753136461, 'recall_score': 0.696969696969697}
+<function run_hydra_ridge at 0x7fb963ec1c10>_0_1
+           accuracy_score mean=0.6888279 std=0.0284308 t_interval=(0.6098912166632678, 0.7677645866529127)
+           f1_score mean=0.6810066 std=0.0273005 t_interval=(0.6052083569516985, 0.756804890559709)
+           precision_score mean=0.6882445 std=0.0307057 t_interval=(0.6029917505136285, 0.7734972232763081)
+           recall_score mean=0.6888279 std=0.0284308 t_interval=(0.6098912166632678, 0.7677645866529127)
+timeseries_0_2_f1-5 (1658, 24) (1658,) (415, 24) (415,)
+Loaded: timeseries_0_2_f1-5
+<function run_hydra_ridge at 0x7fb963ec1c10>_0_2_f1-5 {'accuracy_score': 0.6963855421686747, 'f1_score': 0.6874454762071741, 'precision_score': 0.6943317943616385, 'recall_score': 0.6963855421686747}
+timeseries_0_2_f2-5 (1658, 24) (1658,) (415, 24) (415,)
+Loaded: timeseries_0_2_f2-5
+<function run_hydra_ridge at 0x7fb963ec1c10>_0_2_f2-5 {'accuracy_score': 0.7301204819277108, 'f1_score': 0.727501856957611, 'precision_score': 0.7286104935971845, 'recall_score': 0.7301204819277108}
+timeseries_0_2_f3-5 (1658, 24) (1658,) (415, 24) (415,)
+Loaded: timeseries_0_2_f3-5
+<function run_hydra_ridge at 0x7fb963ec1c10>_0_2_f3-5 {'accuracy_score': 0.7783132530120482, 'f1_score': 0.7707322177887965, 'precision_score': 0.7736732103726728, 'recall_score': 0.7783132530120482}
+timeseries_0_2_f4-5 (1659, 24) (1659,) (414, 24) (414,)
+Loaded: timeseries_0_2_f4-5
+<function run_hydra_ridge at 0x7fb963ec1c10>_0_2_f4-5 {'accuracy_score': 0.785024154589372, 'f1_score': 0.7797594715455921, 'precision_score': 0.7817005629276312, 'recall_score': 0.785024154589372}
+timeseries_0_2_f5-5 (1659, 24) (1659,) (414, 24) (414,)
+Loaded: timeseries_0_2_f5-5
+<function run_hydra_ridge at 0x7fb963ec1c10>_0_2_f5-5 {'accuracy_score': 0.7342995169082126, 'f1_score': 0.7251289979851911, 'precision_score': 0.7273047265506445, 'recall_score': 0.7342995169082126}
+<function run_hydra_ridge at 0x7fb963ec1c10>_0_2
+           accuracy_score mean=0.7448286 std=0.0328963 t_interval=(0.6534938860623523, 0.8361632933800551)
+           f1_score mean=0.7381136 std=0.0336060 t_interval=(0.6448083534423193, 0.8314188547514266)
+           precision_score mean=0.7411242 std=0.0323820 t_interval=(0.6512172298166015, 0.8310310853073073)
+           recall_score mean=0.7448286 std=0.0328963 t_interval=(0.6534938860623523, 0.8361632933800551)
+timeseries_1_0_f1-5 (2137, 24) (2137,) (535, 24) (535,)
+Loaded: timeseries_1_0_f1-5
+<function run_hydra_ridge at 0x7fb963ec1c10>_1_0_f1-5 {'accuracy_score': 0.719626168224299, 'f1_score': 0.7186021801508409, 'precision_score': 0.718910673353281, 'recall_score': 0.719626168224299}
+timeseries_1_0_f2-5 (2137, 24) (2137,) (535, 24) (535,)
+Loaded: timeseries_1_0_f2-5
+<function run_hydra_ridge at 0x7fb963ec1c10>_1_0_f2-5 {'accuracy_score': 0.6915887850467289, 'f1_score': 0.6906467917234973, 'precision_score': 0.69639615920842, 'recall_score': 0.6915887850467289}
+timeseries_1_0_f3-5 (2138, 24) (2138,) (534, 24) (534,)
+Loaded: timeseries_1_0_f3-5
+<function run_hydra_ridge at 0x7fb963ec1c10>_1_0_f3-5 {'accuracy_score': 0.6928838951310862, 'f1_score': 0.6913180090147084, 'precision_score': 0.6947859349220957, 'recall_score': 0.6928838951310862}
+timeseries_1_0_f4-5 (2138, 24) (2138,) (534, 24) (534,)
+Loaded: timeseries_1_0_f4-5
+<function run_hydra_ridge at 0x7fb963ec1c10>_1_0_f4-5 {'accuracy_score': 0.6797752808988764, 'f1_score': 0.6785961366365265, 'precision_score': 0.6793382393687543, 'recall_score': 0.6797752808988764}
+timeseries_1_0_f5-5 (2138, 24) (2138,) (534, 24) (534,)
+Loaded: timeseries_1_0_f5-5
+<function run_hydra_ridge at 0x7fb963ec1c10>_1_0_f5-5 {'accuracy_score': 0.7134831460674157, 'f1_score': 0.7115497184142737, 'precision_score': 0.7171628909015829, 'recall_score': 0.7134831460674157}
+<function run_hydra_ridge at 0x7fb963ec1c10>_1_0
+           accuracy_score mean=0.6994715 std=0.0148055 t_interval=(0.6583648438510578, 0.7405780662963047)
+           f1_score mean=0.6981426 std=0.0147185 t_interval=(0.6572774514803149, 0.7390076828956237)
+           precision_score mean=0.7013188 std=0.0149035 t_interval=(0.6599401523684156, 0.7426974067332379)
+           recall_score mean=0.6994715 std=0.0148055 t_interval=(0.6583648438510578, 0.7405780662963047)
+timeseries_1_2_f1-5 (2580, 24) (2580,) (646, 24) (646,)
+Loaded: timeseries_1_2_f1-5
+<function run_hydra_ridge at 0x7fb963ec1c10>_1_2_f1-5 {'accuracy_score': 0.6377708978328174, 'f1_score': 0.6343341773824138, 'precision_score': 0.6413457368486621, 'recall_score': 0.6377708978328174}
+timeseries_1_2_f2-5 (2581, 24) (2581,) (645, 24) (645,)
+Loaded: timeseries_1_2_f2-5
+<function run_hydra_ridge at 0x7fb963ec1c10>_1_2_f2-5 {'accuracy_score': 0.689922480620155, 'f1_score': 0.6865296332590476, 'precision_score': 0.6881609363020165, 'recall_score': 0.689922480620155}
+timeseries_1_2_f3-5 (2581, 24) (2581,) (645, 24) (645,)
+Loaded: timeseries_1_2_f3-5
+<function run_hydra_ridge at 0x7fb963ec1c10>_1_2_f3-5 {'accuracy_score': 0.6945736434108527, 'f1_score': 0.690448524772753, 'precision_score': 0.6972192015540812, 'recall_score': 0.6945736434108527}
+timeseries_1_2_f4-5 (2581, 24) (2581,) (645, 24) (645,)
+Loaded: timeseries_1_2_f4-5
+<function run_hydra_ridge at 0x7fb963ec1c10>_1_2_f4-5 {'accuracy_score': 0.6728682170542636, 'f1_score': 0.6657327435003315, 'precision_score': 0.6701351219938065, 'recall_score': 0.6728682170542636}
+timeseries_1_2_f5-5 (2581, 24) (2581,) (645, 24) (645,)
+Loaded: timeseries_1_2_f5-5
+<function run_hydra_ridge at 0x7fb963ec1c10>_1_2_f5-5 {'accuracy_score': 0.6697674418604651, 'f1_score': 0.6656406185956063, 'precision_score': 0.6748855806123247, 'recall_score': 0.6697674418604651}
+<function run_hydra_ridge at 0x7fb963ec1c10>_1_2
+           accuracy_score mean=0.6729805 std=0.0200167 t_interval=(0.6174051898805725, 0.7285558824308492)
+           f1_score mean=0.6685371 std=0.0199496 t_interval=(0.613148128154811, 0.7239261508492498)
+           precision_score mean=0.6743493 std=0.0190844 t_interval=(0.6213624660998496, 0.7273361648245069)
+           recall_score mean=0.6729805 std=0.0200167 t_interval=(0.6174051898805725, 0.7285558824308492)
+timeseries_1_4_f1-5 (1856, 24) (1856,) (464, 24) (464,)
+Loaded: timeseries_1_4_f1-5
+<function run_hydra_ridge at 0x7fb963ec1c10>_1_4_f1-5 {'accuracy_score': 0.7133620689655172, 'f1_score': 0.7073364950777439, 'precision_score': 0.7077584085539207, 'recall_score': 0.7133620689655172}
+timeseries_1_4_f2-5 (1856, 24) (1856,) (464, 24) (464,)
+Loaded: timeseries_1_4_f2-5
+<function run_hydra_ridge at 0x7fb963ec1c10>_1_4_f2-5 {'accuracy_score': 0.646551724137931, 'f1_score': 0.6288643189921524, 'precision_score': 0.6318115771639063, 'recall_score': 0.646551724137931}
+timeseries_1_4_f3-5 (1856, 24) (1856,) (464, 24) (464,)
+Loaded: timeseries_1_4_f3-5
+<function run_hydra_ridge at 0x7fb963ec1c10>_1_4_f3-5 {'accuracy_score': 0.6681034482758621, 'f1_score': 0.6563023678463225, 'precision_score': 0.6656770594898276, 'recall_score': 0.6681034482758621}
+timeseries_1_4_f4-5 (1856, 24) (1856,) (464, 24) (464,)
+Loaded: timeseries_1_4_f4-5
+<function run_hydra_ridge at 0x7fb963ec1c10>_1_4_f4-5 {'accuracy_score': 0.7112068965517241, 'f1_score': 0.7051087533343303, 'precision_score': 0.7191824484514447, 'recall_score': 0.7112068965517241}
+timeseries_1_4_f5-5 (1856, 24) (1856,) (464, 24) (464,)
+Loaded: timeseries_1_4_f5-5
+<function run_hydra_ridge at 0x7fb963ec1c10>_1_4_f5-5 {'accuracy_score': 0.6745689655172413, 'f1_score': 0.6668461777267289, 'precision_score': 0.6857070980086515, 'recall_score': 0.6745689655172413}
+<function run_hydra_ridge at 0x7fb963ec1c10>_1_4
+           accuracy_score mean=0.6827586 std=0.0258405 t_interval=(0.6110138680320047, 0.7545033733473057)
+           f1_score mean=0.6728916 std=0.0299150 t_interval=(0.5898341664088267, 0.7559490787820846)
+           precision_score mean=0.6820273 std=0.0311290 t_interval=(0.5955992525432346, 0.7684553841238656)
+           recall_score mean=0.6827586 std=0.0258405 t_interval=(0.6110138680320047, 0.7545033733473057)
+Classifier mean accuracy_score=0.7118722
+Classifier mean f1_score=0.7044988
+Classifier mean precision_score=0.7087661
+Classifier mean recall_score=0.7118722
+End time: 2024-29-11_07-48-29
+Running time: 0:32:49.738455
+Done!
+1141.47user 1841.59system 33:24.97elapsed 148%CPU (0avgtext+0avgdata 997368maxresident)k
+8048inputs+112outputs (8major+1883024minor)pagefaults 0swaps
