@@ -31,7 +31,7 @@ def create_tasks(K, target=None):
                                         'city': None,
                                         'category': None,
                                 },
-                                dataset_filename = '/Users/carolina/Desktop/Mestrado/df_timeseries_targets.csv',
+                                dataset_filename = 'df_timeseries_targets.csv',
             )
             print(f'{node_name}', results)
             kfold_results.append(results)
@@ -51,15 +51,15 @@ def create_tasks(K, target=None):
 
 # ------------------------------ START ------------------------------------
 # Importação dos classificadores
-from classifiers.weasel_d import run_weasel_d
-# from classifiers.tde import run_tde
+# from classifiers.weasel_d import run_weasel_d
+from classifiers.tde import run_tde
 # from classifiers.rdst import run_rdst
 # from classifiers.hydra_ridge import run_hydra_ridge
 
 classifiers = [
-    ['heavy', run_weasel_d],
+    # ['heavy', run_weasel_d],
     # ['light', run_hydra_ridge],
-    # ['heavy', run_tde],
+    ['heavy', run_tde],
     # ['light', run_rdst],
 ]
 
@@ -78,9 +78,6 @@ metrics = ['accuracy_score', 'f1_score', 'precision_score', 'recall_score']
 for m, metric in enumerate(metrics):
     mean_of_means = np.mean([filter_means[m] for filter_means in filters_means])
     print(f'Classifier mean {metric}={mean_of_means:.7f}')
-
-# Executa a função para todo o dataset
-print(date_time)
 
 create_tasks(K)  # Esta linha treina modelos com o dataset completo.
 
