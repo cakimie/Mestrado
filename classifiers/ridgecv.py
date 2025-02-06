@@ -36,6 +36,7 @@ def run_ridge_cv(
     },
     task=None,
     task_name="ridge_cv",
+    dataset_filename=None,
 ):
     import time
     start_time = time.time()

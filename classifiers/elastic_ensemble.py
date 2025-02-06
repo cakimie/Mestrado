@@ -35,6 +35,7 @@ def run_elastic_ensemble(
     },
     task=None,
     task_name="elastic_ensemble",
+    dataset_filename=None,
 ):
     import time
     start_time = time.time()

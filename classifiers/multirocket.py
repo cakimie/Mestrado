@@ -51,6 +51,7 @@ def run_multirocket(
     },
     task=None,
     task_name="multirocket",
+    dataset_filename=None,
 ):
     import time
     start_time = time.time()
