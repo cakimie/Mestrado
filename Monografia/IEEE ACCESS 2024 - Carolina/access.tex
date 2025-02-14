@@ -13,7 +13,7 @@
 \SetMathAlphabet{\mathrm}{bold}{T1}{times}{b}{n}
 \SetMathAlphabet{\mathit}{bold}{T1}{times}{b}{it}
 \SetMathAlphabet{\mathbf}{bold}{T1}{times}{b}{n}
-\SetMathAlphabet{\mathtt}{bold}{OT1}{pcr}{b}{n}
+\SetMathAlphabet{\mathtt}{bold}{T1}{pcr}{m}{n}
 \SetSymbolFont{symbols}{bold}{OMS}{cmsy}{b}{n}
 \renewcommand\boldmath{\@nomath\boldmath\mathversion{bold}}}
 \makeatother
@@ -216,266 +216,510 @@ From their study, it was possible to select the best algorithms to be appied int
 % surrounding equation.
 
 \section{The dataset} % TODO
-% Nesta seção é importante descrever o dataset utilizado, como ele foi coletado, quais são as variáveis presentes, e como ele foi tratado para ser utilizado nos experimentos. Basicamente o meu dataset é o Popular Times do Google oriundo do trabalho do Leonardo.
-Deepening into the dataset used in this work, the Popular Times dataset from Google was used. This dataset was collected by Leonardo, and it contains information about the popularity of establishments at different times of the day. The popularity of the establishments in Google is also known as Popular Times.
+% Nesta seção é importante descrever o dataset utilizado, como ele foi coletado, quais são as variáveis presentes, e como ele foi tratado para ser utilizado nos experimentos. Basicamente o meu dataset é o Popular Times do Google oriundo do trabalho de Silva et al.
+Deepening into the dataset used in this work, the Popular Times dataset from Google was used. This dataset was collected by Silva et al. \cite{silva2019signatures}, and it contains information about the popularity of establishments at different times of the day. The popularity of the establishments in Google is also known as Popular Times.
+The data was collected from a web crawler and processed with business names, categories, cities and coutries. Since their goal was to identify patterns of the Popular Times data of businesses related to food and drink consumption, they filtered the data to include only businesses in the categories of restaurants, bars, coffee shops, dance clubs (nightclubs) and bakeries. 
+This specification was made to ensure that the data would be consistent and relevant to the study.
+Within the data extraction, they used the HTML information to gather the Popular Times data in a hourly basis extracting the popularity values for each day of the day. The data was normalized to a scale of 0 to 1, where 0 represents the lowest popularity and 1 the highest popularity. 
+The popularity values were modeled as a discrete sequence $v_k$, normalized between 0 and 1, where $k$ represents each hour of the day. This allowed the definition of a time series of popularity $S$ as:
 
-\section{Some Common Mistakes}
-The word ``data'' is plural, not singular. The subscript for the
-permeability of vacuum $\mu _{0}$ is zero, not a lowercase letter
-``o.'' The term for residual magnetization is ``remanence''; the adjective
-is ``remanent''; do not write ``remnance'' or ``remnant.'' Use the word
-``micrometer'' instead of ``micron.'' A graph within a graph is an
-``inset,'' not an ``insert.'' The word ``alternatively'' is preferred to the
-word ``alternately'' (unless you really mean something that alternates). Use
-the word ``whereas'' instead of ``while'' (unless you are referring to
-simultaneous events). Do not use the word ``essentially'' to mean
-``approximately'' or ``effectively.'' Do not use the word ``issue'' as a
-euphemism for ``problem.'' When compositions are not specified, separate
-chemical symbols by en-dashes; for example, ``NiMn'' indicates the
-intermetallic compound Ni$_{0.5}$Mn$_{0.5}$ whereas
-``Ni--Mn'' indicates an alloy of some composition
-Ni$_{x}$Mn$_{1-x}$.
+\[
+S = \{ v_k \mid \forall k \in [0, 23], \ 0 \leq v_k \leq 1 \},
+\]
 
-Be aware of the different meanings of the homophones ``affect'' (usually a
-verb) and ``effect'' (usually a noun), ``complement'' and ``compliment,''
-``discreet'' and ``discrete,'' ``principal'' (e.g., ``principal
-investigator'') and ``principle'' (e.g., ``principle of measurement''). Do
-not confuse ``imply'' and ``infer.''
+where $v_k$ denotes the normalized popularity at hour $k$. For each establishment, two distinct time series were generated using the Dynamic Time Warping Barycenter Averaging (DBA) technique: one representing the typical pattern on weekdays and the other representing the pattern on weekends.
 
-Prefixes such as ``non,'' ``sub,'' ``micro,'' ``multi,'' and ``ultra'' are
-not independent words; they should be joined to the words they modify,
-usually without a hyphen. There is no period after the ``et'' in the Latin
-abbreviation ``\emph{et al.}'' (it is also italicized). The abbreviation ``i.e.,'' means
-``that is,'' and the abbreviation ``e.g.,'' means ``for example'' (these
-abbreviations are not italicized).
+Within this study, the dataset specialization was focused on weekdays only. This was done to ensure that the data would be consistent and relevant to the study since the behavior of establishments on weekdays can differ from weekends. 
 
-A general IEEE styleguide is available at \break
-\underline{http://www.ieee.org/authortools}.
+\section{Methodology}
+\label{sec:methodology}
 
-\section{Guidelines for Graphics Preparation and Submission}
-\label{sec:guidelines}
+The methodology of this research is designed to address the study of time series classification algorithms on the Popular Times dataset. 
+The workflow consists of several steps, including algorithm selection, evaluation metrics, and experimental setup.
+This section describes the dataset, preprocessing steps, classification algorithms, evaluation metrics, and experimental setup.
 
-\subsection{Types of Graphics}
-The following list outlines the different types of graphics published in
-IEEE journals. They are categorized based on their construction, and use of
-color/shades of gray:
+\subsection{Dataset Description}
 
-\subsubsection{Color/Grayscale figures}
-{Figures that are meant to appear in color, or shades of black/gray. Such
-figures may include photographs, illustrations, multicolor graphs, and
-flowcharts. For multicolor graphs, please avoid any gray backgrounds or shading, as well as screenshots, instead export the graph from the program used to collect the data.}
+The dataset used in this study consists of 12,704 rows and 28 columns, with each row representing an observation and each column providing a specific feature. 
+The dataset includes time series data spanning 24 hours of the day, recorded at hourly intervals, along with contextual metadata, such as geographical and categorical information.
 
-\subsubsection{Line Art figures}
-{Figures that are composed of only black lines and shapes. These figures
-should have no shades or half-tones of gray, only black and white.}
+The features are structured as follows:
+\begin{itemize}
+    \item \textbf{Hourly Metrics:} Columns \texttt{h00} through \texttt{h23} represent normalized values corresponding to various metrics captured for each hour of the day. These hourly features reflect the dynamic behavior of specific entities over a full daily cycle.
+    \item \textbf{Country and City Identifiers:} Two columns, \texttt{country} and \texttt{city}, provide geographical context for each observation, enabling analysis at different spatial scales.
+    \item \textbf{Category Information:} The \texttt{category} column classifies the data into distinct groups based on the nature of the observed entities, facilitating category-specific analyses. It includes the categories of establishments such as restaurants, cafes, and bakeries.
+\end{itemize}
 
-\subsubsection{Author photos}
-{Author photographs should be included with the author biographies located at the end of the article underneath References. }
+%The dataset captures diverse patterns across various entities, with temporal dynamics reflected in the hourly metrics. 
+%The normalized values for each hour are bounded between 0 and 1, ensuring uniform scaling and comparability across observations.
 
-\subsubsection{Tables}
-{Data charts which are typically black and white, but sometimes include
-color.}
-
-\begin{table}
-\caption{\textbf{Units for Magnetic Properties}}
-\label{table}
-\setlength{\tabcolsep}{3pt}
-\begin{tabular}{|p{25pt}|p{75pt}|p{115pt}|}
+% Optional
+\begin{table}[!h]
+\caption{Sample Structure of the Dataset.}
+\centering
+\begin{tabular}{|c|c|c|c|}
 \hline
-Symbol&
-Quantity&
-Conversion from Gaussian and \par CGS EMU to SI $^{\mathrm{a}}$ \\
-\hline
-$\Phi $&
-magnetic flux&
-1 Mx $\to  10^{-8}$ Wb $= 10^{-8}$ V$\cdot $s \\
-$B$&
-magnetic flux density, \par magnetic induction&
-1 G $\to  10^{-4}$ T $= 10^{-4}$ Wb/m$^{2}$ \\
-$H$&
-magnetic field strength&
-1 Oe $\to  10^{3}/(4\pi )$ A/m \\
-$m$&
-magnetic moment&
-1 erg/G $=$ 1 emu \par $\to 10^{-3}$ A$\cdot $m$^{2} = 10^{-3}$ J/T \\
-$M$&
-magnetization&
-1 erg/(G$\cdot $cm$^{3}) =$ 1 emu/cm$^{3}$ \par $\to 10^{3}$ A/m \\
-4$\pi M$&
-magnetization&
-1 G $\to  10^{3}/(4\pi )$ A/m \\
-$\sigma $&
-specific magnetization&
-1 erg/(G$\cdot $g) $=$ 1 emu/g $\to $ 1 A$\cdot $m$^{2}$/kg \\
-$j$&
-magnetic dipole \par moment&
-1 erg/G $=$ 1 emu \par $\to 4\pi \times  10^{-10}$ Wb$\cdot $m \\
-$J$&
-magnetic polarization&
-1 erg/(G$\cdot $cm$^{3}) =$ 1 emu/cm$^{3}$ \par $\to 4\pi \times  10^{-4}$ T \\
-$\chi , \kappa $&
-susceptibility&
-1 $\to  4\pi $ \\
-$\chi_{\rho }$&
-mass susceptibility&
-1 cm$^{3}$/g $\to  4\pi \times  10^{-3}$ m$^{3}$/kg \\
-$\mu $&
-permeability&
-1 $\to  4\pi \times  10^{-7}$ H/m \par $= 4\pi \times  10^{-7}$ Wb/(A$\cdot $m) \\
-$\mu_{r}$&
-relative permeability&
-$\mu \to \mu_{r}$ \\
-$w, W$&
-energy density&
-1 erg/cm$^{3} \to  10^{-1}$ J/m$^{3}$ \\
-$N, D$&
-demagnetizing factor&
-1 $\to  1/(4\pi )$ \\
-\hline
-\multicolumn{3}{p{251pt}}{Vertical lines are optional in tables. Statements that serve as captions for
-the entire table do not need footnote letters. }\\
-\multicolumn{3}{p{251pt}}{$^{\mathrm{a}}$Gaussian units are the same as cg emu for magnetostatics; Mx
-$=$ maxwell, G $=$ gauss, Oe $=$ oersted; Wb $=$ weber, V $=$ volt, s $=$
-second, T $=$ tesla, m $=$ meter, A $=$ ampere, J $=$ joule, kg $=$
-kilogram, H $=$ henry.}
+\textbf{Column Name} & \textbf{Description} & \textbf{Type} & \textbf{Range/Values} \\ \hline
+\texttt{h00--h23} & Hourly metrics (normalized) & Continuous & [0, 1] \\ \hline
+\texttt{country} & Country identifier & Categorical & \textit{(e.g., 0, 1)} \\ \hline
+\texttt{city} & City identifier & Categorical & \textit{(e.g., 0, 1, 2)} \\ \hline
+\texttt{category} & Entity category & Categorical & \textit{(e.g., 0, 1, 2)} \\ \hline
 \end{tabular}
-\label{tab1}
+\label{table:dataset_structure}
 \end{table}
 
-\subsection{Multipart figures}
-Figures compiled of more than one sub-figure presented side-by-side, or
-stacked. If a multipart figure is made up of multiple figure
-types (one part is lineart, and another is grayscale or color) the figure
-should meet the stricter guidelines.
+\section{Dataset Statistics}
 
-\subsection{File Formats For Graphics}\label{formats}
-Format and save your graphics using a suitable graphics processing program
-that will allow you to create the images as PostScript (.PS), Encapsulated
-PostScript (.EPS), Tagged Image File Format (.TIFF), Portable Document
-Format (.PDF), Portable Network Graphics (.PNG), or Metapost (.MPS), sizes them, and adjusts
-the resolution settings. When
-submitting your final paper, your graphics should all be submitted
-individually in one of these formats along with the manuscript.
+This section provides a detailed breakdown of the dataset used in the study, covering counts by country, city, and categories, as well as distributions within each city and country.
 
-\subsection{Sizing of Graphics}
-Most charts, graphs, and tables are one column wide (3.5 inches/88
-millimeters/21 picas) or page wide (7.16 inches/181 millimeters/43
-picas). The maximum depth a graphic can be is 8.5 inches (216 millimeters/54
-picas). When choosing the depth of a graphic, please allow space for a
-caption. Figures can be sized between column and page widths if the author
-chooses, however it is recommended that figures are not sized less than
-column width unless when necessary.
+\begin{table}[h!]
+\centering
+\caption{Count by Country}
+\label{tab:count_by_country}
+\begin{tabular}{|l|r|}
+\hline
+\textbf{Country} & \textbf{Count} \\
+\hline
+United States & 8218 \\
+Brazil        & 4486 \\
+\hline
+\end{tabular}
+\end{table}
 
-There is currently one publication with column measurements that do not
-coincide with those listed above. Proceedings of the IEEE has a column
-measurement of 3.25 inches (82.5 millimeters/19.5 picas).
+\begin{table}[h!]
+\centering
+\caption{Count by City}
+\label{tab:count_by_city}
+\begin{tabular}{|l|r|}
+\hline
+\textbf{City}      & \textbf{Count} \\
+\hline
+New York & 3226 \\
+Chicago & 2672 \\
+San Francisco & 2320 \\
+São Paulo & 2073 \\
+Rio de Janeiro & 1324 \\
+Curitiba & 1089 \\
+\hline
+\end{tabular}
+\end{table}
 
-The final printed size of author photographs is exactly
-1 inch wide by 1.25 inches tall (25.4 millimeters$\,\times\,$31.75 millimeters/6
-picas$\,\times\,$7.5 picas). Author photos printed in editorials measure 1.59 inches
-wide by 2 inches tall (40 millimeters$\,\times\,$50 millimeters/9.5 picas$\,\times\,$12
-picas).
+\begin{table}[h!]
+\centering
+\caption{Count by Categories (Total)}
+\label{tab:count_by_categories_total}
+\begin{tabular}{|l|r|}
+\hline
+\textbf{Category}  & \textbf{Count} \\
+\hline
+Restaurants & 4837 \\
+Bars        & 3752 \\
+Coffee      & 1979 \\
+Bakeries    & 1843 \\
+Dance Clubs &  293 \\
+\hline
+\end{tabular}
+\end{table}
 
-\subsection{Resolution }
-The proper resolution of your figures will depend on the type of figure it
-is as defined in the ``Types of Figures'' section. Author photographs,
-color, and grayscale figures should be at least 300dpi. Line art, including
-tables should be a minimum of 600dpi.
+\begin{table*}[h!]
+\centering
+\caption{Count by Categories in Each City}
+\label{tab:count_by_categories_city}
+\begin{tabular}{|l|r|r|r|r|r|r|}
+\hline
+\textbf{Category} & \textbf{Chicago} & \textbf{Curitiba} & \textbf{New York} & \textbf{Rio de Janeiro} & \textbf{San Francisco} & \textbf{São Paulo} \\
+\hline
+Bakeries    &  315 &  198 &  590 &  133 &  186 &  421 \\
+Bars        &  827 &  212 &  877 &  398 &  758 &  680 \\
+Coffee      &  595 &   16 &  770 &   46 &  447 &  105 \\
+Dance Clubs &   54 &   14 &   89 &   20 &   57 &   59 \\
+Restaurants &  881 &  649 &  900 &  727 &  872 &  808 \\
+\hline
+\end{tabular}
+\end{table*}
 
-\subsection{Vector Art}
-In order to preserve the figures' integrity across multiple computer
-platforms, we accept files in the following formats: .EPS/.PDF/.PS. All
-fonts must be embedded or text converted to outlines in order to achieve the
-best-quality results.
+\begin{table*}[h!]
+\centering
+\caption{Count by Categories in Each Country}
+\label{tab:count_by_categories_country}
+\begin{tabular}{|l|r|r|}
+\hline
+\textbf{Category} & \textbf{Brazil} & \textbf{United States} \\
+\hline
+Bakeries    &  752 & 1091 \\
+Bars        & 1290 & 2462 \\
+Coffee      &  167 & 1812 \\
+Dance Clubs &   93 &  200 \\
+Restaurants & 2184 & 2653 \\
+\hline
+\end{tabular}
+\end{table*}
+    
 
-\subsection{Color Space}
-The term color space refers to the entire sum of colors that can be
-represented within the said medium. For our purposes, the three main color
-spaces are Grayscale, RGB (red/green/blue) and CMYK
-(cyan/magenta/yellow/black). RGB is generally used with on-screen graphics,
-whereas CMYK is used for printing purposes.
+\begin{table}[h!]
+\centering
+\caption{Total Rows in Dataset}
+\label{tab:total_rows}
+\begin{tabular}{|l|r|}
+\hline
+\textbf{Metric} & \textbf{Count} \\
+\hline
+Total Rows  & 12704 \\
+\hline
+\end{tabular}
+\end{table}
 
-All color figures should be generated in RGB or CMYK color space. Grayscale
-images should be submitted in Grayscale color space. Line art may be
-provided in grayscale OR bitmap colorspace. Note that ``bitmap colorspace''
-and ``bitmap file format'' are not the same thing. When bitmap color space
-is selected, .TIF/.TIFF/.PNG are the recommended file formats.
+The dataset includes information about Brazil (Curitiba, Rio de Janeiro, and SãoPaulo) and the United States (Chicago, New York, and San Francisco).
 
-\subsection{Accepted Fonts Within Figures}
-When preparing your graphics IEEE suggests that you use of one of the
-following Open Type fonts: Times New Roman, Helvetica, Arial, Cambria, and
-Symbol. If you are supplying EPS, PS, or PDF files all fonts must be
-embedded. Some fonts may only be native to your operating system; without
-the fonts embedded, parts of the graphic may be distorted or missing.
+\subsection{Classification Algorithms}
+To uncover patterns in the data, a diverse set of state-of-the-art classification algorithms was employed. These algorithms were selected for their demonstrated effectiveness in handling time series data and their strong performance in prior studies, as detailed in \cite{middlehurst2024bakeoff}. The classifiers utilized in this study are as follows:
 
-A safe option when finalizing your figures is to strip out the fonts before
-you save the files, creating ``outline'' type. This converts fonts to
-artwork what will appear uniformly on any screen.
+\begin{itemize}
+    \item \textbf{FreshPRINCE:} A classifier that combines random forests with summary features from the time series domain, enabling efficient feature extraction and robust classification.
+    \item \textbf{TS-Fresh:} A feature extraction library that computes nearly 800 statistical and descriptive features from time series data. TS-Fresh removes irrelevant features through multiple hypothesis tests ensuring that only the most significant features are retained.
+    \item \textbf{HIVECOTEv2:} An ensemble learning model that integrates several complementary time series classification techniques to achieve high accuracy and versatility.
+    \item \textbf{InceptionTime:} A deep learning model utilizing convolutional neural networks (CNNs) for time series classification, known for its scalability and accuracy.
+    \item \textbf{DrCIF:} The Diverse Representation Canonical Interval Forest, which builds diverse interval-based representations to capture essential time series features.
+    \item \textbf{MultiRocket:} A variant of the ROCKET algorithm designed for multivariate time series data, emphasizing scalability and simplicity.
+    \item \textbf{RDST:} A robust dictionary-based method that encodes time series into sparse representations for classification.
+    \item \textbf{RidgeCV:} A linear classifier that uses ridge regression with cross-validation to achieve effective time series predictions.
+    \item \textbf{rSTSF:} The refined Shapelet Transform-based Forest, which focuses on extracting meaningful shapelets from time series data.
+    \item \textbf{Elastic Ensemble:} An ensemble classifier that leverages elastic distance measures to compare time series.
+    \item \textbf{Hydra Ridge:} A classification model that combines ridge regression with hierarchical feature extraction.
+    \item \textbf{MrSQM:} The Multiresolution Shapelet-Quality Measure classifier, which identifies high-quality shapelets across multiple resolutions for robust predictions.
+    % \item \textbf{Proximity Forest:} A tree-based model that uses distance metrics to build a forest of decision trees for time series classification.
+    \item \textbf{WEASEL-D:} A dictionary-based classifier that transforms time series into bag-of-patterns representations using symbolic aggregation techniques.
+    \item \textbf{TDE (Temporal Dictionary Ensemble):} A highly accurate dictionary-based classifier that combines multiple shapelet-based dictionaries into an ensemble.
+    % \item \textbf{ResNet:} A deep residual network that utilizes skip connections to capture hierarchical time series patterns for classification.
+\end{itemize}
 
-\subsection{Using Labels Within Figures}
+Each algorithm was configured with its regular hyperparameters, keeping the default settings to ensure a fair comparison. The diversity in the chosen classifiers provides a comprehensive exploration of various methodological approaches, from feature-based to deep learning, ensuring a thorough investigation of the time series data.
 
-\subsubsection{Figure Axis labels }
-Figure axis labels are often a source of confusion. Use words rather than
-symbols. As an example, write the quantity ``Magnetization,'' or
-``Magnetization M,'' not just ``M.'' Put units in parentheses. Do not label
-axes only with units. As in Fig. 1, for example, write ``Magnetization
-(A/m)'' or ``Magnetization (A$\cdot$m$^{-1}$),'' not just ``A/m.'' Do not label axes with a ratio of quantities and
-units. For example, write ``Temperature (K),'' not ``Temperature/K.''
+\subsection{Evaluation Metrics}
+The performance of each algorithm was evaluated using the following metrics:
+\begin{itemize}
+    \item \textbf{Accuracy:} Proportion of correctly classified instances.
+    \item \textbf{F1-Score:} Harmonic mean of precision and recall.
+    \item \textbf{Precision:} Proportion of true positives out of all predicted positives.
+    \item \textbf{Recall:} Proportion of true positives out of all actual positives.
+\end{itemize}
+Confidence intervals were computed for all metrics to provide statistical significance.
 
-Multipliers can be especially confusing. Write ``Magnetization (kA/m)'' or
-``Magnetization (10$^{3}$ A/m).'' Do not write ``Magnetization
-(A/m)$\,\times\,$1000'' because the reader would not know whether the top
-axis label in Fig. 1 meant 16000 A/m or 0.016 A/m. Figure labels should be
-legible, approximately 8 to 10 point type.
+% \subsection{Experimental Setup}
+% Experiments were conducted on a [describe system, e.g., high-performance computing cluster or local machine], equipped with [hardware/software details, e.g., NVIDIA GTX 3090 GPU, Python 3.9]. Each algorithm was tested on [dataset split, e.g., training (70\%) and testing (30\%)]. Results were averaged over [number of iterations or cross-validation folds] to ensure robustness.
 
-\subsubsection{Subfigure Labels in Multipart Figures and Tables}
-Multipart figures should be combined and labeled before final submission.
-Labels should appear centered below each subfigure in 8 point Times New
-Roman font in the format of (a) (b) (c).
+% The workflow is summarized in Fig.~\ref{fig:workflow}, which illustrates the steps from data collection to evaluation.
 
-\subsection{File Naming}
-Figures (line artwork or photographs) should be named starting with the
-first 5 letters of the author's last name. The next characters in the
-filename should be the number that represents the sequential
-location of this image in your article. For example, in author
-``Anderson's'' paper, the first three figures would be named ander1.tif,
-ander2.tif, and ander3.ps.
 
-Tables should contain only the body of the table (not the caption) and
-should be named similarly to figures, except that `.t' is inserted
-in-between the author's name and the table number. For example, author
-Anderson's first three tables would be named ander.t1.tif, ander.t2.ps,
-ander.t3.eps.
+\section{Results}
+\label{sec:results}
 
-Author photographs should be named using the first five characters of the
-pictured author's last name. For example, four author photographs for a
-paper may be named: oppen.ps, moshc.tif, chen.eps, and duran.pdf.
+This section presents the outcomes of the experiments, highlighting the performance of the implemented algorithms across various metrics and dataset segments.
 
-If two authors or more have the same last name, their first initial(s) can
-be substituted for the fifth, fourth, third$\ldots$ letters of their surname
-until the degree where there is differentiation. For example, two authors
-Michael and Monica Oppenheimer's photos would be named oppmi.tif, and
-oppmo.eps.
+\subsection{Performance Per City}
+Segmenting the dataset by individual cities revealed significant insights into the classifiers' ability to perform on localized data. The \textbf{WEASEL-D} and \textbf{RIDGE\_CV} classifiers achieved the highest accuracies, with \(0.79 \pm 0.021\) and \(0.78 \pm 0.018\), respectively, demonstrating their effectiveness in city-specific scenarios. In contrast, the \textbf{InceptionTime} classifier performed poorly, achieving an accuracy of only \(0.33 \pm 0.121\), indicating its limited ability to handle the variability inherent in city-level data. These findings highlight the importance of segmentation in identifying localized patterns and optimizing model performance.
 
-\subsection{Referencing a Figure or Table Within Your Paper}
-When referencing your figures and tables within your paper, use the
-abbreviation ``Fig.'' even at the beginning of a sentence. Figures should be numbered with Arabic Numerals.
-Do not abbreviate ``Table.'' Tables should be numbered with Roman Numerals.
+\subsection{Performance Per Country}
+Grouping the data by country provided a more stable environment for evaluating classifier performance. Classifiers such as \textbf{RDST} and \textbf{WEASEL-D} maintained consistently high accuracies of \(0.72 \pm 0.012\) and \(0.72 \pm 0.011\), respectively, across different countries. In contrast, \textbf{InceptionTime} struggled with an accuracy of \(0.29 \pm 0.106\), further emphasizing its limitations in generalizability. The country-level segmentation mitigates data variability, enabling classifiers to provide more reliable predictions and better generalization.
 
-\subsection{Submitting Your Graphics}
-Figures should be submitted individually, separate from the manuscript in one of the file formats listed above in Section IV-C. Place figure captions below the figures; place table titles above the tables. Please do not include captions as part of the figures, or put them in ‘‘text boxes’’ linked to the figures. Also, do not place borders around the outside of your figures.
+\subsection{Performance on Full Dataset}
+Applying the classifiers to the entire dataset without segmentation offers a holistic perspective on their overall performance. In this scenario, \textbf{WEASEL-D} and \textbf{RDST} continued to excel, achieving accuracies of \(0.69\) and \(0.70\), respectively. However, the absence of segmentation introduced higher standard deviations in performance, reflecting the increased complexity and variability of the unsegmented dataset. This analysis underscores the trade-off between dataset comprehensiveness and classifier stability.
 
-\subsection{Color Processing/Printing in IEEE Journals}
-All IEEE Transactions, Journals, and Letters allow an author to publish
-color figures on IEEE {\it Xplore}$\circledR$\ at no charge, and automatically
-convert them to grayscale for print versions. In most journals, figures and
-tables may alternatively be printed in color if an author chooses to do so.
-Please note that this service comes at an extra expense to the author. If
-you intend to have print color graphics, include a note with your final
-paper indicating which figures or tables you would like to be handled that
-way, and stating that you are willing to pay the additional fee.
+\subsection{Performance on Inverted Dataset}
+A novel approach was employed to evaluate the classifiers' cross-border generalizability by training them on one country's data and testing them on another. This inversion significantly impacted the performance of most classifiers, with \textbf{RDST} and \textbf{HYDRA Ridge} achieving reduced accuracies of \(0.18 \pm 0.022\) and \(0.32 \pm 0.001\), respectively. Interestingly, \textbf{WEASEL-D} demonstrated relatively better adaptability in this configuration, with an accuracy of \(0.49 \pm 0.120\). These findings highlight the challenges of regional model transferability and emphasize the importance of tailoring models to specific geographical contexts.
+
+\subsection{Impact of Target Column Inclusion}
+The inclusion of additional contextual columns for city and country enhanced the classifiers' interpretability and performance. For instance, \textbf{RDST} achieved a high accuracy of \(0.71 \pm 0.008\) when trained with these enriched contextual features. This result demonstrates the importance of leveraging additional metadata to extract meaningful patterns from the time-series data, thereby improving predictive performance.
+
+\subsection{Effect of Feature Augmentation with TSFEL}
+Leveraging the Time Series Feature Extraction Library (TSFEL) significantly improved the classifiers' ability to capture patterns within the data. By enriching the dataset with new features, classifiers such as \textbf{WEASEL-D} and \textbf{Hydra Ridge} achieved accuracies of \(0.71 \pm 0.004\) and \(0.70 \pm 0.007\), respectively. These results confirm the efficacy of feature augmentation in enhancing the input space and enabling classifiers to achieve higher accuracy and precision.
+
+\subsection{General Observations}
+Across all segmentations, \textbf{WEASEL-D} and \textbf{RDST} consistently outperformed other classifiers, highlighting their robustness and adaptability to various data configurations. Conversely, \textbf{InceptionTime} demonstrated poor performance, indicating limited applicability to this dataset. Segmentations by city and country reduced variability, improving classifier reliability, while TSFEL features and contextual target columns significantly enhanced overall model performance. These findings emphasize the critical role of segmentation and feature engineering in optimizing classifier outcomes.
+
+
+% The performance metrics highlight the robustness of certain classifiers across different datasets. In particular, \textbf{WEASEL-D} consistently achieves high accuracy, F1-score, and precision with low standard deviation, as seen in Tables~\ref{tab:results_city}, \ref{tab:results_country}, and \ref{tab:results_tsfel}. This makes it a strong candidate for applications requiring reliability and consistency.
+
+% On the other hand, \textbf{InceptionTime} exhibits high variability and lower performance across all datasets (e.g., accuracy of $0.33 \pm 0.121$ in Table~\ref{tab:results_city}), indicating that it may not generalize well in this context.
+
+% The dataset type also plays a significant role in classifier performance. For instance, in the TSFEL dataset (Table~\ref{tab:results_tsfel}), \textbf{WEASEL-D} and \textbf{RDST} show competitive performance with accuracies of $0.71 \pm 0.004$ and $0.71 \pm 0.004$, respectively. Meanwhile, in the country-based dataset (Table~\ref{tab:results_country}), \textbf{RDST (0)} performs well with an accuracy of $0.73 \pm 0.015$.
+
+% In terms of metric-specific insights, \textbf{Hydra Ridge} demonstrates balanced performance across all datasets, providing a reliable alternative to \textbf{WEASEL-D}. Finally, the results emphasize the importance of standard deviation as a measure of consistency, with models like \textbf{FreshPRINCE} showing higher variability and thus less reliable performance.
+
+\subsection{Performance Metrics by City}
+The results for each classifier by city are summarized in Table~\ref{tab:results}, showing the accuracy, F1-Score, precision, and recall along with their confidence intervals.
+
+\begin{table}[!h]
+    \caption{\textbf{Performance Metrics for Classifiers by City}}
+    \label{tab:results_city}
+    \centering
+    \setlength{\tabcolsep}{3pt}
+    \begin{tabular}{|l|c|c|c|}
+    \hline
+    \textbf{Classifier} & \textbf{Accuracy} & \textbf{F1-Score} & \textbf{Precision} \\ 
+    \hline
+    TDE & 0.71 $\pm$ 0.027 & 0.71 $\pm$ 0.032 & 0.73 $\pm$ 0.037 \\ 
+    FreshPRINCE & 0.68 $\pm$ 0.037 & 0.67 $\pm$ 0.035 & 0.67 $\pm$ 0.035 \\ 
+    HIVECOTEv2 & 0.77 $\pm$ 0.018 & 0.75 $\pm$ 0.022 & 0.75 $\pm$ 0.022 \\ 
+    RIDGE\_CV & 0.78 $\pm$ 0.018 & 0.76 $\pm$ 0.020 & 0.76 $\pm$ 0.018 \\ 
+    RDST & 0.78 $\pm$ 0.015 & 0.77 $\pm$ 0.016 & 0.76 $\pm$ 0.013 \\ 
+    rSTSF & 0.77 $\pm$ 0.016 & 0.77 $\pm$ 0.014 & 0.77 $\pm$ 0.011 \\ 
+    DrCIF & 0.75 $\pm$ 0.021 & 0.75 $\pm$ 0.018 & 0.75 $\pm$ 0.016 \\ 
+    Elastic Ensemble & 0.71 $\pm$ 0.033 & 0.71 $\pm$ 0.027 & 0.72 $\pm$ 0.020 \\ 
+    TSFresh & 0.75 $\pm$ 0.038 & 0.74 $\pm$ 0.034 & 0.75 $\pm$ 0.028 \\ 
+    Hydra Ridge & 0.78 $\pm$ 0.018 & 0.77 $\pm$ 0.022 & 0.77 $\pm$ 0.023 \\ 
+    MrSQM & 0.76 $\pm$ 0.028 & 0.76 $\pm$ 0.024 & 0.77 $\pm$ 0.018 \\ 
+    MultiRocket & 0.75 $\pm$ 0.031 & 0.75 $\pm$ 0.026 & 0.76 $\pm$ 0.018 \\ 
+    WEASEL-D & 0.79 $\pm$ 0.021 & 0.78 $\pm$ 0.022 & 0.77 $\pm$ 0.022 \\ 
+    InceptionTime & 0.33 $\pm$ 0.121 & 0.28 $\pm$ 0.169 & 0.53 $\pm$ 0.256 \\ 
+    \hline
+    \end{tabular}
+    \end{table}
+    
+
+    \begin{table}[!h]
+        \caption{\textbf{Mean Performance Metrics for Classifiers by Country}}
+        \label{tab:mean_results_country}
+        \centering
+        \setlength{\tabcolsep}{3pt}
+        \begin{tabular}{|l|c|c|c|}
+        \hline
+        \textbf{Classifier} & \textbf{Accuracy} & \textbf{F1-Score} & \textbf{Precision} \\ 
+        \hline
+        rSTSF & 0.69 $\pm$ 0.012 & 0.69 $\pm$ 0.012 & 0.69 $\pm$ 0.012 \\ 
+        RDST & 0.72 $\pm$ 0.012 & 0.71 $\pm$ 0.012 & 0.72 $\pm$ 0.012 \\ 
+        HIVECOTEv2 & 0.68 $\pm$ 0.015 & 0.68 $\pm$ 0.016 & 0.69 $\pm$ 0.015 \\ 
+        InceptionTime & 0.29 $\pm$ 0.106 & 0.22 $\pm$ 0.123 & 0.37 $\pm$ 0.113 \\ 
+        Elastic Ensemble & 0.64 $\pm$ 0.012 & 0.64 $\pm$ 0.012 & 0.64 $\pm$ 0.012 \\ 
+        HYDRA Ridge & 0.70 $\pm$ 0.011 & 0.70 $\pm$ 0.012 & 0.70 $\pm$ 0.011 \\ 
+        TDE & 0.68 $\pm$ 0.014 & 0.67 $\pm$ 0.016 & 0.68 $\pm$ 0.015 \\ 
+        Ridge CV & 0.70 $\pm$ 0.012 & 0.69 $\pm$ 0.013 & 0.70 $\pm$ 0.012 \\ 
+        Multirocket & 0.69 $\pm$ 0.013 & 0.69 $\pm$ 0.015 & 0.69 $\pm$ 0.015 \\ 
+        DrCIF & 0.66 $\pm$ 0.011 & 0.66 $\pm$ 0.011 & 0.66 $\pm$ 0.011 \\ 
+        TSFresh & 0.68 $\pm$ 0.023 & 0.67 $\pm$ 0.020 & 0.67 $\pm$ 0.017 \\ 
+        MrSQM & 0.64 $\pm$ 0.011 & 0.64 $\pm$ 0.011 & 0.64 $\pm$ 0.012 \\ 
+        WEASEL-D & 0.72 $\pm$ 0.011 & 0.71 $\pm$ 0.011 & 0.72 $\pm$ 0.010 \\ 
+        FreshPRINCE & 0.67 $\pm$ 0.012 & 0.67 $\pm$ 0.012 & 0.67 $\pm$ 0.012 \\ 
+        \hline
+        \end{tabular}
+    \end{table}
+    
+    \begin{table}[!h]
+        \caption{\textbf{Performance Metrics for Classifiers on All Data}}
+        \label{tab:results_all}
+        \centering
+        \setlength{\tabcolsep}{3pt}
+        \begin{tabular}{|l|c|c|c|}
+        \hline
+        \textbf{Classifier} & \textbf{Accuracy} & \textbf{F1-Score} & \textbf{Precision} \\ 
+        \hline
+        WEASEL-D            & 0.69 $\pm$ 0.005 & 0.69 $\pm$ 0.005 & 0.69 $\pm$ 0.006 \\ 
+        TSFresh             & 0.65 $\pm$ 0.013 & 0.65 $\pm$ 0.013 & 0.65 $\pm$ 0.013 \\ 
+        Hydra Ridge         & 0.68 $\pm$ 0.005 & 0.68 $\pm$ 0.005 & 0.68 $\pm$ 0.005 \\ 
+        TDE                 & 0.66 $\pm$ 0.011 & 0.65 $\pm$ 0.012 & 0.66 $\pm$ 0.012 \\ 
+        FreshPRINCE         & 0.64 $\pm$ 0.017 & 0.64 $\pm$ 0.016 & 0.64 $\pm$ 0.016 \\ 
+        RDST                & 0.70 $\pm$ 0.008 & 0.69 $\pm$ 0.008 & 0.70 $\pm$ 0.008 \\ 
+        Best of M1 and M2 Models & 0.70 $\pm$ 0.000 & 0.69 $\pm$ 0.000 & 0.66 $\pm$ 0.000 \\ 
+        \hline
+        \end{tabular}
+        \end{table}
+
+\begin{table}[!h]
+    \caption{\textbf{Mean Performance Metrics for Classifiers by Inverted Countries}}
+    \label{tab:results_inverted}
+    \centering
+    \setlength{\tabcolsep}{3pt}
+    \begin{tabular}{|l|c|c|c|}
+    \hline
+    \textbf{Classifier} & \textbf{Accuracy} & \textbf{F1-Score} & \textbf{Precision} \\ 
+    \hline
+    RDST & 0.18 $\pm$ 0.022 & 0.12 $\pm$ 0.023 & 0.26 $\pm$ 0.149 \\ 
+    WEASEL-D & 0.49 $\pm$ 0.120 & 0.45 $\pm$ 0.117 & 0.48 $\pm$ 0.118 \\ 
+    HYDRA Ridge & 0.32 $\pm$ 0.001 & 0.18 $\pm$ 0.004 & 0.23 $\pm$ 0.056 \\ 
+    Best of M1 and M2 Models & 0.70 $\pm$ 0.000 & 0.69 $\pm$ 0.000 & 0.66 $\pm$ 0.000 \\ 
+    \hline
+    \end{tabular}
+\end{table}
+
+\begin{table}[!h]
+    \caption{\textbf{Performance Metrics for Classifiers by Target}}
+    \label{tab:results_target}
+    \centering
+    \setlength{\tabcolsep}{3pt}
+    \begin{tabular}{|l|c|c|c|}
+    \hline
+    \textbf{Classifier} & \textbf{Accuracy} & \textbf{F1-Score} & \textbf{Precision} \\ 
+    \hline
+    RDST                & 0.71 $\pm$ 0.008 & 0.71 $\pm$ 0.008 & 0.71 $\pm$ 0.007 \\ 
+    TDE                 & 0.66 $\pm$ 0.013 & 0.66 $\pm$ 0.013 & 0.66 $\pm$ 0.013 \\ 
+    WEASEL-D            & 0.70 $\pm$ 0.005 & 0.70 $\pm$ 0.005 & 0.70 $\pm$ 0.005 \\ 
+    Hydra Ridge         & 0.69 $\pm$ 0.008 & 0.69 $\pm$ 0.008 & 0.69 $\pm$ 0.008 \\ 
+    Best of M1 and M2 Models & 0.70 $\pm$ 0.000 & 0.69 $\pm$ 0.000 & 0.66 $\pm$ 0.000 \\ 
+    \hline
+    \end{tabular}
+    \end{table}
+        
+\begin{table}[!h]
+    \caption{\textbf{Performance Metrics for Classifiers on TSFEL Data}}
+    \label{tab:results_tsfel}
+    \centering
+    \setlength{\tabcolsep}{3pt}
+    \begin{tabular}{|l|c|c|c|}
+    \hline
+    \textbf{Classifier} & \textbf{Accuracy} & \textbf{F1-Score} & \textbf{Precision} \\ 
+    \hline
+    Hydra Ridge         & 0.70 $\pm$ 0.007 & 0.70 $\pm$ 0.008 & 0.70 $\pm$ 0.007 \\ 
+    WEASEL-D            & 0.71 $\pm$ 0.004 & 0.71 $\pm$ 0.005 & 0.71 $\pm$ 0.004 \\ 
+    RDST                & 0.71 $\pm$ 0.004 & 0.70 $\pm$ 0.004 & 0.71 $\pm$ 0.004 \\ 
+    Best of M1 and M2 Models & 0.70 $\pm$ 0.000 & 0.69 $\pm$ 0.000 & 0.66 $\pm$ 0.000 \\ 
+    \hline
+    \end{tabular}
+    \end{table}
+        
+\subsection{Algorithm Runtime}
+The runtime for each classifier is reported in Table~\ref{tab:runtime}.
+
+\begin{table}[ht]
+    \centering
+    \begin{tabular}{|c|c|c|}
+    \hline
+    \textbf{Classifier}        & \textbf{Filter}   & \textbf{Running Time}          \\ \hline
+    elastic\_ensemble          & country           & 11 days 00:38:50.543            \\ \hline
+    TDE                       & all               & 6 days 18:09:53.296             \\ \hline
+    elastic\_ensemble          & city              & 4 days 17:21:55.959             \\ \hline
+    hivecotev2                & all               & 1 day 11:10:13.307              \\ \hline
+    hivecotev2                & country           & 1 day 02:29:36.924              \\ \hline
+    multirocket               & city              & 20:28:26.703                    \\ \hline
+    multirocket               & country           & 20:27:35.760                    \\ \hline
+    multirocket               & all               & 19:11:33.422                    \\ \hline
+    hivecotev2                & city              & 19:02:19.624                    \\ \hline
+    rSTSF                     & all               & 17:17:00.056                    \\ \hline
+    rSTSF                     & country           & 17:10:53.382                    \\ \hline
+    rSTSF                     & city              & 16:42:31.802                    \\ \hline
+    MrSQM                     & all               & 13:54:19.091                    \\ \hline
+    MrSQM                     & country           & 11:44:02.075                    \\ \hline
+    inception\_time           & city              & 9:32:49.015                     \\ \hline
+    fresh\_prince             & all               & 8:38:34.519                     \\ \hline
+    ts\_fresh                 & country           & 8:33:43.781                     \\ \hline
+    ts\_fresh                 & all               & 8:30:10.135                     \\ \hline
+    inception\_time           & country           & 8:49:14.094                     \\ \hline
+    ts\_fresh                 & city              & 8:37:40.930                     \\ \hline
+    inception\_time           & all               & 8:34:19.778                     \\ \hline
+    fresh\_prince             & city              & 8:18:27.254                     \\ \hline
+    fresh\_prince             & country           & 8:08:04.246                     \\ \hline
+    MrSQM                     & city              & 6:19:55.141                     \\ \hline
+    rdst                      & all               & 3:33:53.686                     \\ \hline
+    rdst                      & country           & 2:36:26.380                     \\ \hline
+    rdst                      & city              & 1:55:09.165                     \\ \hline
+    rSTSF                     & inverted\_all     & 1:53:40.056                     \\ \hline
+    rdst                      & inverted\_all     & 0:36:05.830                     \\ \hline
+    DrCIF                     & all               & 0:33:28.662                     \\ \hline
+    hydra\_ridge              & city              & 0:32:49.738                     \\ \hline
+    DrCIF                     & country           & 0:31:57.594                     \\ \hline
+    DrCIF                     & city              & 0:30:19.343                     \\ \hline
+    ridge\_cv                 & city              & 0:29:51.667                     \\ \hline
+    hydra\_ridge              & country           & 0:28:05.461                     \\ \hline
+    weasel\_d                 & all               & 0:28:00.548                     \\ \hline
+    ridge\_cv                 & country           & 0:27:16.919                     \\ \hline
+    rdst                      & target            & 0:26:32.958                     \\ \hline
+    hydra\_ridge              & all               & 0:18:43.621                     \\ \hline
+    weasel\_d                 & country           & 0:18:05.071                     \\ \hline
+    ridge\_cv                 & all               & 0:15:30.205                     \\ \hline
+    hydra\_ridge              & inverted\_all     & 0:05:56.080                     \\ \hline
+    weasel\_d                 & city              & 0:05:52.877                     \\ \hline
+    hydra\_ridge              & target            & 0:01:26.594                     \\ \hline
+\end{tabular}
+    \caption{Running Times for Classifiers and Filters}
+    \label{tab:runtime}
+    \end{table}
+
+\subsection{Shapes of Training and Testing Data}
+
+The shapes of the training and testing data for each filter are presented in Table~\ref{table:shapes}.
+
+\begin{table}[ht]
+    \centering
+    \begin{tabular}{|l|l|l|l|}
+    \hline
+    \textbf{Filter} & \textbf{train\_x Shape} & \textbf{test\_x Shape} & \textbf{Columns} \\ \hline
+    all       & (10163, 24) & (2541, 24) & 24 \\ \hline
+    city      & (871, 24)   & (218, 24)  & 24 \\ \hline
+    country   & (3589, 24)  & (897, 24)  & 24 \\ \hline
+    inverted  & (3589, 26)  & (897, 26)  & 26 \\ \hline
+    target    & (10163, 26) & (2541, 26) & 26 \\ \hline
+    tsfel     & (10163, 67) & (2541, 67) & 67 \\ \hline
+    \end{tabular}
+    \caption{Shapes of Training and Testing Data}
+    \label{table:shapes}
+    \end{table}
+    
+\subsection{Shapes of Training and Testing Data}
+
+The shapes of the training and testing data for each filter are presented in Table~\ref{table:shapes}.
+    
+    \begin{table}[ht]
+        \centering
+        \begin{tabular}{|c|c|c|c|}
+        \hline
+        \textbf{Filter} & \textbf{train\_x Shape} & \textbf{test\_x Shape} & \textbf{Columns} \\ \hline
+        Full dataset       & 10163 & 2541 & 24 \\ \hline
+        City      & 871   & 218  & 24 \\ \hline
+        Country   & 3589  & 897  & 24 \\ \hline
+        Country Inverted  & 3589  & 897  & 26 \\ \hline
+        target    & 10163 & 2541 & 26 \\ \hline
+        tsfel     & 10163 & 2541 & 67 \\ \hline
+        \end{tabular}
+        \caption{Shapes of Training and Testing Data}
+        \label{table:shapes}
+        \end{table}
+        
+
+\subsection{Discussion}
+The results demonstrate the effectiveness of Weasel-D in achieving high classification performance. However, the runtime analysis suggests a trade-off between accuracy and computational cost...
+
+\section{Contributions}
+
+This study presents several contributions to the field of Time Series classification and analysis, particularly in the application of state-of-the-art classifiers to a real-world dataset.
+
+\subsection{Application of State-of-the-Art Time Series Classifiers}
+Building upon the foundational work of \cite{middlehurst2024bakeoff}, this research utilizes Time Series Classifiers to analyze and classify data extracted from Google Popular Times. 
+By leveraging these advanced methods, the study provides a robust framework for evaluating classifier performance on a real-world dataset, a critical step in bridging the gap between theoretical research and practical implementation.
+
+\subsection{Real-World Dataset Integration: Google Popular Times}
+The dataset used in this study originates from Google Popular Times, which provides temporal behavioral patterns for various establishments, such as restaurants, bars, and cafes. By utilizing this real-world dataset, the research explores practical applications of Time Series classification, offering insights into how such models behave when applied to diverse, real-world scenarios.
+
+\subsection{Dataset Manipulation and Evaluation Strategies}
+A unique aspect of this study is the exploration of how dataset manipulation affects classifier performance. Several approaches were undertaken to analyze the impact of different configurations, including:
+
+\begin{itemize}
+    \item \textbf{Per City}: The dataset was segmented by individual cities to assess classifier performance on localized data.
+    \item \textbf{Per Country}: The data was grouped by country to evaluate regional differences in classifier outcomes.
+    \item \textbf{Full Dataset}: The classifiers were applied to the entire dataset without segmentation to examine overall performance.
+    \item \textbf{Inverted Dataset}: A novel approach was implemented by training classifiers on one country’s data and testing them on another, thereby assessing the cross-border generalizability of the models.
+    \item \textbf{Target Column Inclusion}: Additional columns for City and Country were included as part of the Time Series data, enriching the context available to the classifiers and enabling a deeper exploration of their impact.
+    \item \textbf{Feature Augmentation with TSFEL}: Leveraging the Time Series Feature Extraction Library (TSFEL), new features were generated and added to the dataset, enhancing the classifiers’ input space and improving their ability to capture patterns within the data.
+\end{itemize}
+
+\subsection{Analysis of Classifier Behavior}
+The study provides a detailed analysis of how state-of-the-art classifiers perform under varying conditions and configurations. Metrics such as accuracy, precision, recall, and F1-score were evaluated to understand the strengths and limitations of the models in each experimental setup. This comprehensive evaluation sheds light on the factors influencing classifier effectiveness in real-world applications.
+
+\subsection{Bridging the Gap Between Theory and Practice}
+One of the most significant contributions of this work is its emphasis on real-world applicability. By integrating a real-world dataset and analyzing classifiers’ behavior across diverse configurations, the study provides valuable insights for practitioners looking to implement Time Series classification in practical scenarios. The findings highlight the importance of understanding dataset characteristics and manipulation strategies to optimize classifier performance.
+
+\subsection{Generalization and Cross-Dataset Performance}
+The research explores the generalizability of classifier performance by introducing the inverted dataset approach, where training and testing are conducted on different countries. This approach provides critical insights into the ability of classifiers to adapt to new, unseen data, a key factor in building reliable and scalable models.
+
+\subsection{Feature Engineering for Enhanced Performance}
+By integrating additional features generated through the TSFEL library, the study emphasizes the importance of feature engineering in Time Series classification. The enhanced dataset allows for deeper exploration of patterns, demonstrating how additional context can improve classifier accuracy and robustness.
+
+\subsection*{Summary}
+In conclusion, this study makes significant contributions to the understanding and application of Time Series classifiers in real-world scenarios. By leveraging state-of-the-art methods, integrating advanced feature engineering techniques, and conducting a comprehensive evaluation of classifier performance across diverse configurations, the research offers a robust framework for future studies and practical implementations in the field of Time Series analysis.
 
 \section{Conclusion}
+% Here I need help to sumarize and write a good conclusion of my time series analysis.
+
+In conclusion, this study presents a comprehensive analysis of Time Series classification methods applied to a real-world dataset extracted from Google Popular Times. By leveraging state-of-the-art classifiers, exploring diverse dataset configurations, and integrating advanced feature engineering techniques, the research provides valuable insights into the behavior and performance of Time Series models in practical applications. The findings highlight the importance of understanding dataset characteristics, segmentation strategies, and feature engineering methods in optimizing classifier performance. The study's contributions to the field of Time Series analysis include the application of advanced classifiers to real-world data, the exploration of dataset manipulation strategies, and the evaluation of classifier performance across diverse configurations. By bridging the gap between theoretical research and practical implementation, this study offers a robust framework for future studies and applications in Time Series classification.
+
 Although a conclusion may review the  main points of the paper, do not replicate the abstract as the conclusion. A
 conclusion might elaborate on the importance of the work or suggest
 applications and extensions.
@@ -670,6 +914,12 @@ unnumbered footnote on the first page, not here.
 
 
 \begin{thebibliography}{00}
+
+\bibitem{zheng2014urban} Y. Zheng, L. Capra, O. Wolfson, and H. Yang, "Urban computing: concepts, methodologies, and applications," \emph{ACM Trans. Intell. Syst. Technol. (TIST)}, vol. 5, no. 3, pp. 1--55, 2014.
+
+\bibitem{middlehurst2024bakeoff} M. Middlehurst, P. Schäfer, and A. Bagnall, ``Bake off redux: A review and experimental evaluation of recent time series classification algorithms,'' \emph{Data Mining and Knowledge Discovery}, pp. 1--74, 2024.
+
+\bibitem{silva2019signatures} L. A. da Silva and T. H. Silva, ``Extraction and exploration of business categories signatures,'' in \emph{Proc. Big Social Data and Urban Computing: First Workshop, BiDU 2018}, Rio de Janeiro, Brazil, Aug. 2018, revised selected papers, Springer, 2019, pp. 90--104.
 
 \bibitem{b1} G. O. Young, ``Synthetic structure of industrial plastics,'' in \emph{Plastics,} 2\textsuperscript{nd} ed., vol. 3, J. Peters, Ed. New York, NY, USA: McGraw-Hill, 1964, pp. 15--64.
 
