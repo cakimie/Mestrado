@@ -1,0 +1,222 @@
+nohup: ignoring input
+2025-02-05 08:44:04.329788: I tensorflow/core/util/port.cc:113] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2025-02-05 08:44:04.356422: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2025-02-05 08:44:04.845110: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+GPU is not available
+Start time: 2025-05-02_08-44-04
+timeseries_1_0_f1-5 (2137, 24) (2137,) (535, 24) (535,)
+Loaded: timeseries_1_0_f1-5
+[1m1/9[0m [32m━━[0m[37m━━━━━━━━━━━━━━━━━━[0m [1m3s[0m 407ms/step[1m8/9[0m [32m━━━━━━━━━━━━━━━━━[0m[37m━━━[0m [1m0s[0m 7ms/step  [1m9/9[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 55ms/step[1m9/9[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m1s[0m 55ms/step
+/home/carol/Documents/Mestrado/.venv/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1344: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+<function run_inception_time at 0x7376b5561dc0>_1_0_f1-5 {'accuracy_score': 0.2635514018691589, 'f1_score': 0.11735940351505499, 'precision_score': 0.29273720893394584, 'recall_score': 0.2635514018691589}
+timeseries_1_0_f2-5 (2137, 24) (2137,) (535, 24) (535,)
+Loaded: timeseries_1_0_f2-5
+[1m1/9[0m [32m━━[0m[37m━━━━━━━━━━━━━━━━━━[0m [1m9s[0m 1s/step[1m4/9[0m [32m━━━━━━━━[0m[37m━━━━━━━━━━━━[0m [1m0s[0m 22ms/step[1m7/9[0m [32m━━━━━━━━━━━━━━━[0m[37m━━━━━[0m [1m0s[0m 22ms/step[1m9/9[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 166ms/step[1m9/9[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m2s[0m 166ms/step
+/home/carol/Documents/Mestrado/.venv/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1344: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+<function run_inception_time at 0x7376b5561dc0>_1_0_f2-5 {'accuracy_score': 0.23551401869158878, 'f1_score': 0.09355863028855796, 'precision_score': 0.15284702224263733, 'recall_score': 0.23551401869158878}
+timeseries_1_0_f3-5 (2138, 24) (2138,) (534, 24) (534,)
+Loaded: timeseries_1_0_f3-5
+[1m1/9[0m [32m━━[0m[37m━━━━━━━━━━━━━━━━━━[0m [1m4s[0m 513ms/step[1m8/9[0m [32m━━━━━━━━━━━━━━━━━[0m[37m━━━[0m [1m0s[0m 7ms/step  [1m9/9[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 62ms/step[1m9/9[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m1s[0m 62ms/step
+/home/carol/Documents/Mestrado/.venv/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1344: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+<function run_inception_time at 0x7376b5561dc0>_1_0_f3-5 {'accuracy_score': 0.2153558052434457, 'f1_score': 0.09590608240878112, 'precision_score': 0.2943345621509459, 'recall_score': 0.2153558052434457}
+timeseries_1_0_f4-5 (2138, 24) (2138,) (534, 24) (534,)
+Loaded: timeseries_1_0_f4-5
+[1m1/9[0m [32m━━[0m[37m━━━━━━━━━━━━━━━━━━[0m [1m4s[0m 558ms/step[1m6/9[0m [32m━━━━━━━━━━━━━[0m[37m━━━━━━━[0m [1m0s[0m 11ms/step [1m9/9[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 93ms/step[1m9/9[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m1s[0m 93ms/step
+/home/carol/Documents/Mestrado/.venv/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1344: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+<function run_inception_time at 0x7376b5561dc0>_1_0_f4-5 {'accuracy_score': 0.02247191011235955, 'f1_score': 0.007990667323919287, 'precision_score': 0.1344418325461695, 'recall_score': 0.02247191011235955}
+timeseries_1_0_f5-5 (2138, 24) (2138,) (534, 24) (534,)
+Loaded: timeseries_1_0_f5-5
+[1m1/9[0m [32m━━[0m[37m━━━━━━━━━━━━━━━━━━[0m [1m3s[0m 418ms/step[1m8/9[0m [32m━━━━━━━━━━━━━━━━━[0m[37m━━━[0m [1m0s[0m 7ms/step  [1m9/9[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 56ms/step[1m9/9[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m1s[0m 56ms/step
+/home/carol/Documents/Mestrado/.venv/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1344: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+<function run_inception_time at 0x7376b5561dc0>_1_0_f5-5 {'accuracy_score': 0.11797752808988764, 'f1_score': 0.025337455697157077, 'precision_score': 0.01419278533412182, 'recall_score': 0.11797752808988764}
+<function run_inception_time at 0x7376b5561dc0>_1_0
+           accuracy_score mean=0.1709741 std=0.0889576 t_interval=(-0.0760116283705666, 0.4179598939731428)
+           f1_score mean=0.0680304 std=0.0431035 t_interval=(-0.05164401014378309, 0.18770490583717125)
+           precision_score mean=0.1777107 std=0.1058874 t_interval=(-0.11627992721316141, 0.4717012916962896)
+           recall_score mean=0.1709741 std=0.0889576 t_interval=(-0.0760116283705666, 0.4179598939731428)
+timeseries_1_2_f1-5 (2580, 24) (2580,) (646, 24) (646,)
+Loaded: timeseries_1_2_f1-5
+[1m 1/11[0m [32m━[0m[37m━━━━━━━━━━━━━━━━━━━[0m [1m4s[0m 427ms/step[1m 8/11[0m [32m━━━━━━━━━━━━━━[0m[37m━━━━━━[0m [1m0s[0m 7ms/step  [1m11/11[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 48ms/step[1m11/11[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m1s[0m 48ms/step
+<function run_inception_time at 0x7376b5561dc0>_1_2_f1-5 {'accuracy_score': 0.19814241486068113, 'f1_score': 0.06759545923632611, 'precision_score': 0.04074828311891558, 'recall_score': 0.19814241486068113}
+timeseries_1_2_f2-5 (2581, 24) (2581,) (645, 24) (645,)
+Loaded: timeseries_1_2_f2-5
+[1m 1/11[0m [32m━[0m[37m━━━━━━━━━━━━━━━━━━━[0m [1m4s[0m 438ms/step[1m 8/11[0m [32m━━━━━━━━━━━━━━[0m[37m━━━━━━[0m [1m0s[0m 8ms/step  [1m11/11[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 50ms/step[1m11/11[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m1s[0m 50ms/step
+/home/carol/Documents/Mestrado/.venv/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1344: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+<function run_inception_time at 0x7376b5561dc0>_1_2_f2-5 {'accuracy_score': 0.16899224806201552, 'f1_score': 0.05130452927697333, 'precision_score': 0.27312902992103166, 'recall_score': 0.16899224806201552}
+timeseries_1_2_f3-5 (2581, 24) (2581,) (645, 24) (645,)
+Loaded: timeseries_1_2_f3-5
+[1m 1/11[0m [32m━[0m[37m━━━━━━━━━━━━━━━━━━━[0m [1m4s[0m 445ms/step[1m 8/11[0m [32m━━━━━━━━━━━━━━[0m[37m━━━━━━[0m [1m0s[0m 8ms/step  [1m11/11[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 49ms/step[1m11/11[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m1s[0m 49ms/step
+<function run_inception_time at 0x7376b5561dc0>_1_2_f3-5 {'accuracy_score': 0.17984496124031008, 'f1_score': 0.06854942113465079, 'precision_score': 0.40638080211161093, 'recall_score': 0.17984496124031008}
+timeseries_1_2_f4-5 (2581, 24) (2581,) (645, 24) (645,)
+Loaded: timeseries_1_2_f4-5
+[1m 1/11[0m [32m━[0m[37m━━━━━━━━━━━━━━━━━━━[0m [1m4s[0m 455ms/step[1m 8/11[0m [32m━━━━━━━━━━━━━━[0m[37m━━━━━━[0m [1m0s[0m 8ms/step  [1m11/11[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 49ms/step[1m11/11[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m1s[0m 49ms/step
+<function run_inception_time at 0x7376b5561dc0>_1_2_f4-5 {'accuracy_score': 0.02635658914728682, 'f1_score': 0.00709939077422423, 'precision_score': 0.1078370381238843, 'recall_score': 0.02635658914728682}
+timeseries_1_2_f5-5 (2581, 24) (2581,) (645, 24) (645,)
+Loaded: timeseries_1_2_f5-5
+[1m 1/11[0m [32m━[0m[37m━━━━━━━━━━━━━━━━━━━[0m [1m4s[0m 440ms/step[1m 8/11[0m [32m━━━━━━━━━━━━━━[0m[37m━━━━━━[0m [1m0s[0m 8ms/step  [1m11/11[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 50ms/step[1m11/11[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m1s[0m 50ms/step
+/home/carol/Documents/Mestrado/.venv/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1344: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+<function run_inception_time at 0x7376b5561dc0>_1_2_f5-5 {'accuracy_score': 0.03255813953488372, 'f1_score': 0.007791244448806881, 'precision_score': 0.3179342791672761, 'recall_score': 0.03255813953488372}
+<function run_inception_time at 0x7376b5561dc0>_1_2
+           accuracy_score mean=0.1211789 std=0.0754932 t_interval=(-0.08842385211817536, 0.33078159325624623)
+           f1_score mean=0.0404680 std=0.0276519 t_interval=(-0.036305895025300364, 0.1172419129736929)
+           precision_score mean=0.2292059 std=0.1352328 t_interval=(-0.14626063215033905, 0.6046724051274265)
+           recall_score mean=0.1211789 std=0.0754932 t_interval=(-0.08842385211817536, 0.33078159325624623)
+timeseries_1_4_f1-5 (1856, 24) (1856,) (464, 24) (464,)
+Loaded: timeseries_1_4_f1-5
+[1m1/8[0m [32m━━[0m[37m━━━━━━━━━━━━━━━━━━[0m [1m3s[0m 442ms/step[1m8/8[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 67ms/step [1m8/8[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m1s[0m 67ms/step
+/home/carol/Documents/Mestrado/.venv/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1344: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+WARNING:tensorflow:5 out of the last 20 calls to <function TensorFlowTrainer.make_predict_function.<locals>.one_step_on_data_distributed at 0x7376420a0310> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has reduce_retracing=True option that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.
+<function run_inception_time at 0x7376b5561dc0>_1_4_f1-5 {'accuracy_score': 0.10775862068965517, 'f1_score': 0.049358052175024265, 'precision_score': 0.4434058774847559, 'recall_score': 0.10775862068965517}
+timeseries_1_4_f2-5 (1856, 24) (1856,) (464, 24) (464,)
+Loaded: timeseries_1_4_f2-5
+[1m1/8[0m [32m━━[0m[37m━━━━━━━━━━━━━━━━━━[0m [1m3s[0m 434ms/step[1m8/8[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 67ms/step [1m8/8[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m1s[0m 67ms/step
+/home/carol/Documents/Mestrado/.venv/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1344: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+WARNING:tensorflow:5 out of the last 17 calls to <function TensorFlowTrainer.make_predict_function.<locals>.one_step_on_data_distributed at 0x737642a6f0d0> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has reduce_retracing=True option that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.
+<function run_inception_time at 0x7376b5561dc0>_1_4_f2-5 {'accuracy_score': 0.14655172413793102, 'f1_score': 0.0699312758417852, 'precision_score': 0.2792819517806126, 'recall_score': 0.14655172413793102}
+timeseries_1_4_f3-5 (1856, 24) (1856,) (464, 24) (464,)
+Loaded: timeseries_1_4_f3-5
+[1m1/8[0m [32m━━[0m[37m━━━━━━━━━━━━━━━━━━[0m [1m2s[0m 424ms/step[1m8/8[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 64ms/step [1m8/8[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m1s[0m 64ms/step
+/home/carol/Documents/Mestrado/.venv/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1344: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+<function run_inception_time at 0x7376b5561dc0>_1_4_f3-5 {'accuracy_score': 0.20043103448275862, 'f1_score': 0.0731089269554412, 'precision_score': 0.24704696187697905, 'recall_score': 0.20043103448275862}
+timeseries_1_4_f4-5 (1856, 24) (1856,) (464, 24) (464,)
+Loaded: timeseries_1_4_f4-5
+[1m1/8[0m [32m━━[0m[37m━━━━━━━━━━━━━━━━━━[0m [1m2s[0m 402ms/step[1m8/8[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 63ms/step [1m8/8[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m1s[0m 63ms/step
+/home/carol/Documents/Mestrado/.venv/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1344: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+<function run_inception_time at 0x7376b5561dc0>_1_4_f4-5 {'accuracy_score': 0.09913793103448276, 'f1_score': 0.0179188401869792, 'precision_score': 0.009849556863037163, 'recall_score': 0.09913793103448276}
+timeseries_1_4_f5-5 (1856, 24) (1856,) (464, 24) (464,)
+Loaded: timeseries_1_4_f5-5
+[1m1/8[0m [32m━━[0m[37m━━━━━━━━━━━━━━━━━━[0m [1m3s[0m 434ms/step[1m8/8[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 66ms/step [1m8/8[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m1s[0m 66ms/step
+/home/carol/Documents/Mestrado/.venv/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1344: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+<function run_inception_time at 0x7376b5561dc0>_1_4_f5-5 {'accuracy_score': 0.17672413793103448, 'f1_score': 0.056408453205539034, 'precision_score': 0.14561516692846632, 'recall_score': 0.17672413793103448}
+<function run_inception_time at 0x7376b5561dc0>_1_4
+           accuracy_score mean=0.1461207 std=0.0388983 t_interval=(0.03812162634880155, 0.25411975296154327)
+           f1_score mean=0.0533451 std=0.0197282 t_interval=(-0.0014291726139426114, 0.10811939195985018)
+           precision_score mean=0.2250399 std=0.1440315 t_interval=(-0.1748556851086165, 0.6249354910821568)
+           recall_score mean=0.1461207 std=0.0388983 t_interval=(0.03812162634880155, 0.25411975296154327)
+timeseries_0_2_f1-5 (1658, 24) (1658,) (415, 24) (415,)
+Loaded: timeseries_0_2_f1-5
+[1m1/7[0m [32m━━[0m[37m━━━━━━━━━━━━━━━━━━[0m [1m2s[0m 444ms/step[1m7/7[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 77ms/step [1m7/7[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m1s[0m 77ms/step
+/home/carol/Documents/Mestrado/.venv/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1344: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+<function run_inception_time at 0x7376b5561dc0>_0_2_f1-5 {'accuracy_score': 0.40481927710843374, 'f1_score': 0.2999897623594962, 'precision_score': 0.40269351835616896, 'recall_score': 0.40481927710843374}
+timeseries_0_2_f2-5 (1658, 24) (1658,) (415, 24) (415,)
+Loaded: timeseries_0_2_f2-5
+[1m1/7[0m [32m━━[0m[37m━━━━━━━━━━━━━━━━━━[0m [1m2s[0m 438ms/step[1m7/7[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 78ms/step [1m7/7[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m1s[0m 78ms/step
+/home/carol/Documents/Mestrado/.venv/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1344: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+<function run_inception_time at 0x7376b5561dc0>_0_2_f2-5 {'accuracy_score': 0.21686746987951808, 'f1_score': 0.08609183276886348, 'precision_score': 0.07593905031892276, 'recall_score': 0.21686746987951808}
+timeseries_0_2_f3-5 (1658, 24) (1658,) (415, 24) (415,)
+Loaded: timeseries_0_2_f3-5
+[1m1/7[0m [32m━━[0m[37m━━━━━━━━━━━━━━━━━━[0m [1m2s[0m 446ms/step[1m7/7[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 77ms/step [1m7/7[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m1s[0m 77ms/step
+/home/carol/Documents/Mestrado/.venv/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1344: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+<function run_inception_time at 0x7376b5561dc0>_0_2_f3-5 {'accuracy_score': 0.363855421686747, 'f1_score': 0.22295696271599882, 'precision_score': 0.2645880002421747, 'recall_score': 0.363855421686747}
+timeseries_0_2_f4-5 (1659, 24) (1659,) (414, 24) (414,)
+Loaded: timeseries_0_2_f4-5
+[1m1/7[0m [32m━━[0m[37m━━━━━━━━━━━━━━━━━━[0m [1m2s[0m 442ms/step[1m7/7[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 77ms/step [1m7/7[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m1s[0m 77ms/step
+/home/carol/Documents/Mestrado/.venv/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1344: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+<function run_inception_time at 0x7376b5561dc0>_0_2_f4-5 {'accuracy_score': 0.4178743961352657, 'f1_score': 0.3622382246775915, 'precision_score': 0.37649027245171385, 'recall_score': 0.4178743961352657}
+timeseries_0_2_f5-5 (1659, 24) (1659,) (414, 24) (414,)
+Loaded: timeseries_0_2_f5-5
+[1m1/7[0m [32m━━[0m[37m━━━━━━━━━━━━━━━━━━[0m [1m2s[0m 447ms/step[1m7/7[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 77ms/step [1m7/7[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m1s[0m 77ms/step
+/home/carol/Documents/Mestrado/.venv/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1344: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+<function run_inception_time at 0x7376b5561dc0>_0_2_f5-5 {'accuracy_score': 0.2608695652173913, 'f1_score': 0.2087765869455867, 'precision_score': 0.49101760758871626, 'recall_score': 0.2608695652173913}
+<function run_inception_time at 0x7376b5561dc0>_0_2
+           accuracy_score mean=0.3328572 std=0.0800040 t_interval=(0.11073054337855126, 0.5549839086323911)
+           f1_score mean=0.2360107 std=0.0931820 t_interval=(-0.022704172478225343, 0.4947255202652401)
+           precision_score mean=0.3221457 std=0.1427513 t_interval=(-0.07419534099502761, 0.7184867205781063)
+           recall_score mean=0.3328572 std=0.0800040 t_interval=(0.11073054337855126, 0.5549839086323911)
+timeseries_0_0_f1-5 (871, 24) (871,) (218, 24) (218,)
+Loaded: timeseries_0_0_f1-5
+[1m1/4[0m [32m━━━━━[0m[37m━━━━━━━━━━━━━━━[0m [1m1s[0m 428ms/step[1m4/4[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 143ms/step[1m4/4[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m1s[0m 143ms/step
+/home/carol/Documents/Mestrado/.venv/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1344: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+<function run_inception_time at 0x7376b5561dc0>_0_0_f1-5 {'accuracy_score': 0.25688073394495414, 'f1_score': 0.18835322670313126, 'precision_score': 0.40390239220514446, 'recall_score': 0.25688073394495414}
+timeseries_0_0_f2-5 (871, 24) (871,) (218, 24) (218,)
+Loaded: timeseries_0_0_f2-5
+[1m1/4[0m [32m━━━━━[0m[37m━━━━━━━━━━━━━━━[0m [1m1s[0m 442ms/step[1m4/4[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 143ms/step[1m4/4[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m1s[0m 143ms/step
+/home/carol/Documents/Mestrado/.venv/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1344: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+<function run_inception_time at 0x7376b5561dc0>_0_0_f2-5 {'accuracy_score': 0.3256880733944954, 'f1_score': 0.2541645929918283, 'precision_score': 0.594315952141443, 'recall_score': 0.3256880733944954}
+timeseries_0_0_f3-5 (871, 24) (871,) (218, 24) (218,)
+Loaded: timeseries_0_0_f3-5
+[1m1/4[0m [32m━━━━━[0m[37m━━━━━━━━━━━━━━━[0m [1m1s[0m 445ms/step[1m4/4[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 151ms/step[1m4/4[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m1s[0m 151ms/step
+/home/carol/Documents/Mestrado/.venv/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1344: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+<function run_inception_time at 0x7376b5561dc0>_0_0_f3-5 {'accuracy_score': 0.4036697247706422, 'f1_score': 0.2581005611268136, 'precision_score': 0.2056617464739429, 'recall_score': 0.4036697247706422}
+timeseries_0_0_f4-5 (871, 24) (871,) (218, 24) (218,)
+Loaded: timeseries_0_0_f4-5
+[1m1/4[0m [32m━━━━━[0m[37m━━━━━━━━━━━━━━━[0m [1m1s[0m 461ms/step[1m4/4[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 153ms/step[1m4/4[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m1s[0m 153ms/step
+/home/carol/Documents/Mestrado/.venv/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1344: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+<function run_inception_time at 0x7376b5561dc0>_0_0_f4-5 {'accuracy_score': 0.5229357798165137, 'f1_score': 0.5207480592801694, 'precision_score': 0.6567543265221018, 'recall_score': 0.5229357798165137}
+timeseries_0_0_f5-5 (872, 24) (872,) (217, 24) (217,)
+Loaded: timeseries_0_0_f5-5
+[1m1/4[0m [32m━━━━━[0m[37m━━━━━━━━━━━━━━━[0m [1m1s[0m 425ms/step[1m4/4[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 138ms/step[1m4/4[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m1s[0m 138ms/step
+/home/carol/Documents/Mestrado/.venv/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1344: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+<function run_inception_time at 0x7376b5561dc0>_0_0_f5-5 {'accuracy_score': 0.15207373271889402, 'f1_score': 0.046987372721061786, 'precision_score': 0.11411424284642589, 'recall_score': 0.15207373271889402}
+<function run_inception_time at 0x7376b5561dc0>_0_0
+           accuracy_score mean=0.3322496 std=0.1262132 t_interval=(-0.018174537539224822, 0.6826737553974246)
+           f1_score mean=0.2536708 std=0.1538405 t_interval=(-0.17345904230646692, 0.6808005674356686)
+           precision_score mean=0.3949497 std=0.2112189 t_interval=(-0.19148805470047758, 0.9813875187761008)
+           recall_score mean=0.3322496 std=0.1262132 t_interval=(-0.018174537539224822, 0.6826737553974246)
+timeseries_0_1_f1-5 (1059, 24) (1059,) (265, 24) (265,)
+Loaded: timeseries_0_1_f1-5
+[1m1/5[0m [32m━━━━[0m[37m━━━━━━━━━━━━━━━━[0m [1m1s[0m 444ms/step[1m5/5[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 149ms/step[1m5/5[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m1s[0m 149ms/step
+/home/carol/Documents/Mestrado/.venv/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1344: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+<function run_inception_time at 0x7376b5561dc0>_0_1_f1-5 {'accuracy_score': 0.2981132075471698, 'f1_score': 0.1471718719293593, 'precision_score': 0.22471698113207547, 'recall_score': 0.2981132075471698}
+timeseries_0_1_f2-5 (1059, 24) (1059,) (265, 24) (265,)
+Loaded: timeseries_0_1_f2-5
+[1m1/5[0m [32m━━━━[0m[37m━━━━━━━━━━━━━━━━[0m [1m1s[0m 474ms/step[1m5/5[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 118ms/step[1m5/5[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m1s[0m 118ms/step
+/home/carol/Documents/Mestrado/.venv/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1344: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+<function run_inception_time at 0x7376b5561dc0>_0_1_f2-5 {'accuracy_score': 0.2943396226415094, 'f1_score': 0.14185512946574894, 'precision_score': 0.10998548621190131, 'recall_score': 0.2943396226415094}
+timeseries_0_1_f3-5 (1059, 24) (1059,) (265, 24) (265,)
+Loaded: timeseries_0_1_f3-5
+[1m1/5[0m [32m━━━━[0m[37m━━━━━━━━━━━━━━━━[0m [1m1s[0m 475ms/step[1m5/5[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 112ms/step[1m5/5[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m1s[0m 112ms/step
+/home/carol/Documents/Mestrado/.venv/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1344: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+<function run_inception_time at 0x7376b5561dc0>_0_1_f3-5 {'accuracy_score': 0.1811320754716981, 'f1_score': 0.10704681131692054, 'precision_score': 0.1436742177796179, 'recall_score': 0.1811320754716981}
+timeseries_0_1_f4-5 (1059, 24) (1059,) (265, 24) (265,)
+Loaded: timeseries_0_1_f4-5
+[1m1/5[0m [32m━━━━[0m[37m━━━━━━━━━━━━━━━━[0m [1m1s[0m 451ms/step[1m5/5[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 112ms/step[1m5/5[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m1s[0m 112ms/step
+/home/carol/Documents/Mestrado/.venv/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1344: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+<function run_inception_time at 0x7376b5561dc0>_0_1_f4-5 {'accuracy_score': 0.35094339622641507, 'f1_score': 0.2226831631467267, 'precision_score': 0.7290672122452073, 'recall_score': 0.35094339622641507}
+timeseries_0_1_f5-5 (1060, 24) (1060,) (264, 24) (264,)
+Loaded: timeseries_0_1_f5-5
+[1m1/5[0m [32m━━━━[0m[37m━━━━━━━━━━━━━━━━[0m [1m1s[0m 424ms/step[1m5/5[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 107ms/step[1m5/5[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m1s[0m 107ms/step
+/home/carol/Documents/Mestrado/.venv/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1344: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+<function run_inception_time at 0x7376b5561dc0>_0_1_f5-5 {'accuracy_score': 0.3484848484848485, 'f1_score': 0.2052168145085396, 'precision_score': 0.5244281659570916, 'recall_score': 0.3484848484848485}
+<function run_inception_time at 0x7376b5561dc0>_0_1
+           accuracy_score mean=0.2946026 std=0.0615882 t_interval=(0.12360635748864338, 0.465598902660013)
+           f1_score mean=0.1647948 std=0.0427940 t_interval=(0.045979592584759976, 0.28360992356215803)
+           precision_score mean=0.3463744 std=0.2408006 t_interval=(-0.3221951161354178, 1.0149439414657753)
+           recall_score mean=0.2946026 std=0.0615882 t_interval=(0.12360635748864338, 0.465598902660013)
+Classifier mean accuracy_score=0.2329972
+Classifier mean f1_score=0.1360533
+Classifier mean precision_score=0.2825711
+Classifier mean recall_score=0.2329972
+End time: 2025-05-02_09-36-37
+Running time: 0:52:33.318964
+Done!
+22158.68user 1782.16system 52:35.64elapsed 758%CPU (0avgtext+0avgdata 1968928maxresident)k
+0inputs+344outputs (0major+3771801minor)pagefaults 0swaps

@@ -1,0 +1,142 @@
+nohup: ignoring input
+/home/carol/Documents/Mestrado/.venv/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1344: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/carol/Documents/Mestrado/.venv/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1344: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/carol/Documents/Mestrado/.venv/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1344: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+GPU is not available
+Start time: 2025-05-02_21-49-09
+timeseries_1_0_f1-5 (4275, 24) (4275,) (1069, 24) (1069,)
+Loaded: timeseries_1_0_f1-5
+<function run_weasel_d at 0x72e170181550>_1_0_f1-5 {'accuracy_score': 0.6594948550046773, 'f1_score': 0.645960115272676, 'precision_score': 0.6495903491374556, 'recall_score': 0.6594948550046773}
+timeseries_1_0_f2-5 (4275, 24) (4275,) (1069, 24) (1069,)
+Loaded: timeseries_1_0_f2-5
+<function run_weasel_d at 0x72e170181550>_1_0_f2-5 {'accuracy_score': 0.6856875584658559, 'f1_score': 0.6807095540984891, 'precision_score': 0.6918669287281469, 'recall_score': 0.6856875584658559}
+timeseries_1_0_f3-5 (4275, 24) (4275,) (1069, 24) (1069,)
+Loaded: timeseries_1_0_f3-5
+<function run_weasel_d at 0x72e170181550>_1_0_f3-5 {'accuracy_score': 0.6435921421889617, 'f1_score': 0.6357237947923251, 'precision_score': 0.645704984210272, 'recall_score': 0.6435921421889617}
+timeseries_1_0_f4-5 (4275, 24) (4275,) (1069, 24) (1069,)
+Loaded: timeseries_1_0_f4-5
+<function run_weasel_d at 0x72e170181550>_1_0_f4-5 {'accuracy_score': 0.6716557530402245, 'f1_score': 0.6651673393496199, 'precision_score': 0.6821578834471349, 'recall_score': 0.6716557530402245}
+timeseries_1_0_f5-5 (4276, 24) (4276,) (1068, 24) (1068,)
+Loaded: timeseries_1_0_f5-5
+<function run_weasel_d at 0x72e170181550>_1_0_f5-5 {'accuracy_score': 0.648876404494382, 'f1_score': 0.6367466461176425, 'precision_score': 0.662927216489844, 'recall_score': 0.648876404494382}
+<function run_weasel_d at 0x72e170181550>_1_0
+           accuracy_score mean=0.6618613 std=0.0153075 t_interval=(0.6193610212481293, 0.7043616640295112)
+           f1_score mean=0.6528615 std=0.0174812 t_interval=(0.6043258247167638, 0.7013971551355374)
+           precision_score mean=0.6664495 std=0.0179987 t_interval=(0.6164769870588173, 0.7164219577463241)
+           recall_score mean=0.6618613 std=0.0153075 t_interval=(0.6193610212481293, 0.7043616640295112)
+timeseries_1_2_f1-5 (5161, 24) (5161,) (1291, 24) (1291,)
+Loaded: timeseries_1_2_f1-5
+<function run_weasel_d at 0x72e170181550>_1_2_f1-5 {'accuracy_score': 0.6545313710302091, 'f1_score': 0.6515709475810902, 'precision_score': 0.6655896383465785, 'recall_score': 0.6545313710302091}
+timeseries_1_2_f2-5 (5161, 24) (5161,) (1291, 24) (1291,)
+Loaded: timeseries_1_2_f2-5
+<function run_weasel_d at 0x72e170181550>_1_2_f2-5 {'accuracy_score': 0.6576297443841983, 'f1_score': 0.653717954536556, 'precision_score': 0.6717148117200938, 'recall_score': 0.6576297443841983}
+timeseries_1_2_f3-5 (5162, 24) (5162,) (1290, 24) (1290,)
+Loaded: timeseries_1_2_f3-5
+<function run_weasel_d at 0x72e170181550>_1_2_f3-5 {'accuracy_score': 0.6651162790697674, 'f1_score': 0.6614301252479827, 'precision_score': 0.67298747529779, 'recall_score': 0.6651162790697674}
+timeseries_1_2_f4-5 (5162, 24) (5162,) (1290, 24) (1290,)
+Loaded: timeseries_1_2_f4-5
+<function run_weasel_d at 0x72e170181550>_1_2_f4-5 {'accuracy_score': 0.6395348837209303, 'f1_score': 0.6371729292783282, 'precision_score': 0.6574840386985661, 'recall_score': 0.6395348837209303}
+timeseries_1_2_f5-5 (5162, 24) (5162,) (1290, 24) (1290,)
+Loaded: timeseries_1_2_f5-5
+<function run_weasel_d at 0x72e170181550>_1_2_f5-5 {'accuracy_score': 0.6565891472868217, 'f1_score': 0.6533602580545914, 'precision_score': 0.6673849717201782, 'recall_score': 0.6565891472868217}
+<function run_weasel_d at 0x72e170181550>_1_2
+           accuracy_score mean=0.6546803 std=0.0083745 t_interval=(0.6314290403134146, 0.6779315298833564)
+           f1_score mean=0.6514504 std=0.0079025 t_interval=(0.6295096751553604, 0.6733912107240592)
+           precision_score mean=0.6670322 std=0.0054912 t_interval=(0.651786243317657, 0.6822781309956257)
+           recall_score mean=0.6546803 std=0.0083745 t_interval=(0.6314290403134146, 0.6779315298833564)
+timeseries_1_4_f1-5 (3712, 24) (3712,) (928, 24) (928,)
+Loaded: timeseries_1_4_f1-5
+<function run_weasel_d at 0x72e170181550>_1_4_f1-5 {'accuracy_score': 0.665948275862069, 'f1_score': 0.6456511965517682, 'precision_score': 0.6685760129839307, 'recall_score': 0.665948275862069}
+timeseries_1_4_f2-5 (3712, 24) (3712,) (928, 24) (928,)
+Loaded: timeseries_1_4_f2-5
+<function run_weasel_d at 0x72e170181550>_1_4_f2-5 {'accuracy_score': 0.6325431034482759, 'f1_score': 0.6211621264639811, 'precision_score': 0.6349251096838814, 'recall_score': 0.6325431034482759}
+timeseries_1_4_f3-5 (3712, 24) (3712,) (928, 24) (928,)
+Loaded: timeseries_1_4_f3-5
+<function run_weasel_d at 0x72e170181550>_1_4_f3-5 {'accuracy_score': 0.6573275862068966, 'f1_score': 0.6462158153910921, 'precision_score': 0.6636818743667899, 'recall_score': 0.6573275862068966}
+timeseries_1_4_f4-5 (3712, 24) (3712,) (928, 24) (928,)
+Loaded: timeseries_1_4_f4-5
+<function run_weasel_d at 0x72e170181550>_1_4_f4-5 {'accuracy_score': 0.6756465517241379, 'f1_score': 0.6689466751215443, 'precision_score': 0.6854571483834424, 'recall_score': 0.6756465517241379}
+timeseries_1_4_f5-5 (3712, 24) (3712,) (928, 24) (928,)
+Loaded: timeseries_1_4_f5-5
+<function run_weasel_d at 0x72e170181550>_1_4_f5-5 {'accuracy_score': 0.6497844827586207, 'f1_score': 0.640817507070446, 'precision_score': 0.6667588284660443, 'recall_score': 0.6497844827586207}
+<function run_weasel_d at 0x72e170181550>_1_4
+           accuracy_score mean=0.6562500 std=0.0146647 t_interval=(0.6155343280885156, 0.6969656719114842)
+           f1_score mean=0.6445587 std=0.0152323 t_interval=(0.6022671237508139, 0.686850204488719)
+           precision_score mean=0.6638798 std=0.0163361 t_interval=(0.6185235500995444, 0.7092360394540912)
+           recall_score mean=0.6562500 std=0.0146647 t_interval=(0.6155343280885156, 0.6969656719114842)
+timeseries_0_2_f1-5 (3316, 24) (3316,) (830, 24) (830,)
+Loaded: timeseries_0_2_f1-5
+<function run_weasel_d at 0x72e170181550>_0_2_f1-5 {'accuracy_score': 0.7132530120481928, 'f1_score': 0.7034297851208319, 'precision_score': 0.7201181094231422, 'recall_score': 0.7132530120481928}
+timeseries_0_2_f2-5 (3317, 24) (3317,) (829, 24) (829,)
+Loaded: timeseries_0_2_f2-5
+<function run_weasel_d at 0x72e170181550>_0_2_f2-5 {'accuracy_score': 0.6827503015681544, 'f1_score': 0.679551842922578, 'precision_score': 0.6961139808243011, 'recall_score': 0.6827503015681544}
+timeseries_0_2_f3-5 (3317, 24) (3317,) (829, 24) (829,)
+Loaded: timeseries_0_2_f3-5
+<function run_weasel_d at 0x72e170181550>_0_2_f3-5 {'accuracy_score': 0.6875753920386007, 'f1_score': 0.6772310960848599, 'precision_score': 0.6841667534760227, 'recall_score': 0.6875753920386007}
+timeseries_0_2_f4-5 (3317, 24) (3317,) (829, 24) (829,)
+Loaded: timeseries_0_2_f4-5
+<function run_weasel_d at 0x72e170181550>_0_2_f4-5 {'accuracy_score': 0.6827503015681544, 'f1_score': 0.6710078762029765, 'precision_score': 0.6863223850488761, 'recall_score': 0.6827503015681544}
+timeseries_0_2_f5-5 (3317, 24) (3317,) (829, 24) (829,)
+Loaded: timeseries_0_2_f5-5
+<function run_weasel_d at 0x72e170181550>_0_2_f5-5 {'accuracy_score': 0.6996381182147166, 'f1_score': 0.686340425248463, 'precision_score': 0.6975786955157217, 'recall_score': 0.6996381182147166}
+<function run_weasel_d at 0x72e170181550>_0_2
+           accuracy_score mean=0.6931934 std=0.0117780 t_interval=(0.6604925811898845, 0.725894268985243)
+           f1_score mean=0.6835122 std=0.0111014 t_interval=(0.6526898161029845, 0.7143345941288993)
+           precision_score mean=0.6968600 std=0.0127607 t_interval=(0.6614307054683958, 0.7322892642468298)
+           recall_score mean=0.6931934 std=0.0117780 t_interval=(0.6604925811898845, 0.725894268985243)
+timeseries_0_0_f1-5 (1742, 24) (1742,) (436, 24) (436,)
+Loaded: timeseries_0_0_f1-5
+<function run_weasel_d at 0x72e170181550>_0_0_f1-5 {'accuracy_score': 0.7454128440366973, 'f1_score': 0.7114968518749988, 'precision_score': 0.7275241445165658, 'recall_score': 0.7454128440366973}
+timeseries_0_0_f2-5 (1742, 24) (1742,) (436, 24) (436,)
+Loaded: timeseries_0_0_f2-5
+<function run_weasel_d at 0x72e170181550>_0_0_f2-5 {'accuracy_score': 0.7178899082568807, 'f1_score': 0.6844464121320412, 'precision_score': 0.6978181547461648, 'recall_score': 0.7178899082568807}
+timeseries_0_0_f3-5 (1742, 24) (1742,) (436, 24) (436,)
+Loaded: timeseries_0_0_f3-5
+/home/carol/Documents/Mestrado/.venv/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1344: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/carol/Documents/Mestrado/.venv/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1344: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+<function run_weasel_d at 0x72e170181550>_0_0_f3-5 {'accuracy_score': 0.7408256880733946, 'f1_score': 0.721703697026965, 'precision_score': 0.7339713175578018, 'recall_score': 0.7408256880733946}
+timeseries_0_0_f4-5 (1743, 24) (1743,) (435, 24) (435,)
+Loaded: timeseries_0_0_f4-5
+<function run_weasel_d at 0x72e170181550>_0_0_f4-5 {'accuracy_score': 0.7057471264367816, 'f1_score': 0.6661633289600712, 'precision_score': 0.6778189556732067, 'recall_score': 0.7057471264367816}
+timeseries_0_0_f5-5 (1743, 24) (1743,) (435, 24) (435,)
+Loaded: timeseries_0_0_f5-5
+<function run_weasel_d at 0x72e170181550>_0_0_f5-5 {'accuracy_score': 0.728735632183908, 'f1_score': 0.6993058226699942, 'precision_score': 0.7078499102721366, 'recall_score': 0.728735632183908}
+<function run_weasel_d at 0x72e170181550>_0_0
+           accuracy_score mean=0.7277222 std=0.0145963 t_interval=(0.6871963136464977, 0.768248165948567)
+           f1_score mean=0.6966232 std=0.0196648 t_interval=(0.6420248517304384, 0.7512215933351897)
+           precision_score mean=0.7089965 std=0.0203240 t_interval=(0.6525680319147334, 0.765424961191617)
+           recall_score mean=0.7277222 std=0.0145963 t_interval=(0.6871963136464977, 0.768248165948567)
+timeseries_0_1_f1-5 (2118, 24) (2118,) (530, 24) (530,)
+Loaded: timeseries_0_1_f1-5
+<function run_weasel_d at 0x72e170181550>_0_1_f1-5 {'accuracy_score': 0.6641509433962264, 'f1_score': 0.6457768491916451, 'precision_score': 0.6781147595503625, 'recall_score': 0.6641509433962264}
+timeseries_0_1_f2-5 (2118, 24) (2118,) (530, 24) (530,)
+Loaded: timeseries_0_1_f2-5
+<function run_weasel_d at 0x72e170181550>_0_1_f2-5 {'accuracy_score': 0.690566037735849, 'f1_score': 0.6796632093905489, 'precision_score': 0.6850711902662266, 'recall_score': 0.690566037735849}
+timeseries_0_1_f3-5 (2118, 24) (2118,) (530, 24) (530,)
+Loaded: timeseries_0_1_f3-5
+<function run_weasel_d at 0x72e170181550>_0_1_f3-5 {'accuracy_score': 0.6849056603773584, 'f1_score': 0.6720068491594812, 'precision_score': 0.6797411657147012, 'recall_score': 0.6849056603773584}
+timeseries_0_1_f4-5 (2119, 24) (2119,) (529, 24) (529,)
+Loaded: timeseries_0_1_f4-5
+<function run_weasel_d at 0x72e170181550>_0_1_f4-5 {'accuracy_score': 0.6446124763705104, 'f1_score': 0.6222311160896469, 'precision_score': 0.6343271831390406, 'recall_score': 0.6446124763705104}
+timeseries_0_1_f5-5 (2119, 24) (2119,) (529, 24) (529,)
+Loaded: timeseries_0_1_f5-5
+<function run_weasel_d at 0x72e170181550>_0_1_f5-5 {'accuracy_score': 0.7069943289224953, 'f1_score': 0.6879990168270981, 'precision_score': 0.7058855363185953, 'recall_score': 0.7069943289224953}
+<function run_weasel_d at 0x72e170181550>_0_1
+           accuracy_score mean=0.6782459 std=0.0216909 t_interval=(0.6180221728322771, 0.7384696058886987)
+           f1_score mean=0.6615354 std=0.0242147 t_interval=(0.5943047155656813, 0.7287661006976867)
+           precision_score mean=0.6766280 std=0.0233604 t_interval=(0.6117689702312593, 0.741486963764311)
+           recall_score mean=0.6782459 std=0.0216909 t_interval=(0.6180221728322771, 0.7384696058886987)
+Classifier mean accuracy_score=0.6786589
+Classifier mean f1_score=0.6650902
+Classifier mean precision_score=0.6799743
+Classifier mean recall_score=0.6786589
+End time: 2025-05-02_21-59-04
+Running time: 0:09:55.121446
+Done!
+2255.25user 1952.58system 9:57.02elapsed 704%CPU (0avgtext+0avgdata 7005376maxresident)k
+0inputs+6504outputs (0major+18489670minor)pagefaults 0swaps

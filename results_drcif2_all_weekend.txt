@@ -1,0 +1,36 @@
+nohup: ignoring input
+/home/carol/Documents/Mestrado/.venv/lib/python3.9/site-packages/numpy/core/fromnumeric.py:3464: RuntimeWarning: Mean of empty slice.
+  return _methods._mean(a, axis=axis, dtype=dtype,
+/home/carol/Documents/Mestrado/.venv/lib/python3.9/site-packages/numpy/core/_methods.py:192: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+GPU is not available
+Start time: 2025-06-02_03-32-58
+timeseries_f1-5 (10163, 24) (10163,) (2541, 24) (2541,)
+Loaded: timeseries_f1-5
+<function run_DrCIF at 0x7fd094781670>_f1-5 {'accuracy_score': 0.6343959071231798, 'f1_score': 0.633876613509738, 'precision_score': 0.6363873237908186, 'recall_score': 0.6343959071231798}
+timeseries_f2-5 (10163, 24) (10163,) (2541, 24) (2541,)
+Loaded: timeseries_f2-5
+<function run_DrCIF at 0x7fd094781670>_f2-5 {'accuracy_score': 0.6406926406926406, 'f1_score': 0.6391944232736265, 'precision_score': 0.6396376290519725, 'recall_score': 0.6406926406926406}
+timeseries_f3-5 (10163, 24) (10163,) (2541, 24) (2541,)
+Loaded: timeseries_f3-5
+<function run_DrCIF at 0x7fd094781670>_f3-5 {'accuracy_score': 0.6001574183392365, 'f1_score': 0.600005353360196, 'precision_score': 0.6032489131983925, 'recall_score': 0.6001574183392365}
+timeseries_f4-5 (10163, 24) (10163,) (2541, 24) (2541,)
+Loaded: timeseries_f4-5
+<function run_DrCIF at 0x7fd094781670>_f4-5 {'accuracy_score': 0.6316410861865407, 'f1_score': 0.6314889241768216, 'precision_score': 0.6334427561595571, 'recall_score': 0.6316410861865407}
+timeseries_f5-5 (10164, 24) (10164,) (2540, 24) (2540,)
+Loaded: timeseries_f5-5
+<function run_DrCIF at 0x7fd094781670>_f5-5 {'accuracy_score': 0.6464566929133858, 'f1_score': 0.6455027753372438, 'precision_score': 0.6455691129969411, 'recall_score': 0.6464566929133858}
+<function run_DrCIF at 0x7fd094781670>
+           accuracy_score mean=0.6306687 std=0.0160967 t_interval=(0.5859771922285215, 0.6753603058734718)
+           f1_score mean=0.6300136 std=0.0157594 t_interval=(0.5862584570035876, 0.6737687788594628)
+           precision_score mean=0.6316571 std=0.0147636 t_interval=(0.5906667809528454, 0.6726475131262275)
+           recall_score mean=0.6306687 std=0.0160967 t_interval=(0.5859771922285215, 0.6753603058734718)
+Classifier mean accuracy_score=nan
+Classifier mean f1_score=nan
+Classifier mean precision_score=nan
+Classifier mean recall_score=nan
+End time: 2025-06-02_03-36-27
+Running time: 0:03:29.088712
+Done!
+211.99user 2.11system 3:32.91elapsed 100%CPU (0avgtext+0avgdata 648388maxresident)k
+272inputs+24outputs (0major+157866minor)pagefaults 0swaps

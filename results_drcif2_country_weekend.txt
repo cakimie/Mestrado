@@ -1,0 +1,52 @@
+nohup: ignoring input
+GPU is not available
+Start time: 2025-05-02_22-07-44
+timeseries_1_f1-5 (6574, 24) (6574,) (1644, 24) (1644,)
+Loaded: timeseries_1_f1-5
+<function run_DrCIF at 0x769e017c05e0>_1_f1-5 {'accuracy_score': 0.6027980535279805, 'f1_score': 0.6025844277291879, 'precision_score': 0.6058595782123822, 'recall_score': 0.6027980535279805}
+timeseries_1_f2-5 (6574, 24) (6574,) (1644, 24) (1644,)
+Loaded: timeseries_1_f2-5
+<function run_DrCIF at 0x769e017c05e0>_1_f2-5 {'accuracy_score': 0.6161800486618005, 'f1_score': 0.6159937659831498, 'precision_score': 0.6160360920410808, 'recall_score': 0.6161800486618005}
+timeseries_1_f3-5 (6574, 24) (6574,) (1644, 24) (1644,)
+Loaded: timeseries_1_f3-5
+<function run_DrCIF at 0x769e017c05e0>_1_f3-5 {'accuracy_score': 0.6100973236009732, 'f1_score': 0.6082659955492631, 'precision_score': 0.6097460055629086, 'recall_score': 0.6100973236009732}
+timeseries_1_f4-5 (6575, 24) (6575,) (1643, 24) (1643,)
+Loaded: timeseries_1_f4-5
+<function run_DrCIF at 0x769e017c05e0>_1_f4-5 {'accuracy_score': 0.6135118685331711, 'f1_score': 0.6135408923496223, 'precision_score': 0.6145135263260367, 'recall_score': 0.6135118685331711}
+timeseries_1_f5-5 (6575, 24) (6575,) (1643, 24) (1643,)
+Loaded: timeseries_1_f5-5
+<function run_DrCIF at 0x769e017c05e0>_1_f5-5 {'accuracy_score': 0.6068167985392574, 'f1_score': 0.6054213493553884, 'precision_score': 0.6097906893838752, 'recall_score': 0.6068167985392574}
+<function run_DrCIF at 0x769e017c05e0>_1
+           accuracy_score mean=0.6098808 std=0.0047427 t_interval=(0.5967130039288915, 0.6230486332163816)
+           f1_score mean=0.6091613 std=0.0049781 t_interval=(0.595339860785021, 0.6229827116016237)
+           precision_score mean=0.6111892 std=0.0036602 t_interval=(0.6010267051072179, 0.6213516515032954)
+           recall_score mean=0.6098808 std=0.0047427 t_interval=(0.5967130039288915, 0.6230486332163816)
+timeseries_0_f1-5 (3588, 24) (3588,) (898, 24) (898,)
+Loaded: timeseries_0_f1-5
+<function run_DrCIF at 0x769e017c05e0>_0_f1-5 {'accuracy_score': 0.6959910913140311, 'f1_score': 0.6940312579667184, 'precision_score': 0.6932864023095637, 'recall_score': 0.6959910913140311}
+timeseries_0_f2-5 (3589, 24) (3589,) (897, 24) (897,)
+Loaded: timeseries_0_f2-5
+<function run_DrCIF at 0x769e017c05e0>_0_f2-5 {'accuracy_score': 0.6956521739130435, 'f1_score': 0.6947988856575638, 'precision_score': 0.6960543073125797, 'recall_score': 0.6956521739130435}
+timeseries_0_f3-5 (3589, 24) (3589,) (897, 24) (897,)
+Loaded: timeseries_0_f3-5
+<function run_DrCIF at 0x769e017c05e0>_0_f3-5 {'accuracy_score': 0.6833890746934225, 'f1_score': 0.6823068343893767, 'precision_score': 0.6827014738735655, 'recall_score': 0.6833890746934225}
+timeseries_0_f4-5 (3589, 24) (3589,) (897, 24) (897,)
+Loaded: timeseries_0_f4-5
+<function run_DrCIF at 0x769e017c05e0>_0_f4-5 {'accuracy_score': 0.7101449275362319, 'f1_score': 0.7090603737269078, 'precision_score': 0.7087795610361125, 'recall_score': 0.7101449275362319}
+timeseries_0_f5-5 (3589, 24) (3589,) (897, 24) (897,)
+Loaded: timeseries_0_f5-5
+<function run_DrCIF at 0x769e017c05e0>_0_f5-5 {'accuracy_score': 0.6677814938684504, 'f1_score': 0.6617835708623035, 'precision_score': 0.6627227700531989, 'recall_score': 0.6677814938684504}
+<function run_DrCIF at 0x769e017c05e0>_0
+           accuracy_score mean=0.6905918 std=0.0142076 t_interval=(0.6511452410809786, 0.7300382634490932)
+           f1_score mean=0.6883962 std=0.0157802 t_interval=(0.6445834102648461, 0.732208958776302)
+           precision_score mean=0.6887089 std=0.0154215 t_interval=(0.6458920487529486, 0.7315257570810597)
+           recall_score mean=0.6905918 std=0.0142076 t_interval=(0.6511452410809786, 0.7300382634490932)
+Classifier mean accuracy_score=0.6502363
+Classifier mean f1_score=0.6487787
+Classifier mean precision_score=0.6499490
+Classifier mean recall_score=0.6502363
+End time: 2025-05-02_22-15-14
+Running time: 0:07:29.775503
+Done!
+195.54user 2.26system 7:37.54elapsed 43%CPU (0avgtext+0avgdata 644084maxresident)k
+0inputs+24outputs (0major+135819minor)pagefaults 0swaps

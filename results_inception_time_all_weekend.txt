@@ -1,0 +1,47 @@
+nohup: ignoring input
+2025-02-06 03:32:37.395430: I tensorflow/core/util/port.cc:113] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2025-02-06 03:32:37.423147: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2025-02-06 03:32:37.979461: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+GPU is not available
+Start time: 2025-06-02_03-32-37
+timeseries_f1-5 (10163, 24) (10163,) (2541, 24) (2541,)
+Loaded: timeseries_f1-5
+[1m 1/40[0m [37m━━━━━━━━━━━━━━━━━━━━[0m [1m17s[0m 441ms/step[1m 8/40[0m [32m━━━━[0m[37m━━━━━━━━━━━━━━━━[0m [1m0s[0m 8ms/step   [1m15/40[0m [32m━━━━━━━[0m[37m━━━━━━━━━━━━━[0m [1m0s[0m 8ms/step[1m22/40[0m [32m━━━━━━━━━━━[0m[37m━━━━━━━━━[0m [1m0s[0m 8ms/step[1m29/40[0m [32m━━━━━━━━━━━━━━[0m[37m━━━━━━[0m [1m0s[0m 8ms/step[1m36/40[0m [32m━━━━━━━━━━━━━━━━━━[0m[37m━━[0m [1m0s[0m 8ms/step[1m40/40[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 18ms/step[1m40/40[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m1s[0m 18ms/step
+<function run_inception_time at 0x7bec8ef61e50>_f1-5 {'accuracy_score': 0.2967335694608422, 'f1_score': 0.14219135579132575, 'precision_score': 0.3154070458957772, 'recall_score': 0.2967335694608422}
+timeseries_f2-5 (10163, 24) (10163,) (2541, 24) (2541,)
+Loaded: timeseries_f2-5
+[1m 1/40[0m [37m━━━━━━━━━━━━━━━━━━━━[0m [1m16s[0m 418ms/step[1m 8/40[0m [32m━━━━[0m[37m━━━━━━━━━━━━━━━━[0m [1m0s[0m 8ms/step   [1m15/40[0m [32m━━━━━━━[0m[37m━━━━━━━━━━━━━[0m [1m0s[0m 8ms/step[1m22/40[0m [32m━━━━━━━━━━━[0m[37m━━━━━━━━━[0m [1m0s[0m 8ms/step[1m29/40[0m [32m━━━━━━━━━━━━━━[0m[37m━━━━━━[0m [1m0s[0m 8ms/step[1m36/40[0m [32m━━━━━━━━━━━━━━━━━━[0m[37m━━[0m [1m0s[0m 8ms/step[1m40/40[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 18ms/step[1m40/40[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m1s[0m 18ms/step
+/home/carol/Documents/Mestrado/.venv/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1344: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+<function run_inception_time at 0x7bec8ef61e50>_f2-5 {'accuracy_score': 0.32270759543486816, 'f1_score': 0.20434261494052, 'precision_score': 0.25563867137695917, 'recall_score': 0.32270759543486816}
+timeseries_f3-5 (10163, 24) (10163,) (2541, 24) (2541,)
+Loaded: timeseries_f3-5
+[1m 1/40[0m [37m━━━━━━━━━━━━━━━━━━━━[0m [1m16s[0m 428ms/step[1m 8/40[0m [32m━━━━[0m[37m━━━━━━━━━━━━━━━━[0m [1m0s[0m 8ms/step   [1m15/40[0m [32m━━━━━━━[0m[37m━━━━━━━━━━━━━[0m [1m0s[0m 8ms/step[1m22/40[0m [32m━━━━━━━━━━━[0m[37m━━━━━━━━━[0m [1m0s[0m 8ms/step[1m29/40[0m [32m━━━━━━━━━━━━━━[0m[37m━━━━━━[0m [1m0s[0m 8ms/step[1m36/40[0m [32m━━━━━━━━━━━━━━━━━━[0m[37m━━[0m [1m0s[0m 8ms/step[1m40/40[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 18ms/step[1m40/40[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m1s[0m 18ms/step
+<function run_inception_time at 0x7bec8ef61e50>_f3-5 {'accuracy_score': 0.15348288075560804, 'f1_score': 0.11246096924980024, 'precision_score': 0.22852920130304824, 'recall_score': 0.15348288075560804}
+timeseries_f4-5 (10163, 24) (10163,) (2541, 24) (2541,)
+Loaded: timeseries_f4-5
+[1m 1/40[0m [37m━━━━━━━━━━━━━━━━━━━━[0m [1m16s[0m 429ms/step[1m 8/40[0m [32m━━━━[0m[37m━━━━━━━━━━━━━━━━[0m [1m0s[0m 8ms/step   [1m15/40[0m [32m━━━━━━━[0m[37m━━━━━━━━━━━━━[0m [1m0s[0m 8ms/step[1m22/40[0m [32m━━━━━━━━━━━[0m[37m━━━━━━━━━[0m [1m0s[0m 8ms/step[1m29/40[0m [32m━━━━━━━━━━━━━━[0m[37m━━━━━━[0m [1m0s[0m 8ms/step[1m36/40[0m [32m━━━━━━━━━━━━━━━━━━[0m[37m━━[0m [1m0s[0m 8ms/step[1m40/40[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 18ms/step[1m40/40[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m1s[0m 18ms/step
+<function run_inception_time at 0x7bec8ef61e50>_f4-5 {'accuracy_score': 0.15466351829988192, 'f1_score': 0.054992625964986504, 'precision_score': 0.221562625137539, 'recall_score': 0.15466351829988192}
+timeseries_f5-5 (10164, 24) (10164,) (2540, 24) (2540,)
+Loaded: timeseries_f5-5
+[1m 1/40[0m [37m━━━━━━━━━━━━━━━━━━━━[0m [1m16s[0m 419ms/step[1m 8/40[0m [32m━━━━[0m[37m━━━━━━━━━━━━━━━━[0m [1m0s[0m 8ms/step   [1m15/40[0m [32m━━━━━━━[0m[37m━━━━━━━━━━━━━[0m [1m0s[0m 8ms/step[1m22/40[0m [32m━━━━━━━━━━━[0m[37m━━━━━━━━━[0m [1m0s[0m 8ms/step[1m29/40[0m [32m━━━━━━━━━━━━━━[0m[37m━━━━━━[0m [1m0s[0m 8ms/step[1m36/40[0m [32m━━━━━━━━━━━━━━━━━━[0m[37m━━[0m [1m0s[0m 8ms/step[1m40/40[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 18ms/step[1m40/40[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m1s[0m 18ms/step
+/home/carol/Documents/Mestrado/.venv/lib/python3.9/site-packages/numpy/core/fromnumeric.py:3464: RuntimeWarning: Mean of empty slice.
+  return _methods._mean(a, axis=axis, dtype=dtype,
+/home/carol/Documents/Mestrado/.venv/lib/python3.9/site-packages/numpy/core/_methods.py:192: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+<function run_inception_time at 0x7bec8ef61e50>_f5-5 {'accuracy_score': 0.02874015748031496, 'f1_score': 0.01889670084066517, 'precision_score': 0.40466466908141835, 'recall_score': 0.02874015748031496}
+<function run_inception_time at 0x7bec8ef61e50>
+           accuracy_score mean=0.1912655 std=0.1073147 t_interval=(-0.10668791278545436, 0.48921900135806046)
+           f1_score mean=0.1065769 std=0.0651305 t_interval=(-0.07425436727122701, 0.2874080739861461)
+           precision_score mean=0.2851604 std=0.0682927 t_interval=(0.09554964146531358, 0.4747712436525832)
+           recall_score mean=0.1912655 std=0.1073147 t_interval=(-0.10668791278545436, 0.48921900135806046)
+Classifier mean accuracy_score=nan
+Classifier mean f1_score=nan
+Classifier mean precision_score=nan
+Classifier mean recall_score=nan
+End time: 2025-06-02_04-18-24
+Running time: 0:45:46.940879
+Done!
+20944.57user 1888.22system 45:49.22elapsed 830%CPU (0avgtext+0avgdata 1548312maxresident)k
+1600inputs+72outputs (2major+3130059minor)pagefaults 0swaps

@@ -1,0 +1,136 @@
+nohup: ignoring input
+GPU is not available
+Start time: 2025-05-02_08-45-38
+timeseries_1_0_f1-5 (2137, 24) (2137,) (535, 24) (535,)
+Loaded: timeseries_1_0_f1-5
+<function run_DrCIF at 0x72b1d71805e0>_1_0_f1-5 {'accuracy_score': 0.616822429906542, 'f1_score': 0.6161474182158039, 'precision_score': 0.6192528304536807, 'recall_score': 0.616822429906542}
+timeseries_1_0_f2-5 (2137, 24) (2137,) (535, 24) (535,)
+Loaded: timeseries_1_0_f2-5
+<function run_DrCIF at 0x72b1d71805e0>_1_0_f2-5 {'accuracy_score': 0.6018691588785047, 'f1_score': 0.6032926625138147, 'precision_score': 0.6054483611485277, 'recall_score': 0.6018691588785047}
+timeseries_1_0_f3-5 (2138, 24) (2138,) (534, 24) (534,)
+Loaded: timeseries_1_0_f3-5
+<function run_DrCIF at 0x72b1d71805e0>_1_0_f3-5 {'accuracy_score': 0.6179775280898876, 'f1_score': 0.6184392908416196, 'precision_score': 0.6207477901044488, 'recall_score': 0.6179775280898876}
+timeseries_1_0_f4-5 (2138, 24) (2138,) (534, 24) (534,)
+Loaded: timeseries_1_0_f4-5
+<function run_DrCIF at 0x72b1d71805e0>_1_0_f4-5 {'accuracy_score': 0.6329588014981273, 'f1_score': 0.63244959869646, 'precision_score': 0.633748573801173, 'recall_score': 0.6329588014981273}
+timeseries_1_0_f5-5 (2138, 24) (2138,) (534, 24) (534,)
+Loaded: timeseries_1_0_f5-5
+<function run_DrCIF at 0x72b1d71805e0>_1_0_f5-5 {'accuracy_score': 0.6235955056179775, 'f1_score': 0.6242248933375636, 'precision_score': 0.6279656335718915, 'recall_score': 0.6235955056179775}
+<function run_DrCIF at 0x72b1d71805e0>_1_0
+           accuracy_score mean=0.6186447 std=0.0101448 t_interval=(0.5904781029775151, 0.6468112666189006)
+           f1_score mean=0.6189108 std=0.0096263 t_interval=(0.5921840171290915, 0.6456375283130134)
+           precision_score mean=0.6214326 std=0.0095402 t_interval=(0.5949447115452859, 0.6479205640866026)
+           recall_score mean=0.6186447 std=0.0101448 t_interval=(0.5904781029775151, 0.6468112666189006)
+timeseries_1_2_f1-5 (2580, 24) (2580,) (646, 24) (646,)
+Loaded: timeseries_1_2_f1-5
+<function run_DrCIF at 0x72b1d71805e0>_1_2_f1-5 {'accuracy_score': 0.6160990712074303, 'f1_score': 0.6160184693467426, 'precision_score': 0.6170249886330825, 'recall_score': 0.6160990712074303}
+timeseries_1_2_f2-5 (2581, 24) (2581,) (645, 24) (645,)
+Loaded: timeseries_1_2_f2-5
+<function run_DrCIF at 0x72b1d71805e0>_1_2_f2-5 {'accuracy_score': 0.648062015503876, 'f1_score': 0.6482398572228012, 'precision_score': 0.653465497481439, 'recall_score': 0.648062015503876}
+timeseries_1_2_f3-5 (2581, 24) (2581,) (645, 24) (645,)
+Loaded: timeseries_1_2_f3-5
+<function run_DrCIF at 0x72b1d71805e0>_1_2_f3-5 {'accuracy_score': 0.6093023255813953, 'f1_score': 0.6088788369721214, 'precision_score': 0.6255517864428513, 'recall_score': 0.6093023255813953}
+timeseries_1_2_f4-5 (2581, 24) (2581,) (645, 24) (645,)
+Loaded: timeseries_1_2_f4-5
+<function run_DrCIF at 0x72b1d71805e0>_1_2_f4-5 {'accuracy_score': 0.6046511627906976, 'f1_score': 0.6041876350328795, 'precision_score': 0.6083725497584441, 'recall_score': 0.6046511627906976}
+timeseries_1_2_f5-5 (2581, 24) (2581,) (645, 24) (645,)
+Loaded: timeseries_1_2_f5-5
+<function run_DrCIF at 0x72b1d71805e0>_1_2_f5-5 {'accuracy_score': 0.6093023255813953, 'f1_score': 0.6087601708506154, 'precision_score': 0.6120755213091706, 'recall_score': 0.6093023255813953}
+<function run_DrCIF at 0x72b1d71805e0>_1_2
+           accuracy_score mean=0.6174834 std=0.0157194 t_interval=(0.5738393875927073, 0.6611273726732105)
+           f1_score mean=0.6172170 std=0.0159666 t_interval=(0.572886608223147, 0.6615473795469171)
+           precision_score mean=0.6232981 std=0.0161445 t_interval=(0.5784738053977039, 0.6681223320522913)
+           recall_score mean=0.6174834 std=0.0157194 t_interval=(0.5738393875927073, 0.6611273726732105)
+timeseries_1_4_f1-5 (1856, 24) (1856,) (464, 24) (464,)
+Loaded: timeseries_1_4_f1-5
+<function run_DrCIF at 0x72b1d71805e0>_1_4_f1-5 {'accuracy_score': 0.5969827586206896, 'f1_score': 0.5993665330250718, 'precision_score': 0.6199754995872656, 'recall_score': 0.5969827586206896}
+timeseries_1_4_f2-5 (1856, 24) (1856,) (464, 24) (464,)
+Loaded: timeseries_1_4_f2-5
+<function run_DrCIF at 0x72b1d71805e0>_1_4_f2-5 {'accuracy_score': 0.5517241379310345, 'f1_score': 0.5469604997126897, 'precision_score': 0.5469944009585426, 'recall_score': 0.5517241379310345}
+timeseries_1_4_f3-5 (1856, 24) (1856,) (464, 24) (464,)
+Loaded: timeseries_1_4_f3-5
+<function run_DrCIF at 0x72b1d71805e0>_1_4_f3-5 {'accuracy_score': 0.5969827586206896, 'f1_score': 0.5939872585551036, 'precision_score': 0.5916762093897245, 'recall_score': 0.5969827586206896}
+timeseries_1_4_f4-5 (1856, 24) (1856,) (464, 24) (464,)
+Loaded: timeseries_1_4_f4-5
+<function run_DrCIF at 0x72b1d71805e0>_1_4_f4-5 {'accuracy_score': 0.6099137931034483, 'f1_score': 0.608840825401565, 'precision_score': 0.6160958708877323, 'recall_score': 0.6099137931034483}
+timeseries_1_4_f5-5 (1856, 24) (1856,) (464, 24) (464,)
+Loaded: timeseries_1_4_f5-5
+<function run_DrCIF at 0x72b1d71805e0>_1_4_f5-5 {'accuracy_score': 0.5862068965517241, 'f1_score': 0.5861390076842866, 'precision_score': 0.5867457452381919, 'recall_score': 0.5862068965517241}
+<function run_DrCIF at 0x72b1d71805e0>_1_4
+           accuracy_score mean=0.5883621 std=0.0197995 t_interval=(0.5333899681937918, 0.6433341697372427)
+           f1_score mean=0.5870588 std=0.0213666 t_interval=(0.5277356044751365, 0.6463820452763502)
+           precision_score mean=0.5922975 std=0.0261381 t_interval=(0.5197264229795483, 0.6648686674450345)
+           recall_score mean=0.5883621 std=0.0197995 t_interval=(0.5333899681937918, 0.6433341697372427)
+timeseries_0_2_f1-5 (1658, 24) (1658,) (415, 24) (415,)
+Loaded: timeseries_0_2_f1-5
+<function run_DrCIF at 0x72b1d71805e0>_0_2_f1-5 {'accuracy_score': 0.6867469879518072, 'f1_score': 0.6781728420840495, 'precision_score': 0.681335888763734, 'recall_score': 0.6867469879518072}
+timeseries_0_2_f2-5 (1658, 24) (1658,) (415, 24) (415,)
+Loaded: timeseries_0_2_f2-5
+<function run_DrCIF at 0x72b1d71805e0>_0_2_f2-5 {'accuracy_score': 0.691566265060241, 'f1_score': 0.6910745251664175, 'precision_score': 0.6960599285186286, 'recall_score': 0.691566265060241}
+timeseries_0_2_f3-5 (1658, 24) (1658,) (415, 24) (415,)
+Loaded: timeseries_0_2_f3-5
+<function run_DrCIF at 0x72b1d71805e0>_0_2_f3-5 {'accuracy_score': 0.6867469879518072, 'f1_score': 0.6805028727526691, 'precision_score': 0.6883627820629719, 'recall_score': 0.6867469879518072}
+timeseries_0_2_f4-5 (1659, 24) (1659,) (414, 24) (414,)
+Loaded: timeseries_0_2_f4-5
+<function run_DrCIF at 0x72b1d71805e0>_0_2_f4-5 {'accuracy_score': 0.7270531400966184, 'f1_score': 0.7218877794993379, 'precision_score': 0.7216164913403884, 'recall_score': 0.7270531400966184}
+timeseries_0_2_f5-5 (1659, 24) (1659,) (414, 24) (414,)
+Loaded: timeseries_0_2_f5-5
+<function run_DrCIF at 0x72b1d71805e0>_0_2_f5-5 {'accuracy_score': 0.6570048309178744, 'f1_score': 0.6519833582492793, 'precision_score': 0.6543740937474952, 'recall_score': 0.6570048309178744}
+<function run_DrCIF at 0x72b1d71805e0>_0_2
+           accuracy_score mean=0.6898236 std=0.0222938 t_interval=(0.6279259980927687, 0.7517212866985705)
+           f1_score mean=0.6847243 std=0.0226016 t_interval=(0.6219721828170381, 0.7474763682836632)
+           precision_score mean=0.6883498 std=0.0217700 t_interval=(0.6279066515707127, 0.7487930222025746)
+           recall_score mean=0.6898236 std=0.0222938 t_interval=(0.6279259980927687, 0.7517212866985705)
+timeseries_0_0_f1-5 (871, 24) (871,) (218, 24) (218,)
+Loaded: timeseries_0_0_f1-5
+<function run_DrCIF at 0x72b1d71805e0>_0_0_f1-5 {'accuracy_score': 0.7431192660550459, 'f1_score': 0.7411552427856175, 'precision_score': 0.7406508932882666, 'recall_score': 0.7431192660550459}
+timeseries_0_0_f2-5 (871, 24) (871,) (218, 24) (218,)
+Loaded: timeseries_0_0_f2-5
+<function run_DrCIF at 0x72b1d71805e0>_0_0_f2-5 {'accuracy_score': 0.7568807339449541, 'f1_score': 0.7609033841232601, 'precision_score': 0.7676812616980149, 'recall_score': 0.7568807339449541}
+timeseries_0_0_f3-5 (871, 24) (871,) (218, 24) (218,)
+Loaded: timeseries_0_0_f3-5
+<function run_DrCIF at 0x72b1d71805e0>_0_0_f3-5 /home/carol/Documents/Mestrado/.venv/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1344: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/carol/Documents/Mestrado/.venv/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1344: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+{'accuracy_score': 0.7660550458715596, 'f1_score': 0.7538320856010697, 'precision_score': 0.7461334031831376, 'recall_score': 0.7660550458715596}
+timeseries_0_0_f4-5 (871, 24) (871,) (218, 24) (218,)
+Loaded: timeseries_0_0_f4-5
+<function run_DrCIF at 0x72b1d71805e0>_0_0_f4-5 {'accuracy_score': 0.7706422018348624, 'f1_score': 0.7577939834572125, 'precision_score': 0.7476165940008055, 'recall_score': 0.7706422018348624}
+timeseries_0_0_f5-5 (872, 24) (872,) (217, 24) (217,)
+Loaded: timeseries_0_0_f5-5
+<function run_DrCIF at 0x72b1d71805e0>_0_0_f5-5 {'accuracy_score': 0.7235023041474654, 'f1_score': 0.7239923161750333, 'precision_score': 0.7303223648631334, 'recall_score': 0.7235023041474654}
+<function run_DrCIF at 0x72b1d71805e0>_0_0
+           accuracy_score mean=0.7520399 std=0.0170873 t_interval=(0.7045980151502884, 0.7994818055912665)
+           f1_score mean=0.7475354 std=0.0135541 t_interval=(0.7099030884462456, 0.7851677164106317)
+           precision_score mean=0.7464809 std=0.0122144 t_interval=(0.7125683993707117, 0.7803934074426315)
+           recall_score mean=0.7520399 std=0.0170873 t_interval=(0.7045980151502884, 0.7994818055912665)
+timeseries_0_1_f1-5 (1059, 24) (1059,) (265, 24) (265,)
+Loaded: timeseries_0_1_f1-5
+<function run_DrCIF at 0x72b1d71805e0>_0_1_f1-5 {'accuracy_score': 0.6264150943396226, 'f1_score': 0.6262207422015269, 'precision_score': 0.6288179780180844, 'recall_score': 0.6264150943396226}
+timeseries_0_1_f2-5 (1059, 24) (1059,) (265, 24) (265,)
+Loaded: timeseries_0_1_f2-5
+<function run_DrCIF at 0x72b1d71805e0>_0_1_f2-5 {'accuracy_score': 0.6113207547169811, 'f1_score': 0.6046965533209443, 'precision_score': 0.6018445300813551, 'recall_score': 0.6113207547169811}
+timeseries_0_1_f3-5 (1059, 24) (1059,) (265, 24) (265,)
+Loaded: timeseries_0_1_f3-5
+<function run_DrCIF at 0x72b1d71805e0>_0_1_f3-5 {'accuracy_score': 0.6528301886792452, 'f1_score': 0.6556247208206879, 'precision_score': 0.6676565686579058, 'recall_score': 0.6528301886792452}
+timeseries_0_1_f4-5 (1059, 24) (1059,) (265, 24) (265,)
+Loaded: timeseries_0_1_f4-5
+<function run_DrCIF at 0x72b1d71805e0>_0_1_f4-5 {'accuracy_score': 0.6830188679245283, 'f1_score': 0.6815414780095512, 'precision_score': 0.6851628327733265, 'recall_score': 0.6830188679245283}
+timeseries_0_1_f5-5 (1060, 24) (1060,) (264, 24) (264,)
+Loaded: timeseries_0_1_f5-5
+<function run_DrCIF at 0x72b1d71805e0>_0_1_f5-5 {'accuracy_score': 0.7348484848484849, 'f1_score': 0.7326903759716963, 'precision_score': 0.7322892565500201, 'recall_score': 0.7348484848484849}
+<function run_DrCIF at 0x72b1d71805e0>_0_1
+           accuracy_score mean=0.6616867 std=0.0439704 t_interval=(0.5396054014450076, 0.7837679547585372)
+           f1_score mean=0.6601548 std=0.0446463 t_interval=(0.536196783660128, 0.7841127644696346)
+           precision_score mean=0.6631542 std=0.0452154 t_interval=(0.5376161752351898, 0.7886922911970868)
+           recall_score mean=0.6616867 std=0.0439704 t_interval=(0.5396054014450076, 0.7837679547585372)
+Classifier mean accuracy_score=0.6546734
+Classifier mean f1_score=0.6526002
+Classifier mean precision_score=0.6558355
+Classifier mean recall_score=0.6546734
+End time: 2025-05-02_08-49-54
+Running time: 0:04:15.914831
+Done!
+215.11user 2.41system 4:21.04elapsed 83%CPU (0avgtext+0avgdata 729540maxresident)k
+0inputs+7680outputs (0major+216700minor)pagefaults 0swaps

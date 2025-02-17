@@ -1,0 +1,62 @@
+nohup: ignoring input
+/home/carol/Documents/Mestrado/.venv/lib/python3.9/site-packages/sklearn/utils/optimize.py:210: ConvergenceWarning: newton-cg failed to converge. Increase the number of iterations.
+  warnings.warn(
+/home/carol/Documents/Mestrado/.venv/lib/python3.9/site-packages/sklearn/utils/optimize.py:210: ConvergenceWarning: newton-cg failed to converge. Increase the number of iterations.
+  warnings.warn(
+/home/carol/Documents/Mestrado/.venv/lib/python3.9/site-packages/sklearn/utils/optimize.py:210: ConvergenceWarning: newton-cg failed to converge. Increase the number of iterations.
+  warnings.warn(
+/home/carol/Documents/Mestrado/.venv/lib/python3.9/site-packages/sklearn/utils/optimize.py:210: ConvergenceWarning: newton-cg failed to converge. Increase the number of iterations.
+  warnings.warn(
+/home/carol/Documents/Mestrado/.venv/lib/python3.9/site-packages/sklearn/utils/optimize.py:210: ConvergenceWarning: newton-cg failed to converge. Increase the number of iterations.
+  warnings.warn(
+GPU is not available
+Start time: 2025-05-02_22-10-39
+timeseries_1_f1-5 (6574, 24) (6574,) (1644, 24) (1644,)
+Loaded: timeseries_1_f1-5
+<function run_MrSQM at 0x72326cd53c10>_1_f1-5 {'accuracy_score': 0.5979318734793188, 'f1_score': 0.5983077794524324, 'precision_score': 0.5999555968512196, 'recall_score': 0.5979318734793188}
+timeseries_1_f2-5 (6574, 24) (6574,) (1644, 24) (1644,)
+Loaded: timeseries_1_f2-5
+<function run_MrSQM at 0x72326cd53c10>_1_f2-5 {'accuracy_score': 0.6143552311435523, 'f1_score': 0.6147113626701306, 'precision_score': 0.6158592038198398, 'recall_score': 0.6143552311435523}
+timeseries_1_f3-5 (6574, 24) (6574,) (1644, 24) (1644,)
+Loaded: timeseries_1_f3-5
+<function run_MrSQM at 0x72326cd53c10>_1_f3-5 {'accuracy_score': 0.6137469586374696, 'f1_score': 0.6130225382765958, 'precision_score': 0.6131521466180717, 'recall_score': 0.6137469586374696}
+timeseries_1_f4-5 (6575, 24) (6575,) (1643, 24) (1643,)
+Loaded: timeseries_1_f4-5
+<function run_MrSQM at 0x72326cd53c10>_1_f4-5 {'accuracy_score': 0.6092513694461351, 'f1_score': 0.6092845006152846, 'precision_score': 0.6098375149408621, 'recall_score': 0.6092513694461351}
+timeseries_1_f5-5 (6575, 24) (6575,) (1643, 24) (1643,)
+Loaded: timeseries_1_f5-5
+<function run_MrSQM at 0x72326cd53c10>_1_f5-5 {'accuracy_score': 0.5903834449178332, 'f1_score': 0.5900557804900501, 'precision_score': 0.5919590884547373, 'recall_score': 0.5903834449178332}
+<function run_MrSQM at 0x72326cd53c10>_1
+           accuracy_score mean=0.6051338 std=0.0094405 t_interval=(0.578922710464398, 0.6313448405853256)
+           f1_score mean=0.6050764 std=0.0094352 t_interval=(0.5788800783467488, 0.6312727062550484)
+           precision_score mean=0.6061527 std=0.0089067 t_interval=(0.5814236685187815, 0.6308817517551109)
+           recall_score mean=0.6051338 std=0.0094405 t_interval=(0.578922710464398, 0.6313448405853256)
+timeseries_0_f1-5 (3588, 24) (3588,) (898, 24) (898,)
+Loaded: timeseries_0_f1-5
+<function run_MrSQM at 0x72326cd53c10>_0_f1-5 {'accuracy_score': 0.6648106904231625, 'f1_score': 0.6632505722592192, 'precision_score': 0.6620568517755394, 'recall_score': 0.6648106904231625}
+timeseries_0_f2-5 (3589, 24) (3589,) (897, 24) (897,)
+Loaded: timeseries_0_f2-5
+<function run_MrSQM at 0x72326cd53c10>_0_f2-5 {'accuracy_score': 0.6878483835005574, 'f1_score': 0.6877875720932345, 'precision_score': 0.6896729846844555, 'recall_score': 0.6878483835005574}
+timeseries_0_f3-5 (3589, 24) (3589,) (897, 24) (897,)
+Loaded: timeseries_0_f3-5
+<function run_MrSQM at 0x72326cd53c10>_0_f3-5 {'accuracy_score': 0.6599777034559643, 'f1_score': 0.6612503679940577, 'precision_score': 0.6633517987146222, 'recall_score': 0.6599777034559643}
+timeseries_0_f4-5 (3589, 24) (3589,) (897, 24) (897,)
+Loaded: timeseries_0_f4-5
+<function run_MrSQM at 0x72326cd53c10>_0_f4-5 {'accuracy_score': 0.6867335562987736, 'f1_score': 0.6891889418645272, 'precision_score': 0.6929305503280512, 'recall_score': 0.6867335562987736}
+timeseries_0_f5-5 (3589, 24) (3589,) (897, 24) (897,)
+Loaded: timeseries_0_f5-5
+<function run_MrSQM at 0x72326cd53c10>_0_f5-5 {'accuracy_score': 0.6521739130434783, 'f1_score': 0.6505271759024812, 'precision_score': 0.6532704089212702, 'recall_score': 0.6521739130434783}
+<function run_MrSQM at 0x72326cd53c10>_0
+           accuracy_score mean=0.6703088 std=0.0144447 t_interval=(0.6302039767877452, 0.7104137219010291)
+           f1_score mean=0.6704009 std=0.0153955 t_interval=(0.6276560912020122, 0.7131457608433958)
+           precision_score mean=0.6722565 std=0.0159659 t_interval=(0.6279280971949276, 0.7165849405746479)
+           recall_score mean=0.6703088 std=0.0144447 t_interval=(0.6302039767877452, 0.7104137219010291)
+Classifier mean accuracy_score=0.6377213
+Classifier mean f1_score=0.6377387
+Classifier mean precision_score=0.6392046
+Classifier mean recall_score=0.6377213
+End time: 2025-06-02_01-39-36
+Running time: 3:28:56.948719
+Done!
+40453.24user 42536.22system 3:29:05elapsed 661%CPU (0avgtext+0avgdata 1256276maxresident)k
+584inputs+80outputs (5major+398013minor)pagefaults 0swaps

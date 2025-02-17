@@ -1,0 +1,52 @@
+nohup: ignoring input
+GPU is not available
+Start time: 2025-05-02_22-09-53
+timeseries_1_f1-5 (6574, 24) (6574,) (1644, 24) (1644,)
+Loaded: timeseries_1_f1-5
+<function run_elastic_ensemble at 0x73bb3f1c8b80>_1_f1-5 {'accuracy_score': 0.5802919708029197, 'f1_score': 0.5806805320219961, 'precision_score': 0.5875308373841228, 'recall_score': 0.5802919708029197}
+timeseries_1_f2-5 (6574, 24) (6574,) (1644, 24) (1644,)
+Loaded: timeseries_1_f2-5
+<function run_elastic_ensemble at 0x73bb3f1c8b80>_1_f2-5 {'accuracy_score': 0.6058394160583942, 'f1_score': 0.6050022108592488, 'precision_score': 0.6088264667410787, 'recall_score': 0.6058394160583942}
+timeseries_1_f3-5 (6574, 24) (6574,) (1644, 24) (1644,)
+Loaded: timeseries_1_f3-5
+<function run_elastic_ensemble at 0x73bb3f1c8b80>_1_f3-5 {'accuracy_score': 0.5875912408759124, 'f1_score': 0.5856206337367154, 'precision_score': 0.5887369648018265, 'recall_score': 0.5875912408759124}
+timeseries_1_f4-5 (6575, 24) (6575,) (1643, 24) (1643,)
+Loaded: timeseries_1_f4-5
+<function run_elastic_ensemble at 0x73bb3f1c8b80>_1_f4-5 {'accuracy_score': 0.6068167985392574, 'f1_score': 0.6079465964569112, 'precision_score': 0.6107006104343293, 'recall_score': 0.6068167985392574}
+timeseries_1_f5-5 (6575, 24) (6575,) (1643, 24) (1643,)
+Loaded: timeseries_1_f5-5
+<function run_elastic_ensemble at 0x73bb3f1c8b80>_1_f5-5 {'accuracy_score': 0.6049908703590993, 'f1_score': 0.603804613338995, 'precision_score': 0.6113115826097473, 'recall_score': 0.6049908703590993}
+<function run_elastic_ensemble at 0x73bb3f1c8b80>_1
+           accuracy_score mean=0.5971061 std=0.0110090 t_interval=(0.5665402972554181, 0.6276718213988153)
+           f1_score mean=0.5966109 std=0.0111823 t_interval=(0.5655637502016918, 0.6276580843638547)
+           precision_score mean=0.6014213 std=0.0108867 t_interval=(0.5711950716897798, 0.6316475130986619)
+           recall_score mean=0.5971061 std=0.0110090 t_interval=(0.5665402972554181, 0.6276718213988153)
+timeseries_0_f1-5 (3588, 24) (3588,) (898, 24) (898,)
+Loaded: timeseries_0_f1-5
+<function run_elastic_ensemble at 0x73bb3f1c8b80>_0_f1-5 {'accuracy_score': 0.6826280623608018, 'f1_score': 0.683565720825108, 'precision_score': 0.6873088707548548, 'recall_score': 0.6826280623608018}
+timeseries_0_f2-5 (3589, 24) (3589,) (897, 24) (897,)
+Loaded: timeseries_0_f2-5
+<function run_elastic_ensemble at 0x73bb3f1c8b80>_0_f2-5 {'accuracy_score': 0.6822742474916388, 'f1_score': 0.6825441683551319, 'precision_score': 0.6879500990559021, 'recall_score': 0.6822742474916388}
+timeseries_0_f3-5 (3589, 24) (3589,) (897, 24) (897,)
+Loaded: timeseries_0_f3-5
+<function run_elastic_ensemble at 0x73bb3f1c8b80>_0_f3-5 {'accuracy_score': 0.68561872909699, 'f1_score': 0.685891580586743, 'precision_score': 0.6865663053387815, 'recall_score': 0.68561872909699}
+timeseries_0_f4-5 (3589, 24) (3589,) (897, 24) (897,)
+Loaded: timeseries_0_f4-5
+<function run_elastic_ensemble at 0x73bb3f1c8b80>_0_f4-5 {'accuracy_score': 0.6722408026755853, 'f1_score': 0.6736966170408022, 'precision_score': 0.6774180895182739, 'recall_score': 0.6722408026755853}
+timeseries_0_f5-5 (3589, 24) (3589,) (897, 24) (897,)
+Loaded: timeseries_0_f5-5
+<function run_elastic_ensemble at 0x73bb3f1c8b80>_0_f5-5 {'accuracy_score': 0.6499442586399108, 'f1_score': 0.6481840116127108, 'precision_score': 0.6501218703072189, 'recall_score': 0.6499442586399108}
+<function run_elastic_ensemble at 0x73bb3f1c8b80>_0
+           accuracy_score mean=0.6745412 std=0.0131012 t_interval=(0.6381663904272927, 0.7109160496786777)
+           f1_score mean=0.6747764 std=0.0139245 t_interval=(0.6361158063196412, 0.7134370330485572)
+           precision_score mean=0.6778730 std=0.0143978 t_interval=(0.6378982288274302, 0.7178478651625824)
+           recall_score mean=0.6745412 std=0.0131012 t_interval=(0.6381663904272927, 0.7109160496786777)
+Classifier mean accuracy_score=0.6358236
+Classifier mean f1_score=0.6356937
+Classifier mean precision_score=0.6396472
+Classifier mean recall_score=0.6358236
+End time: 2025-12-02_00-13-58
+Running time: 6 days, 2:04:05.584190
+Done!
+517532.53user 31.64system 146:04:11elapsed 98%CPU (0avgtext+0avgdata 1154272maxresident)k
+0inputs+24outputs (0major+2929468minor)pagefaults 0swaps

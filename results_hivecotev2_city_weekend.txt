@@ -1,0 +1,16 @@
+nohup: ignoring input
+Traceback (most recent call last):
+  File "/usr/lib/python3.9/runpy.py", line 197, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/usr/lib/python3.9/runpy.py", line 87, in _run_code
+    exec(code, run_globals)
+  File "/home/carol/Documents/Mestrado/classifiers/loop_locally.py", line 147, in <module>
+    means = create_tasks(K, country, city)
+  File "/home/carol/Documents/Mestrado/classifiers/loop_locally.py", line 35, in create_tasks
+    results = classifier(task_name=node_name,
+TypeError: run_hivecotev2() got an unexpected keyword argument 'dataset_filename'
+GPU is not available
+Start time: 2025-05-02_08-20-17
+Command exited with non-zero status 1
+1.69user 2.66system 0:01.56elapsed 278%CPU (0avgtext+0avgdata 520204maxresident)k
+0inputs+24outputs (0major+81299minor)pagefaults 0swaps

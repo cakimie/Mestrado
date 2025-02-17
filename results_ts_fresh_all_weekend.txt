@@ -1,0 +1,16 @@
+nohup: ignoring input
+Traceback (most recent call last):
+  File "/usr/lib/python3.9/runpy.py", line 197, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/usr/lib/python3.9/runpy.py", line 87, in _run_code
+    exec(code, run_globals)
+  File "/home/carol/Documents/Mestrado/classifiers/loop_locally.py", line 154, in <module>
+    create_tasks(K)                                   # This one trains models with full dataset.
+  File "/home/carol/Documents/Mestrado/classifiers/loop_locally.py", line 35, in create_tasks
+    results = classifier(task_name=node_name,
+TypeError: run_ts_fresh() got an unexpected keyword argument 'dataset_filename'
+GPU is not available
+Start time: 2025-06-02_03-31-46
+Command exited with non-zero status 1
+1.72user 2.25system 0:01.61elapsed 246%CPU (0avgtext+0avgdata 518184maxresident)k
+0inputs+16outputs (0major+80654minor)pagefaults 0swaps

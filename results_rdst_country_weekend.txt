@@ -1,0 +1,92 @@
+nohup: ignoring input
+GPU is not available
+Start time: 2025-05-02_22-08-32
+timeseries_1_f1-5 (13148, 24) (13148,) (3288, 24) (3288,)
+Loaded: timeseries_1_f1-5
+Index(['id', 'h00', 'h01', 'h02', 'h03', 'h04', 'h05', 'h06', 'h07', 'h08',
+       'h09', 'h10', 'h11', 'h12', 'h13', 'h14', 'h15', 'h16', 'h17', 'h18',
+       'h19', 'h20', 'h21', 'h22', 'h23', 'country', 'city', 'category'],
+      dtype='object')
+<function run_rdst at 0x735972853b80>_1_f1-5 {'accuracy_score': 0.6602798053527981, 'f1_score': 0.6552630221466546, 'precision_score': 0.664968184539673, 'recall_score': 0.6602798053527981}
+timeseries_1_f2-5 (13149, 24) (13149,) (3287, 24) (3287,)
+Loaded: timeseries_1_f2-5
+Index(['id', 'h00', 'h01', 'h02', 'h03', 'h04', 'h05', 'h06', 'h07', 'h08',
+       'h09', 'h10', 'h11', 'h12', 'h13', 'h14', 'h15', 'h16', 'h17', 'h18',
+       'h19', 'h20', 'h21', 'h22', 'h23', 'country', 'city', 'category'],
+      dtype='object')
+<function run_rdst at 0x735972853b80>_1_f2-5 {'accuracy_score': 0.6467903863705506, 'f1_score': 0.6400869458382201, 'precision_score': 0.6509816548251969, 'recall_score': 0.6467903863705506}
+timeseries_1_f3-5 (13149, 24) (13149,) (3287, 24) (3287,)
+Loaded: timeseries_1_f3-5
+Index(['id', 'h00', 'h01', 'h02', 'h03', 'h04', 'h05', 'h06', 'h07', 'h08',
+       'h09', 'h10', 'h11', 'h12', 'h13', 'h14', 'h15', 'h16', 'h17', 'h18',
+       'h19', 'h20', 'h21', 'h22', 'h23', 'country', 'city', 'category'],
+      dtype='object')
+<function run_rdst at 0x735972853b80>_1_f3-5 {'accuracy_score': 0.6729540614542135, 'f1_score': 0.6672462860046254, 'precision_score': 0.6793481021464238, 'recall_score': 0.6729540614542135}
+timeseries_1_f4-5 (13149, 24) (13149,) (3287, 24) (3287,)
+Loaded: timeseries_1_f4-5
+Index(['id', 'h00', 'h01', 'h02', 'h03', 'h04', 'h05', 'h06', 'h07', 'h08',
+       'h09', 'h10', 'h11', 'h12', 'h13', 'h14', 'h15', 'h16', 'h17', 'h18',
+       'h19', 'h20', 'h21', 'h22', 'h23', 'country', 'city', 'category'],
+      dtype='object')
+<function run_rdst at 0x735972853b80>_1_f4-5 {'accuracy_score': 0.6470946151505933, 'f1_score': 0.6360183619148653, 'precision_score': 0.6489429180336047, 'recall_score': 0.6470946151505933}
+timeseries_1_f5-5 (13149, 24) (13149,) (3287, 24) (3287,)
+Loaded: timeseries_1_f5-5
+Index(['id', 'h00', 'h01', 'h02', 'h03', 'h04', 'h05', 'h06', 'h07', 'h08',
+       'h09', 'h10', 'h11', 'h12', 'h13', 'h14', 'h15', 'h16', 'h17', 'h18',
+       'h19', 'h20', 'h21', 'h22', 'h23', 'country', 'city', 'category'],
+      dtype='object')
+<function run_rdst at 0x735972853b80>_1_f5-5 {'accuracy_score': 0.6370550654091877, 'f1_score': 0.6300083973302736, 'precision_score': 0.6452474857238597, 'recall_score': 0.6370550654091877}
+<function run_rdst at 0x735972853b80>_1
+           accuracy_score mean=0.6528348 std=0.0124796 t_interval=(0.6181859650344059, 0.6874836084605314)
+           f1_score mean=0.6457246 std=0.0136173 t_interval=(0.6079168474409812, 0.6835323578528744)
+           precision_score mean=0.6578977 std=0.0126345 t_interval=(0.6228185354836016, 0.6929768026239016)
+           recall_score mean=0.6528348 std=0.0124796 t_interval=(0.6181859650344059, 0.6874836084605314)
+timeseries_0_f1-5 (7177, 24) (7177,) (1795, 24) (1795,)
+Loaded: timeseries_0_f1-5
+Index(['id', 'h00', 'h01', 'h02', 'h03', 'h04', 'h05', 'h06', 'h07', 'h08',
+       'h09', 'h10', 'h11', 'h12', 'h13', 'h14', 'h15', 'h16', 'h17', 'h18',
+       'h19', 'h20', 'h21', 'h22', 'h23', 'country', 'city', 'category'],
+      dtype='object')
+<function run_rdst at 0x735972853b80>_0_f1-5 {'accuracy_score': 0.6913649025069638, 'f1_score': 0.6774294264144455, 'precision_score': 0.6946981871159146, 'recall_score': 0.6913649025069638}
+timeseries_0_f2-5 (7177, 24) (7177,) (1795, 24) (1795,)
+Loaded: timeseries_0_f2-5
+Index(['id', 'h00', 'h01', 'h02', 'h03', 'h04', 'h05', 'h06', 'h07', 'h08',
+       'h09', 'h10', 'h11', 'h12', 'h13', 'h14', 'h15', 'h16', 'h17', 'h18',
+       'h19', 'h20', 'h21', 'h22', 'h23', 'country', 'city', 'category'],
+      dtype='object')
+<function run_rdst at 0x735972853b80>_0_f2-5 {'accuracy_score': 0.6924791086350975, 'f1_score': 0.6801669277000074, 'precision_score': 0.6904548625244727, 'recall_score': 0.6924791086350975}
+timeseries_0_f3-5 (7178, 24) (7178,) (1794, 24) (1794,)
+Loaded: timeseries_0_f3-5
+Index(['id', 'h00', 'h01', 'h02', 'h03', 'h04', 'h05', 'h06', 'h07', 'h08',
+       'h09', 'h10', 'h11', 'h12', 'h13', 'h14', 'h15', 'h16', 'h17', 'h18',
+       'h19', 'h20', 'h21', 'h22', 'h23', 'country', 'city', 'category'],
+      dtype='object')
+<function run_rdst at 0x735972853b80>_0_f3-5 {'accuracy_score': 0.7006688963210702, 'f1_score': 0.688144008554123, 'precision_score': 0.7050892632384566, 'recall_score': 0.7006688963210702}
+timeseries_0_f4-5 (7178, 24) (7178,) (1794, 24) (1794,)
+Loaded: timeseries_0_f4-5
+Index(['id', 'h00', 'h01', 'h02', 'h03', 'h04', 'h05', 'h06', 'h07', 'h08',
+       'h09', 'h10', 'h11', 'h12', 'h13', 'h14', 'h15', 'h16', 'h17', 'h18',
+       'h19', 'h20', 'h21', 'h22', 'h23', 'country', 'city', 'category'],
+      dtype='object')
+<function run_rdst at 0x735972853b80>_0_f4-5 {'accuracy_score': 0.6995540691192865, 'f1_score': 0.6854416175333209, 'precision_score': 0.6981299924867813, 'recall_score': 0.6995540691192865}
+timeseries_0_f5-5 (7178, 24) (7178,) (1794, 24) (1794,)
+Loaded: timeseries_0_f5-5
+Index(['id', 'h00', 'h01', 'h02', 'h03', 'h04', 'h05', 'h06', 'h07', 'h08',
+       'h09', 'h10', 'h11', 'h12', 'h13', 'h14', 'h15', 'h16', 'h17', 'h18',
+       'h19', 'h20', 'h21', 'h22', 'h23', 'country', 'city', 'category'],
+      dtype='object')
+<function run_rdst at 0x735972853b80>_0_f5-5 {'accuracy_score': 0.6900780379041248, 'f1_score': 0.6774080723416499, 'precision_score': 0.6858229121817399, 'recall_score': 0.6900780379041248}
+<function run_rdst at 0x735972853b80>_0
+           accuracy_score mean=0.6948290 std=0.0043937 t_interval=(0.6826300557554884, 0.7070279500391287)
+           f1_score mean=0.6817180 std=0.0043482 t_interval=(0.6696456083965865, 0.6937904126208321)
+           precision_score mean=0.6948390 std=0.0065792 t_interval=(0.6765722772260901, 0.7131058097928559)
+           recall_score mean=0.6948290 std=0.0043937 t_interval=(0.6826300557554884, 0.7070279500391287)
+Classifier mean accuracy_score=0.6738319
+Classifier mean f1_score=0.6637213
+Classifier mean precision_score=0.6763684
+Classifier mean recall_score=0.6738319
+End time: 2025-06-02_00-17-57
+Running time: 2:09:25.194606
+Done!
+12408.38user 13830.53system 2:09:30elapsed 337%CPU (0avgtext+0avgdata 13580400maxresident)k
+0inputs+32outputs (0major+19119406minor)pagefaults 0swaps

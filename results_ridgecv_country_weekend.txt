@@ -1,0 +1,52 @@
+nohup: ignoring input
+GPU is not available
+Start time: 2025-05-02_22-09-05
+timeseries_1_f1-5 (6574, 24) (6574,) (1644, 24) (1644,)
+Loaded: timeseries_1_f1-5
+<function run_ridge_cv at 0x72dac081edc0>_1_f1-5 {'accuracy_score': 0.6934306569343066, 'f1_score': 0.6855087238339866, 'precision_score': 0.6885233680853697, 'recall_score': 0.6934306569343066}
+timeseries_1_f2-5 (6574, 24) (6574,) (1644, 24) (1644,)
+Loaded: timeseries_1_f2-5
+<function run_ridge_cv at 0x72dac081edc0>_1_f2-5 {'accuracy_score': 0.6697080291970803, 'f1_score': 0.6615631620822113, 'precision_score': 0.6686889031443768, 'recall_score': 0.6697080291970803}
+timeseries_1_f3-5 (6574, 24) (6574,) (1644, 24) (1644,)
+Loaded: timeseries_1_f3-5
+<function run_ridge_cv at 0x72dac081edc0>_1_f3-5 {'accuracy_score': 0.6891727493917275, 'f1_score': 0.6794867334093526, 'precision_score': 0.6922448614153276, 'recall_score': 0.6891727493917275}
+timeseries_1_f4-5 (6575, 24) (6575,) (1643, 24) (1643,)
+Loaded: timeseries_1_f4-5
+<function run_ridge_cv at 0x72dac081edc0>_1_f4-5 {'accuracy_score': 0.671941570298235, 'f1_score': 0.661165221077019, 'precision_score': 0.6728952176238174, 'recall_score': 0.671941570298235}
+timeseries_1_f5-5 (6575, 24) (6575,) (1643, 24) (1643,)
+Loaded: timeseries_1_f5-5
+<function run_ridge_cv at 0x72dac081edc0>_1_f5-5 {'accuracy_score': 0.6634205721241632, 'f1_score': 0.6560089035678534, 'precision_score': 0.6619692300534338, 'recall_score': 0.6634205721241632}
+<function run_ridge_cv at 0x72dac081edc0>_1
+           accuracy_score mean=0.6775347 std=0.0116608 t_interval=(0.6451590769164941, 0.7099103542617109)
+           f1_score mean=0.6687465 std=0.0115555 t_interval=(0.636663352832682, 0.7008297447554871)
+           precision_score mean=0.6768643 std=0.0116357 t_interval=(0.64455839073207, 0.7091702413968599)
+           recall_score mean=0.6775347 std=0.0116608 t_interval=(0.6451590769164941, 0.7099103542617109)
+timeseries_0_f1-5 (3588, 24) (3588,) (898, 24) (898,)
+Loaded: timeseries_0_f1-5
+<function run_ridge_cv at 0x72dac081edc0>_0_f1-5 {'accuracy_score': 0.7271714922048997, 'f1_score': 0.7143402773451285, 'precision_score': 0.7235309661518321, 'recall_score': 0.7271714922048997}
+timeseries_0_f2-5 (3589, 24) (3589,) (897, 24) (897,)
+Loaded: timeseries_0_f2-5
+<function run_ridge_cv at 0x72dac081edc0>_0_f2-5 {'accuracy_score': 0.7268673355629878, 'f1_score': 0.7207322475218618, 'precision_score': 0.7249178250611467, 'recall_score': 0.7268673355629878}
+timeseries_0_f3-5 (3589, 24) (3589,) (897, 24) (897,)
+Loaded: timeseries_0_f3-5
+<function run_ridge_cv at 0x72dac081edc0>_0_f3-5 {'accuracy_score': 0.7012263099219621, 'f1_score': 0.6912662685075199, 'precision_score': 0.700870880732694, 'recall_score': 0.7012263099219621}
+timeseries_0_f4-5 (3589, 24) (3589,) (897, 24) (897,)
+Loaded: timeseries_0_f4-5
+<function run_ridge_cv at 0x72dac081edc0>_0_f4-5 {'accuracy_score': 0.7112597547380156, 'f1_score': 0.7029240619237225, 'precision_score': 0.7114904062988414, 'recall_score': 0.7112597547380156}
+timeseries_0_f5-5 (3589, 24) (3589,) (897, 24) (897,)
+Loaded: timeseries_0_f5-5
+<function run_ridge_cv at 0x72dac081edc0>_0_f5-5 {'accuracy_score': 0.6755852842809364, 'f1_score': 0.660769645033012, 'precision_score': 0.6698506436692461, 'recall_score': 0.6755852842809364}
+<function run_ridge_cv at 0x72dac081edc0>_0
+           accuracy_score mean=0.7084220 std=0.0191304 t_interval=(0.6553076235404487, 0.7615364471430721)
+           f1_score mean=0.6980065 std=0.0211634 t_interval=(0.6392474700684194, 0.7567655300640785)
+           precision_score mean=0.7061321 std=0.0201413 t_interval=(0.6502109288067219, 0.762053359958782)
+           recall_score mean=0.7084220 std=0.0191304 t_interval=(0.6553076235404487, 0.7615364471430721)
+Classifier mean accuracy_score=0.6929784
+Classifier mean f1_score=0.6833765
+Classifier mean precision_score=0.6914982
+Classifier mean recall_score=0.6929784
+End time: 2025-05-02_22-28-56
+Running time: 0:19:50.527289
+Done!
+762.41user 2985.09system 19:56.04elapsed 313%CPU (0avgtext+0avgdata 1124064maxresident)k
+0inputs+24outputs (0major+760564minor)pagefaults 0swaps

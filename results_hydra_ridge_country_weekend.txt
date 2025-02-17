@@ -1,0 +1,52 @@
+nohup: ignoring input
+GPU is not available
+Start time: 2025-05-02_22-10-11
+timeseries_1_f1-5 (13148, 24) (13148,) (3288, 24) (3288,)
+Loaded: timeseries_1_f1-5
+<function run_hydra_ridge at 0x7bcb05893dc0>_1_f1-5 {'accuracy_score': 0.6642335766423357, 'f1_score': 0.6560946519765842, 'precision_score': 0.6720545968425286, 'recall_score': 0.6642335766423357}
+timeseries_1_f2-5 (13149, 24) (13149,) (3287, 24) (3287,)
+Loaded: timeseries_1_f2-5
+<function run_hydra_ridge at 0x7bcb05893dc0>_1_f2-5 {'accuracy_score': 0.6416184971098265, 'f1_score': 0.6330988228447463, 'precision_score': 0.6461734881439221, 'recall_score': 0.6416184971098265}
+timeseries_1_f3-5 (13149, 24) (13149,) (3287, 24) (3287,)
+Loaded: timeseries_1_f3-5
+<function run_hydra_ridge at 0x7bcb05893dc0>_1_f3-5 {'accuracy_score': 0.6583510800121691, 'f1_score': 0.6493040328483483, 'precision_score': 0.661301305297954, 'recall_score': 0.6583510800121691}
+timeseries_1_f4-5 (13149, 24) (13149,) (3287, 24) (3287,)
+Loaded: timeseries_1_f4-5
+<function run_hydra_ridge at 0x7bcb05893dc0>_1_f4-5 {'accuracy_score': 0.6443565561302099, 'f1_score': 0.6298067371405661, 'precision_score': 0.6479054079494474, 'recall_score': 0.6443565561302099}
+timeseries_1_f5-5 (13149, 24) (13149,) (3287, 24) (3287,)
+Loaded: timeseries_1_f5-5
+<function run_hydra_ridge at 0x7bcb05893dc0>_1_f5-5 {'accuracy_score': 0.6318831761484637, 'f1_score': 0.6231840018957593, 'precision_score': 0.6408147653408695, 'recall_score': 0.6318831761484637}
+<function run_hydra_ridge at 0x7bcb05893dc0>_1
+           accuracy_score mean=0.6480886 std=0.0116994 t_interval=(0.6156057140760144, 0.6805714403411877)
+           f1_score mean=0.6382976 std=0.0123727 t_interval=(0.6039455049900057, 0.672649793692396)
+           precision_score mean=0.6536499 std=0.0114098 t_interval=(0.6219713317123521, 0.6853284937175366)
+           recall_score mean=0.6480886 std=0.0116994 t_interval=(0.6156057140760144, 0.6805714403411877)
+timeseries_0_f1-5 (7177, 24) (7177,) (1795, 24) (1795,)
+Loaded: timeseries_0_f1-5
+<function run_hydra_ridge at 0x7bcb05893dc0>_0_f1-5 {'accuracy_score': 0.6908077994428969, 'f1_score': 0.6767191942252552, 'precision_score': 0.6943395878485463, 'recall_score': 0.6908077994428969}
+timeseries_0_f2-5 (7177, 24) (7177,) (1795, 24) (1795,)
+Loaded: timeseries_0_f2-5
+<function run_hydra_ridge at 0x7bcb05893dc0>_0_f2-5 {'accuracy_score': 0.6986072423398328, 'f1_score': 0.6853707332047456, 'precision_score': 0.698835615105193, 'recall_score': 0.6986072423398328}
+timeseries_0_f3-5 (7178, 24) (7178,) (1794, 24) (1794,)
+Loaded: timeseries_0_f3-5
+<function run_hydra_ridge at 0x7bcb05893dc0>_0_f3-5 {'accuracy_score': 0.6945373467112598, 'f1_score': 0.6795942826176361, 'precision_score': 0.7023817138202343, 'recall_score': 0.6945373467112598}
+timeseries_0_f4-5 (7178, 24) (7178,) (1794, 24) (1794,)
+Loaded: timeseries_0_f4-5
+<function run_hydra_ridge at 0x7bcb05893dc0>_0_f4-5 {'accuracy_score': 0.6950947603121517, 'f1_score': 0.6792107061933721, 'precision_score': 0.6976652057547761, 'recall_score': 0.6950947603121517}
+timeseries_0_f5-5 (7178, 24) (7178,) (1794, 24) (1794,)
+Loaded: timeseries_0_f5-5
+<function run_hydra_ridge at 0x7bcb05893dc0>_0_f5-5 {'accuracy_score': 0.6917502787068004, 'f1_score': 0.67855936131663, 'precision_score': 0.6923775102390749, 'recall_score': 0.6917502787068004}
+<function run_hydra_ridge at 0x7bcb05893dc0>_0
+           accuracy_score mean=0.6941595 std=0.0027509 t_interval=(0.6865216736721141, 0.7017972973330625)
+           f1_score mean=0.6798909 std=0.0029125 t_interval=(0.6718045879359331, 0.6879771230871226)
+           precision_score mean=0.6971199 std=0.0034971 t_interval=(0.6874104540691284, 0.7068293990380017)
+           recall_score mean=0.6941595 std=0.0027509 t_interval=(0.6865216736721141, 0.7017972973330625)
+Classifier mean accuracy_score=0.6711240
+Classifier mean f1_score=0.6590943
+Classifier mean precision_score=0.6753849
+Classifier mean recall_score=0.6711240
+End time: 2025-05-02_22-35-15
+Running time: 0:25:03.456759
+Done!
+1087.34user 3854.84system 25:07.32elapsed 327%CPU (0avgtext+0avgdata 1832856maxresident)k
+304inputs+24outputs (16major+10836331minor)pagefaults 0swaps
